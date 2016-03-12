@@ -1,0 +1,5620 @@
+
+TX_quadro.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001aa2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000001c  00802000  00001aa2  00001b36  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          000001cd  0080201c  0080201c  00001b52  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00001b52  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001b84  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000558  00000000  00000000  00001bc8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000fe04  00000000  00000000  00002120  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000257f  00000000  00000000  00011f24  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00009415  00000000  00000000  000144a3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000103c  00000000  00000000  0001d8b8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00030476  00000000  00000000  0001e8f4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00003d0d  00000000  00000000  0004ed6a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000458  00000000  00000000  00052a78  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_macro  0000ceb4  00000000  00000000  00052ed0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	55 c0       	rjmp	.+170    	; 0xac <__ctors_end>
+       2:	00 00       	nop
+       4:	70 c0       	rjmp	.+224    	; 0xe6 <__bad_interrupt>
+       6:	00 00       	nop
+       8:	6e c0       	rjmp	.+220    	; 0xe6 <__bad_interrupt>
+       a:	00 00       	nop
+       c:	6c c0       	rjmp	.+216    	; 0xe6 <__bad_interrupt>
+       e:	00 00       	nop
+      10:	6a c0       	rjmp	.+212    	; 0xe6 <__bad_interrupt>
+      12:	00 00       	nop
+      14:	68 c0       	rjmp	.+208    	; 0xe6 <__bad_interrupt>
+      16:	00 00       	nop
+      18:	66 c0       	rjmp	.+204    	; 0xe6 <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	64 c0       	rjmp	.+200    	; 0xe6 <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	62 c0       	rjmp	.+196    	; 0xe6 <__bad_interrupt>
+      22:	00 00       	nop
+      24:	0c 94 0e 0b 	jmp	0x161c	; 0x161c <__vector_9>
+      28:	5e c0       	rjmp	.+188    	; 0xe6 <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	5c c0       	rjmp	.+184    	; 0xe6 <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	5b c0       	rjmp	.+182    	; 0xe8 <__vector_12>
+      32:	00 00       	nop
+      34:	82 c0       	rjmp	.+260    	; 0x13a <__vector_13>
+      36:	00 00       	nop
+      38:	a9 c0       	rjmp	.+338    	; 0x18c <__vector_14>
+      3a:	00 00       	nop
+      3c:	d0 c0       	rjmp	.+416    	; 0x1de <__vector_15>
+      3e:	00 00       	nop
+      40:	f7 c0       	rjmp	.+494    	; 0x230 <__vector_16>
+      42:	00 00       	nop
+      44:	1e c1       	rjmp	.+572    	; 0x282 <__vector_17>
+      46:	00 00       	nop
+      48:	45 c1       	rjmp	.+650    	; 0x2d4 <__vector_18>
+      4a:	00 00       	nop
+      4c:	6c c1       	rjmp	.+728    	; 0x326 <__vector_19>
+      4e:	00 00       	nop
+      50:	93 c1       	rjmp	.+806    	; 0x378 <__vector_20>
+      52:	00 00       	nop
+      54:	ba c1       	rjmp	.+884    	; 0x3ca <__vector_21>
+      56:	00 00       	nop
+      58:	46 c0       	rjmp	.+140    	; 0xe6 <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	44 c0       	rjmp	.+136    	; 0xe6 <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	42 c0       	rjmp	.+132    	; 0xe6 <__bad_interrupt>
+      62:	00 00       	nop
+      64:	40 c0       	rjmp	.+128    	; 0xe6 <__bad_interrupt>
+      66:	00 00       	nop
+      68:	3e c0       	rjmp	.+124    	; 0xe6 <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	3c c0       	rjmp	.+120    	; 0xe6 <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	b0 c2       	rjmp	.+1376   	; 0x5d2 <__vector_28>
+      72:	00 00       	nop
+      74:	d5 c2       	rjmp	.+1450   	; 0x620 <__vector_29>
+      76:	00 00       	nop
+      78:	36 c0       	rjmp	.+108    	; 0xe6 <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	34 c0       	rjmp	.+104    	; 0xe6 <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	32 c0       	rjmp	.+100    	; 0xe6 <__bad_interrupt>
+      82:	00 00       	nop
+      84:	30 c0       	rjmp	.+96     	; 0xe6 <__bad_interrupt>
+      86:	00 00       	nop
+      88:	d8 c7       	rjmp	.+4016   	; 0x103a <__vector_34>
+      8a:	00 00       	nop
+      8c:	2c c0       	rjmp	.+88     	; 0xe6 <__bad_interrupt>
+      8e:	00 00       	nop
+      90:	c5 c1       	rjmp	.+906    	; 0x41c <__vector_36>
+      92:	00 00       	nop
+      94:	ec c1       	rjmp	.+984    	; 0x46e <__vector_37>
+      96:	00 00       	nop
+      98:	13 c2       	rjmp	.+1062   	; 0x4c0 <__vector_38>
+      9a:	00 00       	nop
+      9c:	3a c2       	rjmp	.+1140   	; 0x512 <__vector_39>
+      9e:	00 00       	nop
+      a0:	22 c0       	rjmp	.+68     	; 0xe6 <__bad_interrupt>
+      a2:	00 00       	nop
+      a4:	20 c0       	rjmp	.+64     	; 0xe6 <__bad_interrupt>
+      a6:	00 00       	nop
+      a8:	1e c0       	rjmp	.+60     	; 0xe6 <__bad_interrupt>
+	...
+
+000000ac <__ctors_end>:
+      ac:	11 24       	eor	r1, r1
+      ae:	1f be       	out	0x3f, r1	; 63
+      b0:	cf ef       	ldi	r28, 0xFF	; 255
+      b2:	cd bf       	out	0x3d, r28	; 61
+      b4:	df e2       	ldi	r29, 0x2F	; 47
+      b6:	de bf       	out	0x3e, r29	; 62
+
+000000b8 <__do_copy_data>:
+      b8:	10 e2       	ldi	r17, 0x20	; 32
+      ba:	a0 e0       	ldi	r26, 0x00	; 0
+      bc:	b0 e2       	ldi	r27, 0x20	; 32
+      be:	e2 ea       	ldi	r30, 0xA2	; 162
+      c0:	fa e1       	ldi	r31, 0x1A	; 26
+      c2:	02 c0       	rjmp	.+4      	; 0xc8 <__do_copy_data+0x10>
+      c4:	05 90       	lpm	r0, Z+
+      c6:	0d 92       	st	X+, r0
+      c8:	ac 31       	cpi	r26, 0x1C	; 28
+      ca:	b1 07       	cpc	r27, r17
+      cc:	d9 f7       	brne	.-10     	; 0xc4 <__do_copy_data+0xc>
+
+000000ce <__do_clear_bss>:
+      ce:	21 e2       	ldi	r18, 0x21	; 33
+      d0:	ac e1       	ldi	r26, 0x1C	; 28
+      d2:	b0 e2       	ldi	r27, 0x20	; 32
+      d4:	01 c0       	rjmp	.+2      	; 0xd8 <.do_clear_bss_start>
+
+000000d6 <.do_clear_bss_loop>:
+      d6:	1d 92       	st	X+, r1
+
+000000d8 <.do_clear_bss_start>:
+      d8:	a9 3e       	cpi	r26, 0xE9	; 233
+      da:	b2 07       	cpc	r27, r18
+      dc:	e1 f7       	brne	.-8      	; 0xd6 <.do_clear_bss_loop>
+      de:	0e 94 3f 0b 	call	0x167e	; 0x167e <main>
+      e2:	0c 94 4f 0d 	jmp	0x1a9e	; 0x1a9e <_exit>
+
+000000e6 <__bad_interrupt>:
+      e6:	8c cf       	rjmp	.-232    	; 0x0 <__vectors>
+
+000000e8 <__vector_12>:
+ *
+ * This function will handle interrupt on Timer Counter C4 overflow and
+ * call the callback function.
+ */
+ISR(TCC4_OVF_vect)
+{
+      e8:	1f 92       	push	r1
+      ea:	0f 92       	push	r0
+      ec:	0f b6       	in	r0, 0x3f	; 63
+      ee:	0f 92       	push	r0
+      f0:	11 24       	eor	r1, r1
+      f2:	2f 93       	push	r18
+      f4:	3f 93       	push	r19
+      f6:	4f 93       	push	r20
+      f8:	5f 93       	push	r21
+      fa:	6f 93       	push	r22
+      fc:	7f 93       	push	r23
+      fe:	8f 93       	push	r24
+     100:	9f 93       	push	r25
+     102:	af 93       	push	r26
+     104:	bf 93       	push	r27
+     106:	ef 93       	push	r30
+     108:	ff 93       	push	r31
+	if (tc45_tcc4_ovf_callback) {
+     10a:	e0 91 36 20 	lds	r30, 0x2036
+     10e:	f0 91 37 20 	lds	r31, 0x2037
+     112:	30 97       	sbiw	r30, 0x00	; 0
+     114:	09 f0       	breq	.+2      	; 0x118 <__vector_12+0x30>
+		tc45_tcc4_ovf_callback();
+     116:	09 95       	icall
+	}
+}
+     118:	ff 91       	pop	r31
+     11a:	ef 91       	pop	r30
+     11c:	bf 91       	pop	r27
+     11e:	af 91       	pop	r26
+     120:	9f 91       	pop	r25
+     122:	8f 91       	pop	r24
+     124:	7f 91       	pop	r23
+     126:	6f 91       	pop	r22
+     128:	5f 91       	pop	r21
+     12a:	4f 91       	pop	r20
+     12c:	3f 91       	pop	r19
+     12e:	2f 91       	pop	r18
+     130:	0f 90       	pop	r0
+     132:	0f be       	out	0x3f, r0	; 63
+     134:	0f 90       	pop	r0
+     136:	1f 90       	pop	r1
+     138:	18 95       	reti
+
+0000013a <__vector_13>:
+ *
+ * This function will handle interrupt on Timer Counter C4 error and
+ * call the callback function.
+ */
+ISR(TCC4_ERR_vect)
+{
+     13a:	1f 92       	push	r1
+     13c:	0f 92       	push	r0
+     13e:	0f b6       	in	r0, 0x3f	; 63
+     140:	0f 92       	push	r0
+     142:	11 24       	eor	r1, r1
+     144:	2f 93       	push	r18
+     146:	3f 93       	push	r19
+     148:	4f 93       	push	r20
+     14a:	5f 93       	push	r21
+     14c:	6f 93       	push	r22
+     14e:	7f 93       	push	r23
+     150:	8f 93       	push	r24
+     152:	9f 93       	push	r25
+     154:	af 93       	push	r26
+     156:	bf 93       	push	r27
+     158:	ef 93       	push	r30
+     15a:	ff 93       	push	r31
+	if (tc45_tcc4_err_callback) {
+     15c:	e0 91 34 20 	lds	r30, 0x2034
+     160:	f0 91 35 20 	lds	r31, 0x2035
+     164:	30 97       	sbiw	r30, 0x00	; 0
+     166:	09 f0       	breq	.+2      	; 0x16a <__vector_13+0x30>
+		tc45_tcc4_err_callback();
+     168:	09 95       	icall
+	}
+}
+     16a:	ff 91       	pop	r31
+     16c:	ef 91       	pop	r30
+     16e:	bf 91       	pop	r27
+     170:	af 91       	pop	r26
+     172:	9f 91       	pop	r25
+     174:	8f 91       	pop	r24
+     176:	7f 91       	pop	r23
+     178:	6f 91       	pop	r22
+     17a:	5f 91       	pop	r21
+     17c:	4f 91       	pop	r20
+     17e:	3f 91       	pop	r19
+     180:	2f 91       	pop	r18
+     182:	0f 90       	pop	r0
+     184:	0f be       	out	0x3f, r0	; 63
+     186:	0f 90       	pop	r0
+     188:	1f 90       	pop	r1
+     18a:	18 95       	reti
+
+0000018c <__vector_14>:
+ *
+ * This function will handle interrupt on Timer Counter C4 Compare/CaptureA and
+ * call the callback function.
+ */
+ISR(TCC4_CCA_vect)
+{
+     18c:	1f 92       	push	r1
+     18e:	0f 92       	push	r0
+     190:	0f b6       	in	r0, 0x3f	; 63
+     192:	0f 92       	push	r0
+     194:	11 24       	eor	r1, r1
+     196:	2f 93       	push	r18
+     198:	3f 93       	push	r19
+     19a:	4f 93       	push	r20
+     19c:	5f 93       	push	r21
+     19e:	6f 93       	push	r22
+     1a0:	7f 93       	push	r23
+     1a2:	8f 93       	push	r24
+     1a4:	9f 93       	push	r25
+     1a6:	af 93       	push	r26
+     1a8:	bf 93       	push	r27
+     1aa:	ef 93       	push	r30
+     1ac:	ff 93       	push	r31
+	if (tc45_tcc4_cca_callback) {
+     1ae:	e0 91 32 20 	lds	r30, 0x2032
+     1b2:	f0 91 33 20 	lds	r31, 0x2033
+     1b6:	30 97       	sbiw	r30, 0x00	; 0
+     1b8:	09 f0       	breq	.+2      	; 0x1bc <__vector_14+0x30>
+		tc45_tcc4_cca_callback();
+     1ba:	09 95       	icall
+	}
+}
+     1bc:	ff 91       	pop	r31
+     1be:	ef 91       	pop	r30
+     1c0:	bf 91       	pop	r27
+     1c2:	af 91       	pop	r26
+     1c4:	9f 91       	pop	r25
+     1c6:	8f 91       	pop	r24
+     1c8:	7f 91       	pop	r23
+     1ca:	6f 91       	pop	r22
+     1cc:	5f 91       	pop	r21
+     1ce:	4f 91       	pop	r20
+     1d0:	3f 91       	pop	r19
+     1d2:	2f 91       	pop	r18
+     1d4:	0f 90       	pop	r0
+     1d6:	0f be       	out	0x3f, r0	; 63
+     1d8:	0f 90       	pop	r0
+     1da:	1f 90       	pop	r1
+     1dc:	18 95       	reti
+
+000001de <__vector_15>:
+ *
+ * This function will handle interrupt on Timer Counter C4 Compare/CaptureB and
+ * call the callback function.
+ */
+ISR(TCC4_CCB_vect)
+{
+     1de:	1f 92       	push	r1
+     1e0:	0f 92       	push	r0
+     1e2:	0f b6       	in	r0, 0x3f	; 63
+     1e4:	0f 92       	push	r0
+     1e6:	11 24       	eor	r1, r1
+     1e8:	2f 93       	push	r18
+     1ea:	3f 93       	push	r19
+     1ec:	4f 93       	push	r20
+     1ee:	5f 93       	push	r21
+     1f0:	6f 93       	push	r22
+     1f2:	7f 93       	push	r23
+     1f4:	8f 93       	push	r24
+     1f6:	9f 93       	push	r25
+     1f8:	af 93       	push	r26
+     1fa:	bf 93       	push	r27
+     1fc:	ef 93       	push	r30
+     1fe:	ff 93       	push	r31
+	if (tc45_tcc4_ccb_callback) {
+     200:	e0 91 30 20 	lds	r30, 0x2030
+     204:	f0 91 31 20 	lds	r31, 0x2031
+     208:	30 97       	sbiw	r30, 0x00	; 0
+     20a:	09 f0       	breq	.+2      	; 0x20e <__vector_15+0x30>
+		tc45_tcc4_ccb_callback();
+     20c:	09 95       	icall
+	}
+}
+     20e:	ff 91       	pop	r31
+     210:	ef 91       	pop	r30
+     212:	bf 91       	pop	r27
+     214:	af 91       	pop	r26
+     216:	9f 91       	pop	r25
+     218:	8f 91       	pop	r24
+     21a:	7f 91       	pop	r23
+     21c:	6f 91       	pop	r22
+     21e:	5f 91       	pop	r21
+     220:	4f 91       	pop	r20
+     222:	3f 91       	pop	r19
+     224:	2f 91       	pop	r18
+     226:	0f 90       	pop	r0
+     228:	0f be       	out	0x3f, r0	; 63
+     22a:	0f 90       	pop	r0
+     22c:	1f 90       	pop	r1
+     22e:	18 95       	reti
+
+00000230 <__vector_16>:
+ *
+ * This function will handle interrupt on Timer Counter C4 Compare/CaptureC and
+ * call the callback function.
+ */
+ISR(TCC4_CCC_vect)
+{
+     230:	1f 92       	push	r1
+     232:	0f 92       	push	r0
+     234:	0f b6       	in	r0, 0x3f	; 63
+     236:	0f 92       	push	r0
+     238:	11 24       	eor	r1, r1
+     23a:	2f 93       	push	r18
+     23c:	3f 93       	push	r19
+     23e:	4f 93       	push	r20
+     240:	5f 93       	push	r21
+     242:	6f 93       	push	r22
+     244:	7f 93       	push	r23
+     246:	8f 93       	push	r24
+     248:	9f 93       	push	r25
+     24a:	af 93       	push	r26
+     24c:	bf 93       	push	r27
+     24e:	ef 93       	push	r30
+     250:	ff 93       	push	r31
+	if (tc45_tcc4_ccc_callback) {
+     252:	e0 91 2e 20 	lds	r30, 0x202E
+     256:	f0 91 2f 20 	lds	r31, 0x202F
+     25a:	30 97       	sbiw	r30, 0x00	; 0
+     25c:	09 f0       	breq	.+2      	; 0x260 <__vector_16+0x30>
+		tc45_tcc4_ccc_callback();
+     25e:	09 95       	icall
+	}
+}
+     260:	ff 91       	pop	r31
+     262:	ef 91       	pop	r30
+     264:	bf 91       	pop	r27
+     266:	af 91       	pop	r26
+     268:	9f 91       	pop	r25
+     26a:	8f 91       	pop	r24
+     26c:	7f 91       	pop	r23
+     26e:	6f 91       	pop	r22
+     270:	5f 91       	pop	r21
+     272:	4f 91       	pop	r20
+     274:	3f 91       	pop	r19
+     276:	2f 91       	pop	r18
+     278:	0f 90       	pop	r0
+     27a:	0f be       	out	0x3f, r0	; 63
+     27c:	0f 90       	pop	r0
+     27e:	1f 90       	pop	r1
+     280:	18 95       	reti
+
+00000282 <__vector_17>:
+ *
+ * This function will handle interrupt on Timer Counter C4 Compare/CaptureD and
+ * call the callback function.
+ */
+ISR(TCC4_CCD_vect)
+{
+     282:	1f 92       	push	r1
+     284:	0f 92       	push	r0
+     286:	0f b6       	in	r0, 0x3f	; 63
+     288:	0f 92       	push	r0
+     28a:	11 24       	eor	r1, r1
+     28c:	2f 93       	push	r18
+     28e:	3f 93       	push	r19
+     290:	4f 93       	push	r20
+     292:	5f 93       	push	r21
+     294:	6f 93       	push	r22
+     296:	7f 93       	push	r23
+     298:	8f 93       	push	r24
+     29a:	9f 93       	push	r25
+     29c:	af 93       	push	r26
+     29e:	bf 93       	push	r27
+     2a0:	ef 93       	push	r30
+     2a2:	ff 93       	push	r31
+	if (tc45_tcc4_ccd_callback) {
+     2a4:	e0 91 2c 20 	lds	r30, 0x202C
+     2a8:	f0 91 2d 20 	lds	r31, 0x202D
+     2ac:	30 97       	sbiw	r30, 0x00	; 0
+     2ae:	09 f0       	breq	.+2      	; 0x2b2 <__vector_17+0x30>
+		tc45_tcc4_ccd_callback();
+     2b0:	09 95       	icall
+	}
+}
+     2b2:	ff 91       	pop	r31
+     2b4:	ef 91       	pop	r30
+     2b6:	bf 91       	pop	r27
+     2b8:	af 91       	pop	r26
+     2ba:	9f 91       	pop	r25
+     2bc:	8f 91       	pop	r24
+     2be:	7f 91       	pop	r23
+     2c0:	6f 91       	pop	r22
+     2c2:	5f 91       	pop	r21
+     2c4:	4f 91       	pop	r20
+     2c6:	3f 91       	pop	r19
+     2c8:	2f 91       	pop	r18
+     2ca:	0f 90       	pop	r0
+     2cc:	0f be       	out	0x3f, r0	; 63
+     2ce:	0f 90       	pop	r0
+     2d0:	1f 90       	pop	r1
+     2d2:	18 95       	reti
+
+000002d4 <__vector_18>:
+ *
+ * This function will handle interrupt on Timer Counter C5 overflow and
+ * call the callback function.
+ */
+ISR(TCC5_OVF_vect)
+{
+     2d4:	1f 92       	push	r1
+     2d6:	0f 92       	push	r0
+     2d8:	0f b6       	in	r0, 0x3f	; 63
+     2da:	0f 92       	push	r0
+     2dc:	11 24       	eor	r1, r1
+     2de:	2f 93       	push	r18
+     2e0:	3f 93       	push	r19
+     2e2:	4f 93       	push	r20
+     2e4:	5f 93       	push	r21
+     2e6:	6f 93       	push	r22
+     2e8:	7f 93       	push	r23
+     2ea:	8f 93       	push	r24
+     2ec:	9f 93       	push	r25
+     2ee:	af 93       	push	r26
+     2f0:	bf 93       	push	r27
+     2f2:	ef 93       	push	r30
+     2f4:	ff 93       	push	r31
+	if (tc45_tcc5_ovf_callback) {
+     2f6:	e0 91 2a 20 	lds	r30, 0x202A
+     2fa:	f0 91 2b 20 	lds	r31, 0x202B
+     2fe:	30 97       	sbiw	r30, 0x00	; 0
+     300:	09 f0       	breq	.+2      	; 0x304 <__vector_18+0x30>
+		tc45_tcc5_ovf_callback();
+     302:	09 95       	icall
+	}
+}
+     304:	ff 91       	pop	r31
+     306:	ef 91       	pop	r30
+     308:	bf 91       	pop	r27
+     30a:	af 91       	pop	r26
+     30c:	9f 91       	pop	r25
+     30e:	8f 91       	pop	r24
+     310:	7f 91       	pop	r23
+     312:	6f 91       	pop	r22
+     314:	5f 91       	pop	r21
+     316:	4f 91       	pop	r20
+     318:	3f 91       	pop	r19
+     31a:	2f 91       	pop	r18
+     31c:	0f 90       	pop	r0
+     31e:	0f be       	out	0x3f, r0	; 63
+     320:	0f 90       	pop	r0
+     322:	1f 90       	pop	r1
+     324:	18 95       	reti
+
+00000326 <__vector_19>:
+ *
+ * This function will handle interrupt on Timer Counter C5 error and
+ * call the callback function.
+ */
+ISR(TCC5_ERR_vect)
+{
+     326:	1f 92       	push	r1
+     328:	0f 92       	push	r0
+     32a:	0f b6       	in	r0, 0x3f	; 63
+     32c:	0f 92       	push	r0
+     32e:	11 24       	eor	r1, r1
+     330:	2f 93       	push	r18
+     332:	3f 93       	push	r19
+     334:	4f 93       	push	r20
+     336:	5f 93       	push	r21
+     338:	6f 93       	push	r22
+     33a:	7f 93       	push	r23
+     33c:	8f 93       	push	r24
+     33e:	9f 93       	push	r25
+     340:	af 93       	push	r26
+     342:	bf 93       	push	r27
+     344:	ef 93       	push	r30
+     346:	ff 93       	push	r31
+	if (tc45_tcc5_err_callback) {
+     348:	e0 91 28 20 	lds	r30, 0x2028
+     34c:	f0 91 29 20 	lds	r31, 0x2029
+     350:	30 97       	sbiw	r30, 0x00	; 0
+     352:	09 f0       	breq	.+2      	; 0x356 <__vector_19+0x30>
+		tc45_tcc5_err_callback();
+     354:	09 95       	icall
+	}
+}
+     356:	ff 91       	pop	r31
+     358:	ef 91       	pop	r30
+     35a:	bf 91       	pop	r27
+     35c:	af 91       	pop	r26
+     35e:	9f 91       	pop	r25
+     360:	8f 91       	pop	r24
+     362:	7f 91       	pop	r23
+     364:	6f 91       	pop	r22
+     366:	5f 91       	pop	r21
+     368:	4f 91       	pop	r20
+     36a:	3f 91       	pop	r19
+     36c:	2f 91       	pop	r18
+     36e:	0f 90       	pop	r0
+     370:	0f be       	out	0x3f, r0	; 63
+     372:	0f 90       	pop	r0
+     374:	1f 90       	pop	r1
+     376:	18 95       	reti
+
+00000378 <__vector_20>:
+ *
+ * This function will handle interrupt on Timer Counter C5 Compare/CaptureA and
+ * call the callback function.
+ */
+ISR(TCC5_CCA_vect)
+{
+     378:	1f 92       	push	r1
+     37a:	0f 92       	push	r0
+     37c:	0f b6       	in	r0, 0x3f	; 63
+     37e:	0f 92       	push	r0
+     380:	11 24       	eor	r1, r1
+     382:	2f 93       	push	r18
+     384:	3f 93       	push	r19
+     386:	4f 93       	push	r20
+     388:	5f 93       	push	r21
+     38a:	6f 93       	push	r22
+     38c:	7f 93       	push	r23
+     38e:	8f 93       	push	r24
+     390:	9f 93       	push	r25
+     392:	af 93       	push	r26
+     394:	bf 93       	push	r27
+     396:	ef 93       	push	r30
+     398:	ff 93       	push	r31
+	if (tc45_tcc5_cca_callback) {
+     39a:	e0 91 26 20 	lds	r30, 0x2026
+     39e:	f0 91 27 20 	lds	r31, 0x2027
+     3a2:	30 97       	sbiw	r30, 0x00	; 0
+     3a4:	09 f0       	breq	.+2      	; 0x3a8 <__vector_20+0x30>
+		tc45_tcc5_cca_callback();
+     3a6:	09 95       	icall
+	}
+}
+     3a8:	ff 91       	pop	r31
+     3aa:	ef 91       	pop	r30
+     3ac:	bf 91       	pop	r27
+     3ae:	af 91       	pop	r26
+     3b0:	9f 91       	pop	r25
+     3b2:	8f 91       	pop	r24
+     3b4:	7f 91       	pop	r23
+     3b6:	6f 91       	pop	r22
+     3b8:	5f 91       	pop	r21
+     3ba:	4f 91       	pop	r20
+     3bc:	3f 91       	pop	r19
+     3be:	2f 91       	pop	r18
+     3c0:	0f 90       	pop	r0
+     3c2:	0f be       	out	0x3f, r0	; 63
+     3c4:	0f 90       	pop	r0
+     3c6:	1f 90       	pop	r1
+     3c8:	18 95       	reti
+
+000003ca <__vector_21>:
+ *
+ * This function will handle interrupt on Timer Counter C5 Compare/CaptureB and
+ * call the callback function.
+ */
+ISR(TCC5_CCB_vect)
+{
+     3ca:	1f 92       	push	r1
+     3cc:	0f 92       	push	r0
+     3ce:	0f b6       	in	r0, 0x3f	; 63
+     3d0:	0f 92       	push	r0
+     3d2:	11 24       	eor	r1, r1
+     3d4:	2f 93       	push	r18
+     3d6:	3f 93       	push	r19
+     3d8:	4f 93       	push	r20
+     3da:	5f 93       	push	r21
+     3dc:	6f 93       	push	r22
+     3de:	7f 93       	push	r23
+     3e0:	8f 93       	push	r24
+     3e2:	9f 93       	push	r25
+     3e4:	af 93       	push	r26
+     3e6:	bf 93       	push	r27
+     3e8:	ef 93       	push	r30
+     3ea:	ff 93       	push	r31
+	if (tc45_tcc5_ccb_callback) {
+     3ec:	e0 91 24 20 	lds	r30, 0x2024
+     3f0:	f0 91 25 20 	lds	r31, 0x2025
+     3f4:	30 97       	sbiw	r30, 0x00	; 0
+     3f6:	09 f0       	breq	.+2      	; 0x3fa <__vector_21+0x30>
+		tc45_tcc5_ccb_callback();
+     3f8:	09 95       	icall
+	}
+}
+     3fa:	ff 91       	pop	r31
+     3fc:	ef 91       	pop	r30
+     3fe:	bf 91       	pop	r27
+     400:	af 91       	pop	r26
+     402:	9f 91       	pop	r25
+     404:	8f 91       	pop	r24
+     406:	7f 91       	pop	r23
+     408:	6f 91       	pop	r22
+     40a:	5f 91       	pop	r21
+     40c:	4f 91       	pop	r20
+     40e:	3f 91       	pop	r19
+     410:	2f 91       	pop	r18
+     412:	0f 90       	pop	r0
+     414:	0f be       	out	0x3f, r0	; 63
+     416:	0f 90       	pop	r0
+     418:	1f 90       	pop	r1
+     41a:	18 95       	reti
+
+0000041c <__vector_36>:
+ *
+ * This function will handle interrupt on Timer Counter D5 overflow and
+ * call the callback function.
+ */
+ISR(TCD5_OVF_vect)
+{
+     41c:	1f 92       	push	r1
+     41e:	0f 92       	push	r0
+     420:	0f b6       	in	r0, 0x3f	; 63
+     422:	0f 92       	push	r0
+     424:	11 24       	eor	r1, r1
+     426:	2f 93       	push	r18
+     428:	3f 93       	push	r19
+     42a:	4f 93       	push	r20
+     42c:	5f 93       	push	r21
+     42e:	6f 93       	push	r22
+     430:	7f 93       	push	r23
+     432:	8f 93       	push	r24
+     434:	9f 93       	push	r25
+     436:	af 93       	push	r26
+     438:	bf 93       	push	r27
+     43a:	ef 93       	push	r30
+     43c:	ff 93       	push	r31
+	if (tc45_tcd5_ovf_callback) {
+     43e:	e0 91 22 20 	lds	r30, 0x2022
+     442:	f0 91 23 20 	lds	r31, 0x2023
+     446:	30 97       	sbiw	r30, 0x00	; 0
+     448:	09 f0       	breq	.+2      	; 0x44c <__vector_36+0x30>
+		tc45_tcd5_ovf_callback();
+     44a:	09 95       	icall
+	}
+}
+     44c:	ff 91       	pop	r31
+     44e:	ef 91       	pop	r30
+     450:	bf 91       	pop	r27
+     452:	af 91       	pop	r26
+     454:	9f 91       	pop	r25
+     456:	8f 91       	pop	r24
+     458:	7f 91       	pop	r23
+     45a:	6f 91       	pop	r22
+     45c:	5f 91       	pop	r21
+     45e:	4f 91       	pop	r20
+     460:	3f 91       	pop	r19
+     462:	2f 91       	pop	r18
+     464:	0f 90       	pop	r0
+     466:	0f be       	out	0x3f, r0	; 63
+     468:	0f 90       	pop	r0
+     46a:	1f 90       	pop	r1
+     46c:	18 95       	reti
+
+0000046e <__vector_37>:
+ *
+ * This function will handle interrupt on Timer Counter D5 error and
+ * call the callback function.
+ */
+ISR(TCD5_ERR_vect)
+{
+     46e:	1f 92       	push	r1
+     470:	0f 92       	push	r0
+     472:	0f b6       	in	r0, 0x3f	; 63
+     474:	0f 92       	push	r0
+     476:	11 24       	eor	r1, r1
+     478:	2f 93       	push	r18
+     47a:	3f 93       	push	r19
+     47c:	4f 93       	push	r20
+     47e:	5f 93       	push	r21
+     480:	6f 93       	push	r22
+     482:	7f 93       	push	r23
+     484:	8f 93       	push	r24
+     486:	9f 93       	push	r25
+     488:	af 93       	push	r26
+     48a:	bf 93       	push	r27
+     48c:	ef 93       	push	r30
+     48e:	ff 93       	push	r31
+	if (tc45_tcd5_err_callback) {
+     490:	e0 91 20 20 	lds	r30, 0x2020
+     494:	f0 91 21 20 	lds	r31, 0x2021
+     498:	30 97       	sbiw	r30, 0x00	; 0
+     49a:	09 f0       	breq	.+2      	; 0x49e <__vector_37+0x30>
+		tc45_tcd5_err_callback();
+     49c:	09 95       	icall
+	}
+}
+     49e:	ff 91       	pop	r31
+     4a0:	ef 91       	pop	r30
+     4a2:	bf 91       	pop	r27
+     4a4:	af 91       	pop	r26
+     4a6:	9f 91       	pop	r25
+     4a8:	8f 91       	pop	r24
+     4aa:	7f 91       	pop	r23
+     4ac:	6f 91       	pop	r22
+     4ae:	5f 91       	pop	r21
+     4b0:	4f 91       	pop	r20
+     4b2:	3f 91       	pop	r19
+     4b4:	2f 91       	pop	r18
+     4b6:	0f 90       	pop	r0
+     4b8:	0f be       	out	0x3f, r0	; 63
+     4ba:	0f 90       	pop	r0
+     4bc:	1f 90       	pop	r1
+     4be:	18 95       	reti
+
+000004c0 <__vector_38>:
+ *
+ * This function will handle interrupt on Timer Counter D5 Compare/CaptureA and
+ * call the callback function.
+ */
+ISR(TCD5_CCA_vect)
+{
+     4c0:	1f 92       	push	r1
+     4c2:	0f 92       	push	r0
+     4c4:	0f b6       	in	r0, 0x3f	; 63
+     4c6:	0f 92       	push	r0
+     4c8:	11 24       	eor	r1, r1
+     4ca:	2f 93       	push	r18
+     4cc:	3f 93       	push	r19
+     4ce:	4f 93       	push	r20
+     4d0:	5f 93       	push	r21
+     4d2:	6f 93       	push	r22
+     4d4:	7f 93       	push	r23
+     4d6:	8f 93       	push	r24
+     4d8:	9f 93       	push	r25
+     4da:	af 93       	push	r26
+     4dc:	bf 93       	push	r27
+     4de:	ef 93       	push	r30
+     4e0:	ff 93       	push	r31
+	if (tc45_tcd5_cca_callback) {
+     4e2:	e0 91 1e 20 	lds	r30, 0x201E
+     4e6:	f0 91 1f 20 	lds	r31, 0x201F
+     4ea:	30 97       	sbiw	r30, 0x00	; 0
+     4ec:	09 f0       	breq	.+2      	; 0x4f0 <__vector_38+0x30>
+		tc45_tcd5_cca_callback();
+     4ee:	09 95       	icall
+	}
+}
+     4f0:	ff 91       	pop	r31
+     4f2:	ef 91       	pop	r30
+     4f4:	bf 91       	pop	r27
+     4f6:	af 91       	pop	r26
+     4f8:	9f 91       	pop	r25
+     4fa:	8f 91       	pop	r24
+     4fc:	7f 91       	pop	r23
+     4fe:	6f 91       	pop	r22
+     500:	5f 91       	pop	r21
+     502:	4f 91       	pop	r20
+     504:	3f 91       	pop	r19
+     506:	2f 91       	pop	r18
+     508:	0f 90       	pop	r0
+     50a:	0f be       	out	0x3f, r0	; 63
+     50c:	0f 90       	pop	r0
+     50e:	1f 90       	pop	r1
+     510:	18 95       	reti
+
+00000512 <__vector_39>:
+ *
+ * This function will handle interrupt on Timer Counter D5 Compare/CaptureB and
+ * call the callback function.
+ */
+ISR(TCD5_CCB_vect)
+{
+     512:	1f 92       	push	r1
+     514:	0f 92       	push	r0
+     516:	0f b6       	in	r0, 0x3f	; 63
+     518:	0f 92       	push	r0
+     51a:	11 24       	eor	r1, r1
+     51c:	2f 93       	push	r18
+     51e:	3f 93       	push	r19
+     520:	4f 93       	push	r20
+     522:	5f 93       	push	r21
+     524:	6f 93       	push	r22
+     526:	7f 93       	push	r23
+     528:	8f 93       	push	r24
+     52a:	9f 93       	push	r25
+     52c:	af 93       	push	r26
+     52e:	bf 93       	push	r27
+     530:	ef 93       	push	r30
+     532:	ff 93       	push	r31
+	if (tc45_tcd5_ccb_callback) {
+     534:	e0 91 1c 20 	lds	r30, 0x201C
+     538:	f0 91 1d 20 	lds	r31, 0x201D
+     53c:	30 97       	sbiw	r30, 0x00	; 0
+     53e:	09 f0       	breq	.+2      	; 0x542 <__vector_39+0x30>
+		tc45_tcd5_ccb_callback();
+     540:	09 95       	icall
+	}
+}
+     542:	ff 91       	pop	r31
+     544:	ef 91       	pop	r30
+     546:	bf 91       	pop	r27
+     548:	af 91       	pop	r26
+     54a:	9f 91       	pop	r25
+     54c:	8f 91       	pop	r24
+     54e:	7f 91       	pop	r23
+     550:	6f 91       	pop	r22
+     552:	5f 91       	pop	r21
+     554:	4f 91       	pop	r20
+     556:	3f 91       	pop	r19
+     558:	2f 91       	pop	r18
+     55a:	0f 90       	pop	r0
+     55c:	0f be       	out	0x3f, r0	; 63
+     55e:	0f 90       	pop	r0
+     560:	1f 90       	pop	r1
+     562:	18 95       	reti
+
+00000564 <tc45_enable>:
+ *
+ * \note
+ * unmask TC45 clock (sysclk), but does not configure the TC45 clock source.
+ */
+void tc45_enable(volatile void *tc)
+{
+     564:	cf 93       	push	r28
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+     566:	cf b7       	in	r28, 0x3f	; 63
+	cpu_irq_disable();
+     568:	f8 94       	cli
+	irqflags_t iflags = cpu_irq_save();
+
+#ifdef TCC4
+	if ((uintptr_t)tc == (uintptr_t)&TCC4) {
+     56a:	28 2f       	mov	r18, r24
+     56c:	39 2f       	mov	r19, r25
+     56e:	21 15       	cp	r18, r1
+     570:	88 e0       	ldi	r24, 0x08	; 8
+     572:	38 07       	cpc	r19, r24
+     574:	39 f4       	brne	.+14     	; 0x584 <tc45_enable+0x20>
+		sysclk_enable_module(SYSCLK_PORT_C, SYSCLK_TC4);
+     576:	61 e0       	ldi	r22, 0x01	; 1
+     578:	83 e0       	ldi	r24, 0x03	; 3
+     57a:	8d d6       	rcall	.+3354   	; 0x1296 <sysclk_enable_module>
+		sysclk_enable_module(SYSCLK_PORT_C, SYSCLK_HIRES);
+     57c:	64 e0       	ldi	r22, 0x04	; 4
+     57e:	83 e0       	ldi	r24, 0x03	; 3
+     580:	8a d6       	rcall	.+3348   	; 0x1296 <sysclk_enable_module>
+     582:	17 c0       	rjmp	.+46     	; 0x5b2 <tc45_enable+0x4e>
+	} else
+#endif
+#ifdef TCC5
+	if ((uintptr_t)tc == (uintptr_t)&TCC5) {
+     584:	20 34       	cpi	r18, 0x40	; 64
+     586:	88 e0       	ldi	r24, 0x08	; 8
+     588:	38 07       	cpc	r19, r24
+     58a:	39 f4       	brne	.+14     	; 0x59a <tc45_enable+0x36>
+		sysclk_enable_module(SYSCLK_PORT_C, SYSCLK_TC5);
+     58c:	62 e0       	ldi	r22, 0x02	; 2
+     58e:	83 e0       	ldi	r24, 0x03	; 3
+     590:	82 d6       	rcall	.+3332   	; 0x1296 <sysclk_enable_module>
+		sysclk_enable_module(SYSCLK_PORT_C, SYSCLK_HIRES);
+     592:	64 e0       	ldi	r22, 0x04	; 4
+     594:	83 e0       	ldi	r24, 0x03	; 3
+     596:	7f d6       	rcall	.+3326   	; 0x1296 <sysclk_enable_module>
+     598:	0c c0       	rjmp	.+24     	; 0x5b2 <tc45_enable+0x4e>
+	} else
+#endif
+#ifdef TCD5
+	if ((uintptr_t)tc == (uintptr_t)&TCD5) {
+     59a:	20 34       	cpi	r18, 0x40	; 64
+     59c:	39 40       	sbci	r19, 0x09	; 9
+     59e:	39 f4       	brne	.+14     	; 0x5ae <tc45_enable+0x4a>
+		sysclk_enable_module(SYSCLK_PORT_D, SYSCLK_TC5);
+     5a0:	62 e0       	ldi	r22, 0x02	; 2
+     5a2:	84 e0       	ldi	r24, 0x04	; 4
+     5a4:	78 d6       	rcall	.+3312   	; 0x1296 <sysclk_enable_module>
+		sysclk_enable_module(SYSCLK_PORT_D, SYSCLK_HIRES);
+     5a6:	64 e0       	ldi	r22, 0x04	; 4
+     5a8:	84 e0       	ldi	r24, 0x04	; 4
+     5aa:	75 d6       	rcall	.+3306   	; 0x1296 <sysclk_enable_module>
+     5ac:	02 c0       	rjmp	.+4      	; 0x5b2 <tc45_enable+0x4e>
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+     5ae:	cf bf       	out	0x3f, r28	; 63
+     5b0:	0e c0       	rjmp	.+28     	; 0x5ce <tc45_enable+0x6a>
+static inline void sleepmgr_lock_mode(enum sleepmgr_mode mode)
+{
+#ifdef CONFIG_SLEEPMGR_ENABLE
+	irqflags_t flags;
+
+	if(sleepmgr_locks[mode] >= 0xff) {
+     5b2:	80 91 bc 20 	lds	r24, 0x20BC
+     5b6:	8f 3f       	cpi	r24, 0xFF	; 255
+     5b8:	09 f4       	brne	.+2      	; 0x5bc <tc45_enable+0x58>
+     5ba:	ff cf       	rjmp	.-2      	; 0x5ba <tc45_enable+0x56>
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+     5bc:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+     5be:	f8 94       	cli
+	}
+
+	// Enter a critical section
+	flags = cpu_irq_save();
+
+	++sleepmgr_locks[mode];
+     5c0:	eb eb       	ldi	r30, 0xBB	; 187
+     5c2:	f0 e2       	ldi	r31, 0x20	; 32
+     5c4:	81 81       	ldd	r24, Z+1	; 0x01
+     5c6:	8f 5f       	subi	r24, 0xFF	; 255
+     5c8:	81 83       	std	Z+1, r24	; 0x01
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+     5ca:	9f bf       	out	0x3f, r25	; 63
+     5cc:	cf bf       	out	0x3f, r28	; 63
+		cpu_irq_restore(iflags);
+		return;
+	}
+	sleepmgr_lock_mode(SLEEPMGR_IDLE);
+	cpu_irq_restore(iflags);
+}
+     5ce:	cf 91       	pop	r28
+     5d0:	08 95       	ret
+
+000005d2 <__vector_28>:
+ *
+ * \param callback Reference to a callback function
+ */
+void xcl_set_unf_interrupt_callback(xcl_callback_t callback)
+{
+	xcl_unf_callback = callback;
+     5d2:	1f 92       	push	r1
+     5d4:	0f 92       	push	r0
+     5d6:	0f b6       	in	r0, 0x3f	; 63
+     5d8:	0f 92       	push	r0
+     5da:	11 24       	eor	r1, r1
+     5dc:	2f 93       	push	r18
+     5de:	3f 93       	push	r19
+     5e0:	4f 93       	push	r20
+     5e2:	5f 93       	push	r21
+     5e4:	6f 93       	push	r22
+     5e6:	7f 93       	push	r23
+     5e8:	8f 93       	push	r24
+     5ea:	9f 93       	push	r25
+     5ec:	af 93       	push	r26
+     5ee:	bf 93       	push	r27
+     5f0:	ef 93       	push	r30
+     5f2:	ff 93       	push	r31
+     5f4:	e0 91 3a 20 	lds	r30, 0x203A
+     5f8:	f0 91 3b 20 	lds	r31, 0x203B
+     5fc:	09 95       	icall
+     5fe:	ff 91       	pop	r31
+     600:	ef 91       	pop	r30
+     602:	bf 91       	pop	r27
+     604:	af 91       	pop	r26
+     606:	9f 91       	pop	r25
+     608:	8f 91       	pop	r24
+     60a:	7f 91       	pop	r23
+     60c:	6f 91       	pop	r22
+     60e:	5f 91       	pop	r21
+     610:	4f 91       	pop	r20
+     612:	3f 91       	pop	r19
+     614:	2f 91       	pop	r18
+     616:	0f 90       	pop	r0
+     618:	0f be       	out	0x3f, r0	; 63
+     61a:	0f 90       	pop	r0
+     61c:	1f 90       	pop	r1
+     61e:	18 95       	reti
+
+00000620 <__vector_29>:
+ * \note
+ * This ISR is declared only when CONFIG_XCL_CALLBACK_ENABLE is active in
+ * conf_xcl.h.
+ */
+ISR(XCL_CC_vect)
+{
+     620:	1f 92       	push	r1
+     622:	0f 92       	push	r0
+     624:	0f b6       	in	r0, 0x3f	; 63
+     626:	0f 92       	push	r0
+     628:	11 24       	eor	r1, r1
+     62a:	2f 93       	push	r18
+     62c:	3f 93       	push	r19
+     62e:	4f 93       	push	r20
+     630:	5f 93       	push	r21
+     632:	6f 93       	push	r22
+     634:	7f 93       	push	r23
+     636:	8f 93       	push	r24
+     638:	9f 93       	push	r25
+     63a:	af 93       	push	r26
+     63c:	bf 93       	push	r27
+     63e:	ef 93       	push	r30
+     640:	ff 93       	push	r31
+	Assert(xcl_cc_callback != NULL);
+	xcl_cc_callback();
+     642:	e0 91 38 20 	lds	r30, 0x2038
+     646:	f0 91 39 20 	lds	r31, 0x2039
+     64a:	09 95       	icall
+}
+     64c:	ff 91       	pop	r31
+     64e:	ef 91       	pop	r30
+     650:	bf 91       	pop	r27
+     652:	af 91       	pop	r26
+     654:	9f 91       	pop	r25
+     656:	8f 91       	pop	r24
+     658:	7f 91       	pop	r23
+     65a:	6f 91       	pop	r22
+     65c:	5f 91       	pop	r21
+     65e:	4f 91       	pop	r20
+     660:	3f 91       	pop	r19
+     662:	2f 91       	pop	r18
+     664:	0f 90       	pop	r0
+     666:	0f be       	out	0x3f, r0	; 63
+     668:	0f 90       	pop	r0
+     66a:	1f 90       	pop	r1
+     66c:	18 95       	reti
+
+0000066e <RF_init>:
+extern tSX1276LR SX1276LR;
+const char paket[]="12345678901234567890123456789";
+
+void RF_init(void)
+{	
+	SX1276Init();
+     66e:	9d d3       	rcall	.+1850   	; 0xdaa <SX1276Init>
+     670:	8a ea       	ldi	r24, 0xAA	; 170
+     672:	90 ea       	ldi	r25, 0xA0	; 160
+     674:	a1 e0       	ldi	r26, 0x01	; 1
+     676:	b0 e0       	ldi	r27, 0x00	; 0
+ * @{
+ */
+__always_optimize
+static inline void __portable_avr_delay_cycles(unsigned long n)
+{
+	do { barrier(); } while (--n);
+     678:	01 97       	sbiw	r24, 0x01	; 1
+     67a:	a1 09       	sbc	r26, r1
+     67c:	b1 09       	sbc	r27, r1
+     67e:	e1 f7       	brne	.-8      	; 0x678 <RF_init+0xa>
+	delay_ms(20);
+	
+	/* /Reruseni IRQ0 */
+	PORTC.INTMASK |= PIN2_bm;
+     680:	e0 e4       	ldi	r30, 0x40	; 64
+     682:	f6 e0       	ldi	r31, 0x06	; 6
+     684:	82 85       	ldd	r24, Z+10	; 0x0a
+     686:	84 60       	ori	r24, 0x04	; 4
+     688:	82 87       	std	Z+10, r24	; 0x0a
+	PORTC.INTCTRL |= PORT_INTLVL_LO_gc;
+     68a:	81 85       	ldd	r24, Z+9	; 0x09
+     68c:	81 60       	ori	r24, 0x01	; 1
+     68e:	81 87       	std	Z+9, r24	; 0x09
+     690:	08 95       	ret
+
+00000692 <Send_data>:
+}
+// 
+// /************************************************************************/
+// 
+void Send_data(uint8_t *data,uint8_t Length)
+{
+     692:	ef 92       	push	r14
+     694:	ff 92       	push	r15
+     696:	1f 93       	push	r17
+     698:	cf 93       	push	r28
+     69a:	df 93       	push	r29
+     69c:	7c 01       	movw	r14, r24
+     69e:	16 2f       	mov	r17, r22
+	uint8_t Temp=0;
+	uint16_t Timeout=2600;	// u kzadeho oboju musi byt jinak ?!?!?
+	
+	// see errata note
+	//SX1276LoRaSetOpMode( RFLR_OPMODE_SLEEP );
+	SX1276LoRaSetOpMode( RFLR_OPMODE_STANDBY );
+     6a0:	81 e0       	ldi	r24, 0x01	; 1
+     6a2:	d3 d2       	rcall	.+1446   	; 0xc4a <SX1276LoRaSetOpMode>
+
+	 SX1276LR.RegIrqFlagsMask = 
+     6a4:	ca e4       	ldi	r28, 0x4A	; 74
+     6a6:	d0 e2       	ldi	r29, 0x20	; 32
+     6a8:	86 ef       	ldi	r24, 0xF6	; 246
+     6aa:	89 8b       	std	Y+17, r24	; 0x11
+	 RFLR_IRQFLAGS_CADDONE |
+	 RFLR_IRQFLAGS_FHSSCHANGEDCHANNEL
+	 //|RFLR_IRQFLAGS_CADDETECTED
+	 ;
+			 
+	SX1276LR.RegHopPeriod = 0;
+     6ac:	1c a2       	std	Y+36, r1	; 0x24
+	
+	SX1276Write(REG_LR_HOPPERIOD, SX1276LR.RegHopPeriod );	//0x1C
+     6ae:	60 e0       	ldi	r22, 0x00	; 0
+     6b0:	84 e2       	ldi	r24, 0x24	; 36
+     6b2:	49 d2       	rcall	.+1170   	; 0xb46 <SX1276Write>
+	SX1276Write( REG_LR_IRQFLAGSMASK, SX1276LR.RegIrqFlagsMask );
+     6b4:	69 89       	ldd	r22, Y+17	; 0x11
+     6b6:	81 e1       	ldi	r24, 0x11	; 17
+     6b8:	46 d2       	rcall	.+1164   	; 0xb46 <SX1276Write>
+
+	// Initializes the payload size
+	SX1276LR.RegPayloadLength = Length;
+     6ba:	1a a3       	std	Y+34, r17	; 0x22
+	SX1276Write(REG_LR_PAYLOADLENGTH, SX1276LR.RegPayloadLength );	//0x17
+     6bc:	61 2f       	mov	r22, r17
+     6be:	82 e2       	ldi	r24, 0x22	; 34
+     6c0:	42 d2       	rcall	.+1156   	; 0xb46 <SX1276Write>
+	
+	SX1276LR.RegFifoTxBaseAddr = 0x00; // Full buffer used for Tx
+     6c2:	1e 86       	std	Y+14, r1	; 0x0e
+	SX1276Write( REG_LR_FIFOTXBASEADDR, SX1276LR.RegFifoTxBaseAddr );
+     6c4:	60 e0       	ldi	r22, 0x00	; 0
+     6c6:	8e e0       	ldi	r24, 0x0E	; 14
+     6c8:	3e d2       	rcall	.+1148   	; 0xb46 <SX1276Write>
+
+	SX1276LR.RegFifoAddrPtr = SX1276LR.RegFifoTxBaseAddr;
+     6ca:	6e 85       	ldd	r22, Y+14	; 0x0e
+     6cc:	6d 87       	std	Y+13, r22	; 0x0d
+	SX1276Write( REG_LR_FIFOADDRPTR, SX1276LR.RegFifoAddrPtr );
+     6ce:	8d e0       	ldi	r24, 0x0D	; 13
+     6d0:	3a d2       	rcall	.+1140   	; 0xb46 <SX1276Write>
+	
+	// Write payload buffer to LORA modem
+	SX1276WriteFifo(data,Length);
+     6d2:	61 2f       	mov	r22, r17
+     6d4:	c7 01       	movw	r24, r14
+     6d6:	6d d2       	rcall	.+1242   	; 0xbb2 <SX1276WriteFifo>
+								
+								///TX done						//CAD DONE							//Detected CAD	
+	 SX1276LR.RegDioMapping1 = RFLR_DIOMAPPING1_DIO0_01;// | RFLR_DIOMAPPING1_DIO0_10 |RFLR_DIOMAPPING1_DIO1_10 ;//| RFLR_DIOMAPPING1_DIO1_00 | RFLR_DIOMAPPING1_DIO2_00 | RFLR_DIOMAPPING1_DIO3_01;
+     6d8:	80 e4       	ldi	r24, 0x40	; 64
+     6da:	80 93 89 20 	sts	0x2089, r24
+	 // PllLock              Mode Ready
+	 SX1276LR.RegDioMapping2 = 0;//RFLR_DIOMAPPING2_DIO4_01 | RFLR_DIOMAPPING2_DIO5_00;
+     6de:	10 92 8a 20 	sts	0x208A, r1
+	SX1276WriteBuffer( REG_LR_DIOMAPPING1, &SX1276LR.RegDioMapping1, 2 );
+     6e2:	42 e0       	ldi	r20, 0x02	; 2
+     6e4:	69 e8       	ldi	r22, 0x89	; 137
+     6e6:	70 e2       	ldi	r23, 0x20	; 32
+     6e8:	0a d2       	rcall	.+1044   	; 0xafe <SX1276WriteBuffer>
+// 		gpio_toggle_pin(LED2);				//...tak pockame
+// 		delay_ms(400); 
+// 			
+// 	}
+// 	gpio_toggle_pin(LED2);
+	SX1276LoRaSetOpMode( RFLR_OPMODE_TRANSMITTER );
+     6ea:	83 e0       	ldi	r24, 0x03	; 3
+     6ec:	ae d2       	rcall	.+1372   	; 0xc4a <SX1276LoRaSetOpMode>
+	
+	
+}
+     6ee:	df 91       	pop	r29
+     6f0:	cf 91       	pop	r28
+     6f2:	1f 91       	pop	r17
+     6f4:	ff 90       	pop	r15
+     6f6:	ef 90       	pop	r14
+     6f8:	08 95       	ret
+
+000006fa <RF_Task>:
+
+/**************************************************************************/
+void RF_Task(TASKS_STATE *Status,QUEUES_TASKS *Queue)
+{	
+     6fa:	ac 01       	movw	r20, r24
+	static uint8_t Buffer[40];
+	
+	
+	//pokud jsou data odeslany, posli dalsi balik
+	if ((Queue->DataToRF.Packet_sent==0x63)&&(Queue->DataToRF.GPS_New_Data==0x63))
+     6fc:	fb 01       	movw	r30, r22
+     6fe:	e1 53       	subi	r30, 0x31	; 49
+     700:	ff 4f       	sbci	r31, 0xFF	; 255
+     702:	90 81       	ld	r25, Z
+     704:	93 36       	cpi	r25, 0x63	; 99
+     706:	a1 f4       	brne	.+40     	; 0x730 <RF_Task+0x36>
+     708:	31 96       	adiw	r30, 0x01	; 1
+     70a:	80 81       	ld	r24, Z
+     70c:	83 36       	cpi	r24, 0x63	; 99
+     70e:	81 f4       	brne	.+32     	; 0x730 <RF_Task+0x36>
+     710:	9b 01       	movw	r18, r22
+     712:	da 01       	movw	r26, r20
+	{	
+			
+		Queue->DataToRF.Packet_sent=0;
+     714:	31 97       	sbiw	r30, 0x01	; 1
+     716:	10 82       	st	Z, r1
+		Queue->DataToRF.GPS_New_Data=0;
+     718:	31 96       	adiw	r30, 0x01	; 1
+     71a:	10 82       	st	Z, r1
+		Status->RFTask=TASK_OFF;
+     71c:	81 e0       	ldi	r24, 0x01	; 1
+     71e:	12 96       	adiw	r26, 0x02	; 2
+     720:	8c 93       	st	X, r24
+		
+		Tx_running=1;
+     722:	80 93 c3 20 	sts	0x20C3, r24
+		//spi_enable(&SPIC);
+		Send_data(Queue->DataToRF.TX_Buff,8);
+     726:	68 e0       	ldi	r22, 0x08	; 8
+     728:	c9 01       	movw	r24, r18
+     72a:	8f 52       	subi	r24, 0x2F	; 47
+     72c:	9f 4f       	sbci	r25, 0xFF	; 255
+     72e:	b1 cf       	rjmp	.-158    	; 0x692 <Send_data>
+     730:	08 95       	ret
+
+00000732 <Check_status>:
+// 	if ((Temp&RFLR_IRQFLAGS_TXDONE)==RFLR_IRQFLAGS_TXDONE)
+// 	{	
+// 	
+	
+		//spi_enable(&SPIC);
+		Tx_running=0;
+     732:	10 92 c3 20 	sts	0x20C3, r1
+		//
+		// Clear Irq
+		SX1276Write( REG_LR_IRQFLAGS, RFLR_IRQFLAGS_TXDONE  );	//or 0x10??
+     736:	68 e0       	ldi	r22, 0x08	; 8
+     738:	82 e1       	ldi	r24, 0x12	; 18
+     73a:	05 d2       	rcall	.+1034   	; 0xb46 <SX1276Write>
+		// optimize the power consumption by switching off the transmitter as soon as the packet has been sent
+		SX1276LoRaSetOpMode( RFLR_OPMODE_STANDBY);
+     73c:	81 e0       	ldi	r24, 0x01	; 1
+     73e:	85 d2       	rcall	.+1290   	; 0xc4a <SX1276LoRaSetOpMode>
+		SX1276LoRaSetOpMode( RFLR_OPMODE_SLEEP);
+     740:	80 e0       	ldi	r24, 0x00	; 0
+     742:	83 d2       	rcall	.+1286   	; 0xc4a <SX1276LoRaSetOpMode>
+     744:	80 e0       	ldi	r24, 0x00	; 0
+     746:	90 e0       	ldi	r25, 0x00	; 0
+     748:	01 96       	adiw	r24, 0x01	; 1
+     74a:	85 3d       	cpi	r24, 0xD5	; 213
+     74c:	24 e1       	ldi	r18, 0x14	; 20
+     74e:	92 07       	cpc	r25, r18
+     750:	d9 f7       	brne	.-10     	; 0x748 <Check_status+0x16>
+		
+		return 0x63;	//packet sent
+	//}
+	
+	//return 0;
+}
+     752:	83 e6       	ldi	r24, 0x63	; 99
+     754:	08 95       	ret
+
+00000756 <SX1276LoRaSetRFPower>:
+	SX1276LR->RegPaDac&=0x4;	//0x7 pro 20dBm
+	SX1276Write( REG_LR_PADAC, SX1276LR->RegPaDac );	//PA +20dBm
+}
+
+void SX1276LoRaSetRFPower( int8_t power,tSX1276LR *SX1276LR  )
+{
+     756:	0f 93       	push	r16
+     758:	1f 93       	push	r17
+     75a:	cf 93       	push	r28
+     75c:	c8 2f       	mov	r28, r24
+     75e:	8b 01       	movw	r16, r22
+	SX1276Read( REG_LR_PACONFIG, &SX1276LR->RegPaConfig );
+     760:	67 5f       	subi	r22, 0xF7	; 247
+     762:	7f 4f       	sbci	r23, 0xFF	; 255
+     764:	89 e0       	ldi	r24, 0x09	; 9
+     766:	22 d2       	rcall	.+1092   	; 0xbac <SX1276Read>
+	SX1276Read( REG_LR_PADAC, &SX1276LR->RegPaDac );
+     768:	b8 01       	movw	r22, r16
+     76a:	64 5b       	subi	r22, 0xB4	; 180
+     76c:	7f 4f       	sbci	r23, 0xFF	; 255
+     76e:	8d e4       	ldi	r24, 0x4D	; 77
+     770:	1d d2       	rcall	.+1082   	; 0xbac <SX1276Read>
+	
+	if( ( SX1276LR->RegPaConfig & RFLR_PACONFIG_PASELECT_PABOOST ) == RFLR_PACONFIG_PASELECT_PABOOST )
+     772:	f8 01       	movw	r30, r16
+     774:	91 85       	ldd	r25, Z+9	; 0x09
+     776:	99 23       	and	r25, r25
+     778:	14 f5       	brge	.+68     	; 0x7be <SX1276LoRaSetRFPower+0x68>
+	{
+		if( ( SX1276LR->RegPaDac & 0x87 ) == 0x87 )
+     77a:	e4 5b       	subi	r30, 0xB4	; 180
+     77c:	ff 4f       	sbci	r31, 0xFF	; 255
+     77e:	80 81       	ld	r24, Z
+     780:	87 78       	andi	r24, 0x87	; 135
+     782:	87 38       	cpi	r24, 0x87	; 135
+     784:	71 f4       	brne	.+28     	; 0x7a2 <SX1276LoRaSetRFPower+0x4c>
+		{
+			if( power < 5 )
+     786:	c5 30       	cpi	r28, 0x05	; 5
+     788:	0c f4       	brge	.+2      	; 0x78c <SX1276LoRaSetRFPower+0x36>
+			{
+				power = 5;
+     78a:	c5 e0       	ldi	r28, 0x05	; 5
+			if( power > 20 )
+			{
+				power = 20;
+			}
+			SX1276LR->RegPaConfig = ( SX1276LR->RegPaConfig & RFLR_PACONFIG_MAX_POWER_MASK ) | 0x70;
+			SX1276LR->RegPaConfig = ( SX1276LR->RegPaConfig & RFLR_PACONFIG_OUTPUTPOWER_MASK ) | ( uint8_t )( ( uint16_t )( power - 5 ) & 0x0F );
+     78c:	90 7f       	andi	r25, 0xF0	; 240
+     78e:	90 67       	ori	r25, 0x70	; 112
+     790:	c5 31       	cpi	r28, 0x15	; 21
+     792:	0c f0       	brlt	.+2      	; 0x796 <SX1276LoRaSetRFPower+0x40>
+     794:	c4 e1       	ldi	r28, 0x14	; 20
+     796:	c5 50       	subi	r28, 0x05	; 5
+     798:	cf 70       	andi	r28, 0x0F	; 15
+     79a:	c9 2b       	or	r28, r25
+     79c:	f8 01       	movw	r30, r16
+     79e:	c1 87       	std	Z+9, r28	; 0x09
+     7a0:	1c c0       	rjmp	.+56     	; 0x7da <SX1276LoRaSetRFPower+0x84>
+		}
+		else
+		{
+			if( power < 2 )
+     7a2:	c2 30       	cpi	r28, 0x02	; 2
+     7a4:	0c f4       	brge	.+2      	; 0x7a8 <SX1276LoRaSetRFPower+0x52>
+			{
+				power = 2;
+     7a6:	c2 e0       	ldi	r28, 0x02	; 2
+			if( power > 17 )
+			{
+				power = 17;
+			}
+			SX1276LR->RegPaConfig = ( SX1276LR->RegPaConfig & RFLR_PACONFIG_MAX_POWER_MASK ) | 0x70;
+			SX1276LR->RegPaConfig = ( SX1276LR->RegPaConfig & RFLR_PACONFIG_OUTPUTPOWER_MASK ) | ( uint8_t )( ( uint16_t )( power - 2 ) & 0x0F );
+     7a8:	90 7f       	andi	r25, 0xF0	; 240
+     7aa:	90 67       	ori	r25, 0x70	; 112
+     7ac:	c2 31       	cpi	r28, 0x12	; 18
+     7ae:	0c f0       	brlt	.+2      	; 0x7b2 <SX1276LoRaSetRFPower+0x5c>
+     7b0:	c1 e1       	ldi	r28, 0x11	; 17
+     7b2:	c2 50       	subi	r28, 0x02	; 2
+     7b4:	cf 70       	andi	r28, 0x0F	; 15
+     7b6:	c9 2b       	or	r28, r25
+     7b8:	f8 01       	movw	r30, r16
+     7ba:	c1 87       	std	Z+9, r28	; 0x09
+     7bc:	0e c0       	rjmp	.+28     	; 0x7da <SX1276LoRaSetRFPower+0x84>
+     7be:	8c 2f       	mov	r24, r28
+     7c0:	cc 23       	and	r28, r28
+     7c2:	0c f4       	brge	.+2      	; 0x7c6 <SX1276LoRaSetRFPower+0x70>
+     7c4:	8f ef       	ldi	r24, 0xFF	; 255
+		if( power > 14 )
+		{
+			power = 14;
+		}
+		SX1276LR->RegPaConfig = ( SX1276LR->RegPaConfig & RFLR_PACONFIG_MAX_POWER_MASK ) | 0x70;
+		SX1276LR->RegPaConfig = ( SX1276LR->RegPaConfig & RFLR_PACONFIG_OUTPUTPOWER_MASK ) | ( uint8_t )( ( uint16_t )( power + 1 ) & 0x0F );
+     7c6:	90 7f       	andi	r25, 0xF0	; 240
+     7c8:	90 67       	ori	r25, 0x70	; 112
+     7ca:	8f 30       	cpi	r24, 0x0F	; 15
+     7cc:	0c f0       	brlt	.+2      	; 0x7d0 <SX1276LoRaSetRFPower+0x7a>
+     7ce:	8e e0       	ldi	r24, 0x0E	; 14
+     7d0:	8f 5f       	subi	r24, 0xFF	; 255
+     7d2:	8f 70       	andi	r24, 0x0F	; 15
+     7d4:	89 2b       	or	r24, r25
+     7d6:	f8 01       	movw	r30, r16
+     7d8:	81 87       	std	Z+9, r24	; 0x09
+	}
+	SX1276Write( REG_LR_PACONFIG, SX1276LR->RegPaConfig );
+     7da:	f8 01       	movw	r30, r16
+     7dc:	61 85       	ldd	r22, Z+9	; 0x09
+     7de:	89 e0       	ldi	r24, 0x09	; 9
+     7e0:	b2 d1       	rcall	.+868    	; 0xb46 <SX1276Write>
+	//LoRaSettings.Power = power;
+}
+     7e2:	cf 91       	pop	r28
+     7e4:	1f 91       	pop	r17
+     7e6:	0f 91       	pop	r16
+     7e8:	08 95       	ret
+
+000007ea <SX1276LoRaSetPAOutput>:
+
+
+void SX1276LoRaSetPAOutput( uint8_t outputPin,  tSX1276LR *SX1276LR )
+{
+     7ea:	1f 93       	push	r17
+     7ec:	cf 93       	push	r28
+     7ee:	df 93       	push	r29
+     7f0:	18 2f       	mov	r17, r24
+     7f2:	eb 01       	movw	r28, r22
+	SX1276Read( REG_LR_PACONFIG, &SX1276LR->RegPaConfig );
+     7f4:	67 5f       	subi	r22, 0xF7	; 247
+     7f6:	7f 4f       	sbci	r23, 0xFF	; 255
+     7f8:	89 e0       	ldi	r24, 0x09	; 9
+     7fa:	d8 d1       	rcall	.+944    	; 0xbac <SX1276Read>
+	SX1276LR->RegPaConfig = (SX1276LR->RegPaConfig & RFLR_PACONFIG_PASELECT_MASK ) | outputPin;
+     7fc:	99 85       	ldd	r25, Y+9	; 0x09
+     7fe:	9f 77       	andi	r25, 0x7F	; 127
+     800:	61 2f       	mov	r22, r17
+     802:	69 2b       	or	r22, r25
+     804:	69 87       	std	Y+9, r22	; 0x09
+	SX1276Write( REG_LR_PACONFIG, SX1276LR->RegPaConfig );
+     806:	89 e0       	ldi	r24, 0x09	; 9
+     808:	9e d1       	rcall	.+828    	; 0xb46 <SX1276Write>
+}
+     80a:	df 91       	pop	r29
+     80c:	cf 91       	pop	r28
+     80e:	1f 91       	pop	r17
+     810:	08 95       	ret
+
+00000812 <SX1276LoRaSetPa20dBm>:
+
+void SX1276LoRaSetPa20dBm( bool enale,  tSX1276LR *SX1276LR )
+{
+     812:	1f 93       	push	r17
+     814:	cf 93       	push	r28
+     816:	df 93       	push	r29
+     818:	18 2f       	mov	r17, r24
+     81a:	eb 01       	movw	r28, r22
+	SX1276Read( REG_LR_PADAC, &SX1276LR->RegPaDac );
+     81c:	64 5b       	subi	r22, 0xB4	; 180
+     81e:	7f 4f       	sbci	r23, 0xFF	; 255
+     820:	8d e4       	ldi	r24, 0x4D	; 77
+     822:	c4 d1       	rcall	.+904    	; 0xbac <SX1276Read>
+	SX1276Read( REG_LR_PACONFIG, &SX1276LR->RegPaConfig );
+     824:	be 01       	movw	r22, r28
+     826:	67 5f       	subi	r22, 0xF7	; 247
+     828:	7f 4f       	sbci	r23, 0xFF	; 255
+     82a:	89 e0       	ldi	r24, 0x09	; 9
+     82c:	bf d1       	rcall	.+894    	; 0xbac <SX1276Read>
+
+	if( ( SX1276LR->RegPaConfig & RFLR_PACONFIG_PASELECT_PABOOST ) == RFLR_PACONFIG_PASELECT_PABOOST )
+     82e:	99 85       	ldd	r25, Y+9	; 0x09
+     830:	99 23       	and	r25, r25
+     832:	44 f4       	brge	.+16     	; 0x844 <SX1276LoRaSetPa20dBm+0x32>
+	{
+		if( enale == true )
+     834:	11 23       	and	r17, r17
+     836:	59 f0       	breq	.+22     	; 0x84e <SX1276LoRaSetPa20dBm+0x3c>
+		{
+			SX1276LR->RegPaDac = 0x87;
+     838:	87 e8       	ldi	r24, 0x87	; 135
+     83a:	fe 01       	movw	r30, r28
+     83c:	e4 5b       	subi	r30, 0xB4	; 180
+     83e:	ff 4f       	sbci	r31, 0xFF	; 255
+     840:	80 83       	st	Z, r24
+     842:	05 c0       	rjmp	.+10     	; 0x84e <SX1276LoRaSetPa20dBm+0x3c>
+		}
+	}
+	else
+	{
+		SX1276LR->RegPaDac = 0x84;
+     844:	84 e8       	ldi	r24, 0x84	; 132
+     846:	fe 01       	movw	r30, r28
+     848:	e4 5b       	subi	r30, 0xB4	; 180
+     84a:	ff 4f       	sbci	r31, 0xFF	; 255
+     84c:	80 83       	st	Z, r24
+	}
+	SX1276Write( REG_LR_PADAC, SX1276LR->RegPaDac );
+     84e:	c4 5b       	subi	r28, 0xB4	; 180
+     850:	df 4f       	sbci	r29, 0xFF	; 255
+     852:	68 81       	ld	r22, Y
+     854:	8d e4       	ldi	r24, 0x4D	; 77
+     856:	77 d1       	rcall	.+750    	; 0xb46 <SX1276Write>
+}
+     858:	df 91       	pop	r29
+     85a:	cf 91       	pop	r28
+     85c:	1f 91       	pop	r17
+     85e:	08 95       	ret
+
+00000860 <SX1276LoRaSetRFFrequency>:
+
+
+void SX1276LoRaSetRFFrequency( uint32_t freq,  tSX1276LR *SX1276LR )
+{
+     860:	cf 93       	push	r28
+     862:	df 93       	push	r29
+     864:	ea 01       	movw	r28, r20
+	freq = ( uint32_t )( ( double )freq / ( double )FREQ_STEP );
+     866:	0e 94 9f 0c 	call	0x193e	; 0x193e <__floatunsisf>
+     86a:	20 e0       	ldi	r18, 0x00	; 0
+     86c:	34 e2       	ldi	r19, 0x24	; 36
+     86e:	44 e7       	ldi	r20, 0x74	; 116
+     870:	52 e4       	ldi	r21, 0x42	; 66
+     872:	d1 d7       	rcall	.+4002   	; 0x1816 <__divsf3>
+     874:	0e 94 73 0c 	call	0x18e6	; 0x18e6 <__fixunssfsi>
+	SX1276LR->RegFrfMsb = ( uint8_t )( ( freq >> 16 ) & 0xFF );
+     878:	8e 83       	std	Y+6, r24	; 0x06
+	SX1276LR->RegFrfMid = ( uint8_t )( ( freq >> 8 ) & 0xFF );
+     87a:	7f 83       	std	Y+7, r23	; 0x07
+	SX1276LR->RegFrfLsb = ( uint8_t )( freq & 0xFF );
+     87c:	68 87       	std	Y+8, r22	; 0x08
+	SX1276WriteBuffer( REG_LR_FRFMSB, &SX1276LR->RegFrfMsb, 3 );
+     87e:	be 01       	movw	r22, r28
+     880:	6a 5f       	subi	r22, 0xFA	; 250
+     882:	7f 4f       	sbci	r23, 0xFF	; 255
+     884:	43 e0       	ldi	r20, 0x03	; 3
+     886:	86 e0       	ldi	r24, 0x06	; 6
+     888:	3a d1       	rcall	.+628    	; 0xafe <SX1276WriteBuffer>
+}
+     88a:	df 91       	pop	r29
+     88c:	cf 91       	pop	r28
+     88e:	08 95       	ret
+
+00000890 <SX1276LoRaSetNbTrigPeaks>:
+	
+}
+
+
+void SX1276LoRaSetNbTrigPeaks( uint8_t value,tSX1276LR *SX1276LR)
+{
+     890:	1f 93       	push	r17
+     892:	cf 93       	push	r28
+     894:	df 93       	push	r29
+     896:	18 2f       	mov	r17, r24
+     898:	eb 01       	movw	r28, r22
+	SX1276Read( 0x31, &SX1276LR->RegTestReserved31 );
+     89a:	60 5d       	subi	r22, 0xD0	; 208
+     89c:	7f 4f       	sbci	r23, 0xFF	; 255
+     89e:	81 e3       	ldi	r24, 0x31	; 49
+     8a0:	85 d1       	rcall	.+778    	; 0xbac <SX1276Read>
+	SX1276LR->RegTestReserved31 = ( SX1276LR->RegTestReserved31 & 0xF8 ) | value;
+     8a2:	98 a9       	ldd	r25, Y+48	; 0x30
+     8a4:	98 7f       	andi	r25, 0xF8	; 248
+     8a6:	61 2f       	mov	r22, r17
+     8a8:	69 2b       	or	r22, r25
+     8aa:	68 ab       	std	Y+48, r22	; 0x30
+	SX1276Write( 0x31, SX1276LR->RegTestReserved31 );
+     8ac:	81 e3       	ldi	r24, 0x31	; 49
+     8ae:	4b d1       	rcall	.+662    	; 0xb46 <SX1276Write>
+}
+     8b0:	df 91       	pop	r29
+     8b2:	cf 91       	pop	r28
+     8b4:	1f 91       	pop	r17
+     8b6:	08 95       	ret
+
+000008b8 <SX1276LoRaSetSpreadingFactor>:
+	SX1276WriteBuffer( REG_LR_FRFMSB, &SX1276LR->RegFrfMsb, 3 );
+}
+
+
+void SX1276LoRaSetSpreadingFactor( uint8_t factor,tSX1276LR *SX1276LR )
+{
+     8b8:	0f 93       	push	r16
+     8ba:	1f 93       	push	r17
+     8bc:	cf 93       	push	r28
+     8be:	c8 2f       	mov	r28, r24
+     8c0:	8b 01       	movw	r16, r22
+
+	if( factor > 12 )
+     8c2:	8d 30       	cpi	r24, 0x0D	; 13
+     8c4:	48 f4       	brcc	.+18     	; 0x8d8 <SX1276LoRaSetSpreadingFactor+0x20>
+	{
+		factor = 12;
+	}
+	else if( factor < 6 )
+     8c6:	86 30       	cpi	r24, 0x06	; 6
+     8c8:	10 f0       	brcs	.+4      	; 0x8ce <SX1276LoRaSetSpreadingFactor+0x16>
+	{
+		factor = 6;
+	}
+	
+	if( factor == 6 )
+     8ca:	86 30       	cpi	r24, 0x06	; 6
+     8cc:	31 f4       	brne	.+12     	; 0x8da <SX1276LoRaSetSpreadingFactor+0x22>
+	{
+		SX1276LoRaSetNbTrigPeaks( 5,SX1276LR);
+     8ce:	b8 01       	movw	r22, r16
+     8d0:	85 e0       	ldi	r24, 0x05	; 5
+     8d2:	de df       	rcall	.-68     	; 0x890 <SX1276LoRaSetNbTrigPeaks>
+     8d4:	c6 e0       	ldi	r28, 0x06	; 6
+     8d6:	04 c0       	rjmp	.+8      	; 0x8e0 <SX1276LoRaSetSpreadingFactor+0x28>
+void SX1276LoRaSetSpreadingFactor( uint8_t factor,tSX1276LR *SX1276LR )
+{
+
+	if( factor > 12 )
+	{
+		factor = 12;
+     8d8:	cc e0       	ldi	r28, 0x0C	; 12
+	{
+		SX1276LoRaSetNbTrigPeaks( 5,SX1276LR);
+	}
+	else
+	{
+		SX1276LoRaSetNbTrigPeaks( 3,SX1276LR );
+     8da:	b8 01       	movw	r22, r16
+     8dc:	83 e0       	ldi	r24, 0x03	; 3
+     8de:	d8 df       	rcall	.-80     	; 0x890 <SX1276LoRaSetNbTrigPeaks>
+	}
+
+	SX1276Read( REG_LR_MODEMCONFIG2, &SX1276LR->RegModemConfig2 );
+     8e0:	b8 01       	movw	r22, r16
+     8e2:	62 5e       	subi	r22, 0xE2	; 226
+     8e4:	7f 4f       	sbci	r23, 0xFF	; 255
+     8e6:	8e e1       	ldi	r24, 0x1E	; 30
+     8e8:	61 d1       	rcall	.+706    	; 0xbac <SX1276Read>
+	SX1276LR->RegModemConfig2 = ( SX1276LR->RegModemConfig2 & RFLR_MODEMCONFIG2_SF_MASK ) | ( factor << 4 );
+     8ea:	20 e1       	ldi	r18, 0x10	; 16
+     8ec:	c2 9f       	mul	r28, r18
+     8ee:	c0 01       	movw	r24, r0
+     8f0:	11 24       	eor	r1, r1
+     8f2:	f8 01       	movw	r30, r16
+     8f4:	66 8d       	ldd	r22, Z+30	; 0x1e
+     8f6:	6f 70       	andi	r22, 0x0F	; 15
+     8f8:	68 2b       	or	r22, r24
+     8fa:	66 8f       	std	Z+30, r22	; 0x1e
+	SX1276Write( REG_LR_MODEMCONFIG2, SX1276LR->RegModemConfig2 );
+     8fc:	8e e1       	ldi	r24, 0x1E	; 30
+     8fe:	23 d1       	rcall	.+582    	; 0xb46 <SX1276Write>
+	
+}
+     900:	cf 91       	pop	r28
+     902:	1f 91       	pop	r17
+     904:	0f 91       	pop	r16
+     906:	08 95       	ret
+
+00000908 <SX1276LoRaSetErrorCoding>:
+	SX1276LR->RegTestReserved31 = ( SX1276LR->RegTestReserved31 & 0xF8 ) | value;
+	SX1276Write( 0x31, SX1276LR->RegTestReserved31 );
+}
+
+void SX1276LoRaSetErrorCoding( uint8_t value,tSX1276LR *SX1276LR )
+{
+     908:	1f 93       	push	r17
+     90a:	cf 93       	push	r28
+     90c:	df 93       	push	r29
+     90e:	18 2f       	mov	r17, r24
+     910:	eb 01       	movw	r28, r22
+	SX1276Read( REG_LR_MODEMCONFIG1, &SX1276LR->RegModemConfig1 );
+     912:	63 5e       	subi	r22, 0xE3	; 227
+     914:	7f 4f       	sbci	r23, 0xFF	; 255
+     916:	8d e1       	ldi	r24, 0x1D	; 29
+     918:	49 d1       	rcall	.+658    	; 0xbac <SX1276Read>
+	SX1276LR->RegModemConfig1 = ( SX1276LR->RegModemConfig1 & RFLR_MODEMCONFIG1_CODINGRATE_MASK ) | ( value << 1 );
+     91a:	61 2f       	mov	r22, r17
+     91c:	66 0f       	add	r22, r22
+     91e:	9d 8d       	ldd	r25, Y+29	; 0x1d
+     920:	91 7f       	andi	r25, 0xF1	; 241
+     922:	69 2b       	or	r22, r25
+     924:	6d 8f       	std	Y+29, r22	; 0x1d
+	SX1276Write( REG_LR_MODEMCONFIG1, SX1276LR->RegModemConfig1 );
+     926:	8d e1       	ldi	r24, 0x1D	; 29
+     928:	0e d1       	rcall	.+540    	; 0xb46 <SX1276Write>
+	
+}
+     92a:	df 91       	pop	r29
+     92c:	cf 91       	pop	r28
+     92e:	1f 91       	pop	r17
+     930:	08 95       	ret
+
+00000932 <SX1276LoRaSetPacketCrcOn>:
+
+
+void SX1276LoRaSetPacketCrcOn( bool enable,tSX1276LR *SX1276LR )
+{
+     932:	1f 93       	push	r17
+     934:	cf 93       	push	r28
+     936:	df 93       	push	r29
+     938:	18 2f       	mov	r17, r24
+     93a:	eb 01       	movw	r28, r22
+	SX1276Read( REG_LR_MODEMCONFIG2, &SX1276LR->RegModemConfig2 );
+     93c:	62 5e       	subi	r22, 0xE2	; 226
+     93e:	7f 4f       	sbci	r23, 0xFF	; 255
+     940:	8e e1       	ldi	r24, 0x1E	; 30
+     942:	34 d1       	rcall	.+616    	; 0xbac <SX1276Read>
+	SX1276LR->RegModemConfig2 = ( SX1276LR->RegModemConfig2 & RFLR_MODEMCONFIG2_RXPAYLOADCRC_MASK ) | ( enable << 2 );
+     944:	61 2f       	mov	r22, r17
+     946:	66 0f       	add	r22, r22
+     948:	66 0f       	add	r22, r22
+     94a:	9e 8d       	ldd	r25, Y+30	; 0x1e
+     94c:	9b 7f       	andi	r25, 0xFB	; 251
+     94e:	69 2b       	or	r22, r25
+     950:	6e 8f       	std	Y+30, r22	; 0x1e
+	SX1276Write( REG_LR_MODEMCONFIG2, SX1276LR->RegModemConfig2 );
+     952:	8e e1       	ldi	r24, 0x1E	; 30
+     954:	f8 d0       	rcall	.+496    	; 0xb46 <SX1276Write>
+	
+}
+     956:	df 91       	pop	r29
+     958:	cf 91       	pop	r28
+     95a:	1f 91       	pop	r17
+     95c:	08 95       	ret
+
+0000095e <SX1276LoRaSetSignalBandwidth>:
+
+void SX1276LoRaSetSignalBandwidth( uint8_t bw,tSX1276LR *SX1276LR )
+{
+     95e:	1f 93       	push	r17
+     960:	cf 93       	push	r28
+     962:	df 93       	push	r29
+     964:	18 2f       	mov	r17, r24
+     966:	eb 01       	movw	r28, r22
+	SX1276Read( REG_LR_MODEMCONFIG1, &SX1276LR->RegModemConfig1 );
+     968:	63 5e       	subi	r22, 0xE3	; 227
+     96a:	7f 4f       	sbci	r23, 0xFF	; 255
+     96c:	8d e1       	ldi	r24, 0x1D	; 29
+     96e:	1e d1       	rcall	.+572    	; 0xbac <SX1276Read>
+	SX1276LR->RegModemConfig1 = ( SX1276LR->RegModemConfig1 & RFLR_MODEMCONFIG1_BW_MASK ) | ( bw << 4 );
+     970:	20 e1       	ldi	r18, 0x10	; 16
+     972:	12 9f       	mul	r17, r18
+     974:	c0 01       	movw	r24, r0
+     976:	11 24       	eor	r1, r1
+     978:	6d 8d       	ldd	r22, Y+29	; 0x1d
+     97a:	6f 70       	andi	r22, 0x0F	; 15
+     97c:	68 2b       	or	r22, r24
+     97e:	6d 8f       	std	Y+29, r22	; 0x1d
+	SX1276Write( REG_LR_MODEMCONFIG1, SX1276LR->RegModemConfig1 );
+     980:	8d e1       	ldi	r24, 0x1D	; 29
+     982:	e1 d0       	rcall	.+450    	; 0xb46 <SX1276Write>
+	
+}
+     984:	df 91       	pop	r29
+     986:	cf 91       	pop	r28
+     988:	1f 91       	pop	r17
+     98a:	08 95       	ret
+
+0000098c <SX1276LoRaSetImplicitHeaderOn>:
+
+
+void SX1276LoRaSetImplicitHeaderOn( bool enable,tSX1276LR *SX1276LR )
+{
+     98c:	1f 93       	push	r17
+     98e:	cf 93       	push	r28
+     990:	df 93       	push	r29
+     992:	18 2f       	mov	r17, r24
+     994:	eb 01       	movw	r28, r22
+	SX1276Read( REG_LR_MODEMCONFIG1, &SX1276LR->RegModemConfig1 );
+     996:	63 5e       	subi	r22, 0xE3	; 227
+     998:	7f 4f       	sbci	r23, 0xFF	; 255
+     99a:	8d e1       	ldi	r24, 0x1D	; 29
+     99c:	07 d1       	rcall	.+526    	; 0xbac <SX1276Read>
+	SX1276LR->RegModemConfig1 = ( SX1276LR->RegModemConfig1 & RFLR_MODEMCONFIG1_IMPLICITHEADER_MASK ) | ( enable );
+     99e:	9d 8d       	ldd	r25, Y+29	; 0x1d
+     9a0:	9e 7f       	andi	r25, 0xFE	; 254
+     9a2:	61 2f       	mov	r22, r17
+     9a4:	69 2b       	or	r22, r25
+     9a6:	6d 8f       	std	Y+29, r22	; 0x1d
+	SX1276Write( REG_LR_MODEMCONFIG1, SX1276LR->RegModemConfig1 );
+     9a8:	8d e1       	ldi	r24, 0x1D	; 29
+     9aa:	cd d0       	rcall	.+410    	; 0xb46 <SX1276Write>
+	
+}
+     9ac:	df 91       	pop	r29
+     9ae:	cf 91       	pop	r28
+     9b0:	1f 91       	pop	r17
+     9b2:	08 95       	ret
+
+000009b4 <SX1276LoRaSetSymbTimeout>:
+
+void SX1276LoRaSetSymbTimeout( uint16_t value,tSX1276LR *SX1276LR )
+{
+     9b4:	ef 92       	push	r14
+     9b6:	ff 92       	push	r15
+     9b8:	0f 93       	push	r16
+     9ba:	1f 93       	push	r17
+     9bc:	cf 93       	push	r28
+     9be:	df 93       	push	r29
+     9c0:	08 2f       	mov	r16, r24
+     9c2:	19 2f       	mov	r17, r25
+     9c4:	eb 01       	movw	r28, r22
+	SX1276ReadBuffer( REG_LR_MODEMCONFIG2, &SX1276LR->RegModemConfig2, 2 );
+     9c6:	7b 01       	movw	r14, r22
+     9c8:	8e e1       	ldi	r24, 0x1E	; 30
+     9ca:	e8 0e       	add	r14, r24
+     9cc:	f1 1c       	adc	r15, r1
+     9ce:	42 e0       	ldi	r20, 0x02	; 2
+     9d0:	b7 01       	movw	r22, r14
+     9d2:	8e e1       	ldi	r24, 0x1E	; 30
+     9d4:	c7 d0       	rcall	.+398    	; 0xb64 <SX1276ReadBuffer>
+
+	SX1276LR->RegModemConfig2 = ( SX1276LR->RegModemConfig2 & RFLR_MODEMCONFIG2_SYMBTIMEOUTMSB_MASK ) | ( ( value >> 8 ) & ~RFLR_MODEMCONFIG2_SYMBTIMEOUTMSB_MASK );
+     9d6:	91 2f       	mov	r25, r17
+     9d8:	93 70       	andi	r25, 0x03	; 3
+     9da:	2e 8d       	ldd	r18, Y+30	; 0x1e
+     9dc:	2c 7f       	andi	r18, 0xFC	; 252
+     9de:	92 2b       	or	r25, r18
+     9e0:	9e 8f       	std	Y+30, r25	; 0x1e
+	SX1276LR->RegSymbTimeoutLsb = value & 0xFF;
+     9e2:	0f 8f       	std	Y+31, r16	; 0x1f
+	SX1276WriteBuffer( REG_LR_MODEMCONFIG2, &SX1276LR->RegModemConfig2, 2 );
+     9e4:	42 e0       	ldi	r20, 0x02	; 2
+     9e6:	b7 01       	movw	r22, r14
+     9e8:	8e e1       	ldi	r24, 0x1E	; 30
+     9ea:	89 d0       	rcall	.+274    	; 0xafe <SX1276WriteBuffer>
+}
+     9ec:	df 91       	pop	r29
+     9ee:	cf 91       	pop	r28
+     9f0:	1f 91       	pop	r17
+     9f2:	0f 91       	pop	r16
+     9f4:	ff 90       	pop	r15
+     9f6:	ef 90       	pop	r14
+     9f8:	08 95       	ret
+
+000009fa <SX1276LoRaSetPayloadLength>:
+
+void SX1276LoRaSetPayloadLength( uint8_t value,tSX1276LR *SX1276LR )
+{
+	SX1276LR->RegPayloadLength = value;
+     9fa:	fb 01       	movw	r30, r22
+     9fc:	82 a3       	std	Z+34, r24	; 0x22
+	SX1276Write( REG_LR_PAYLOADLENGTH, SX1276LR->RegPayloadLength );
+     9fe:	68 2f       	mov	r22, r24
+     a00:	82 e2       	ldi	r24, 0x22	; 34
+     a02:	a1 c0       	rjmp	.+322    	; 0xb46 <SX1276Write>
+     a04:	08 95       	ret
+
+00000a06 <SX1276LoRaSetLowDatarateOptimize>:
+	
+}
+
+void SX1276LoRaSetLowDatarateOptimize( bool enable,tSX1276LR *SX1276LR )
+{
+     a06:	1f 93       	push	r17
+     a08:	cf 93       	push	r28
+     a0a:	df 93       	push	r29
+     a0c:	18 2f       	mov	r17, r24
+     a0e:	eb 01       	movw	r28, r22
+	SX1276Read( REG_LR_MODEMCONFIG3, &SX1276LR->RegModemConfig3 );
+     a10:	6a 5d       	subi	r22, 0xDA	; 218
+     a12:	7f 4f       	sbci	r23, 0xFF	; 255
+     a14:	86 e2       	ldi	r24, 0x26	; 38
+     a16:	ca d0       	rcall	.+404    	; 0xbac <SX1276Read>
+	SX1276LR->RegModemConfig3 = ( SX1276LR->RegModemConfig3 & RFLR_MODEMCONFIG3_LOWDATARATEOPTIMIZE_MASK ) | ( enable << 3 );
+     a18:	61 2f       	mov	r22, r17
+     a1a:	66 0f       	add	r22, r22
+     a1c:	66 0f       	add	r22, r22
+     a1e:	66 0f       	add	r22, r22
+     a20:	9e a1       	ldd	r25, Y+38	; 0x26
+     a22:	97 7f       	andi	r25, 0xF7	; 247
+     a24:	69 2b       	or	r22, r25
+     a26:	6e a3       	std	Y+38, r22	; 0x26
+	SX1276Write( REG_LR_MODEMCONFIG3, SX1276LR->RegModemConfig3 );
+     a28:	86 e2       	ldi	r24, 0x26	; 38
+     a2a:	8d d0       	rcall	.+282    	; 0xb46 <SX1276Write>
+     a2c:	df 91       	pop	r29
+     a2e:	cf 91       	pop	r28
+     a30:	1f 91       	pop	r17
+     a32:	08 95       	ret
+
+00000a34 <SX1276InitIo>:
+
+struct spi_device spi_device_conf =  {.id = SX1276_CS_PIN};
+
+
+void SX1276InitIo( void )
+{	
+     a34:	cf 92       	push	r12
+     a36:	df 92       	push	r13
+     a38:	ef 92       	push	r14
+     a3a:	ff 92       	push	r15
+     a3c:	0f 93       	push	r16
+     a3e:	1f 93       	push	r17
+ * \param flags Bitmask of flags specifying additional configuration
+ * parameters.
+ */
+static inline void ioport_configure_pin(port_pin_t pin, port_pin_flags_t flags)
+{
+	ioport_configure_port_pin(arch_ioport_pin_to_base(pin),
+     a40:	41 e0       	ldi	r20, 0x01	; 1
+     a42:	50 e0       	ldi	r21, 0x00	; 0
+     a44:	60 e8       	ldi	r22, 0x80	; 128
+     a46:	80 e4       	ldi	r24, 0x40	; 64
+     a48:	96 e0       	ldi	r25, 0x06	; 6
+     a4a:	d6 d3       	rcall	.+1964   	; 0x11f8 <ioport_configure_port_pin>
+     a4c:	40 e0       	ldi	r20, 0x00	; 0
+     a4e:	50 e0       	ldi	r21, 0x00	; 0
+     a50:	60 e4       	ldi	r22, 0x40	; 64
+     a52:	80 e4       	ldi	r24, 0x40	; 64
+     a54:	96 e0       	ldi	r25, 0x06	; 6
+     a56:	d0 d3       	rcall	.+1952   	; 0x11f8 <ioport_configure_port_pin>
+     a58:	41 e0       	ldi	r20, 0x01	; 1
+     a5a:	50 e0       	ldi	r21, 0x00	; 0
+     a5c:	60 e2       	ldi	r22, 0x20	; 32
+     a5e:	80 e4       	ldi	r24, 0x40	; 64
+     a60:	96 e0       	ldi	r25, 0x06	; 6
+     a62:	ca d3       	rcall	.+1940   	; 0x11f8 <ioport_configure_port_pin>
+     a64:	41 e0       	ldi	r20, 0x01	; 1
+     a66:	50 e0       	ldi	r21, 0x00	; 0
+     a68:	60 e1       	ldi	r22, 0x10	; 16
+     a6a:	80 e6       	ldi	r24, 0x60	; 96
+     a6c:	96 e0       	ldi	r25, 0x06	; 6
+     a6e:	c4 d3       	rcall	.+1928   	; 0x11f8 <ioport_configure_port_pin>
+		bool level)
+{
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	if (level) {
+		base->OUTSET = arch_ioport_pin_to_mask(pin);
+     a70:	80 e1       	ldi	r24, 0x10	; 16
+     a72:	80 93 65 06 	sts	0x0665, r24
+     a76:	43 e0       	ldi	r20, 0x03	; 3
+     a78:	50 e0       	ldi	r21, 0x00	; 0
+     a7a:	60 e1       	ldi	r22, 0x10	; 16
+     a7c:	80 e4       	ldi	r24, 0x40	; 64
+     a7e:	96 e0       	ldi	r25, 0x06	; 6
+     a80:	bb d3       	rcall	.+1910   	; 0x11f8 <ioport_configure_port_pin>
+     a82:	41 e0       	ldi	r20, 0x01	; 1
+     a84:	50 e0       	ldi	r21, 0x00	; 0
+     a86:	68 e0       	ldi	r22, 0x08	; 8
+     a88:	80 e4       	ldi	r24, 0x40	; 64
+     a8a:	96 e0       	ldi	r25, 0x06	; 6
+     a8c:	b5 d3       	rcall	.+1898   	; 0x11f8 <ioport_configure_port_pin>
+     a8e:	40 e0       	ldi	r20, 0x00	; 0
+     a90:	50 e0       	ldi	r21, 0x00	; 0
+     a92:	64 e0       	ldi	r22, 0x04	; 4
+     a94:	80 e4       	ldi	r24, 0x40	; 64
+     a96:	96 e0       	ldi	r25, 0x06	; 6
+     a98:	af d3       	rcall	.+1886   	; 0x11f8 <ioport_configure_port_pin>
+     a9a:	40 e0       	ldi	r20, 0x00	; 0
+     a9c:	50 e0       	ldi	r21, 0x00	; 0
+     a9e:	60 e8       	ldi	r22, 0x80	; 128
+     aa0:	80 e0       	ldi	r24, 0x00	; 0
+     aa2:	96 e0       	ldi	r25, 0x06	; 6
+     aa4:	a9 d3       	rcall	.+1874   	; 0x11f8 <ioport_configure_port_pin>
+     aa6:	40 e0       	ldi	r20, 0x00	; 0
+     aa8:	50 e0       	ldi	r21, 0x00	; 0
+     aaa:	60 e4       	ldi	r22, 0x40	; 64
+     aac:	80 e0       	ldi	r24, 0x00	; 0
+     aae:	96 e0       	ldi	r25, 0x06	; 6
+     ab0:	a3 d3       	rcall	.+1862   	; 0x11f8 <ioport_configure_port_pin>
+	//ioport_set_pin_dir(SX1276_DI0_PIN,   IOPORT_DIR_INPUT  );
+	ioport_configure_pin(SX1276_DIO0_PIN, IOPORT_DIR_INPUT);
+	ioport_configure_pin(SX1276_DIO1_PIN, IOPORT_DIR_INPUT);
+	ioport_configure_pin(SX1276_DIO2_PIN, IOPORT_DIR_INPUT);
+	
+	spi_master_init(&SPIC);
+     ab2:	80 ee       	ldi	r24, 0xE0	; 224
+     ab4:	98 e0       	ldi	r25, 0x08	; 8
+     ab6:	e8 d1       	rcall	.+976    	; 0xe88 <spi_master_init>
+ 	spi_master_setup_device(&SPIC, &spi_device_conf, SPI_MODE_0, 1000000, 0);	//Max 10 MHz
+     ab8:	c1 2c       	mov	r12, r1
+     aba:	d1 2c       	mov	r13, r1
+     abc:	76 01       	movw	r14, r12
+     abe:	00 e4       	ldi	r16, 0x40	; 64
+     ac0:	12 e4       	ldi	r17, 0x42	; 66
+     ac2:	2f e0       	ldi	r18, 0x0F	; 15
+     ac4:	30 e0       	ldi	r19, 0x00	; 0
+     ac6:	40 e0       	ldi	r20, 0x00	; 0
+     ac8:	60 e0       	ldi	r22, 0x00	; 0
+     aca:	70 e2       	ldi	r23, 0x20	; 32
+     acc:	80 ee       	ldi	r24, 0xE0	; 224
+     ace:	98 e0       	ldi	r25, 0x08	; 8
+     ad0:	eb d1       	rcall	.+982    	; 0xea8 <spi_master_setup_device>
+ *
+ * \param spi Base address of the SPI instance.
+ */
+static inline void spi_enable(SPI_t *spi)
+{
+	spi->CTRL |= SPI_ENABLE_bm;
+     ad2:	e0 ee       	ldi	r30, 0xE0	; 224
+     ad4:	f8 e0       	ldi	r31, 0x08	; 8
+     ad6:	80 81       	ld	r24, Z
+     ad8:	80 64       	ori	r24, 0x40	; 64
+     ada:	80 83       	st	Z, r24
+ 	spi_enable(&SPIC);
+}
+     adc:	1f 91       	pop	r17
+     ade:	0f 91       	pop	r16
+     ae0:	ff 90       	pop	r15
+     ae2:	ef 90       	pop	r14
+     ae4:	df 90       	pop	r13
+     ae6:	cf 90       	pop	r12
+     ae8:	08 95       	ret
+
+00000aea <SX1276SetReset>:
+
+void SX1276SetReset( uint8_t state )
+{
+    if( state == RADIO_RESET_ON )
+     aea:	81 30       	cpi	r24, 0x01	; 1
+     aec:	21 f4       	brne	.+8      	; 0xaf6 <SX1276SetReset+0xc>
+     aee:	88 e0       	ldi	r24, 0x08	; 8
+     af0:	80 93 45 06 	sts	0x0645, r24
+     af4:	08 95       	ret
+	} else {
+		base->OUTCLR = arch_ioport_pin_to_mask(pin);
+     af6:	88 e0       	ldi	r24, 0x08	; 8
+     af8:	80 93 46 06 	sts	0x0646, r24
+     afc:	08 95       	ret
+
+00000afe <SX1276WriteBuffer>:
+// 	spi_deselect_device(&SPIC, &spi_device_conf);
+// }
+
+
+void SX1276WriteBuffer( uint8_t addr, uint8_t *buffer, uint8_t size )
+{
+     afe:	0f 93       	push	r16
+     b00:	1f 93       	push	r17
+     b02:	cf 93       	push	r28
+     b04:	df 93       	push	r29
+     b06:	d8 2f       	mov	r29, r24
+     b08:	8b 01       	movw	r16, r22
+     b0a:	c4 2f       	mov	r28, r20
+//    spi_write_packet(&SPIC,buffer,size);
+//    spi_deselect_device(&SPIC, &spi_device_conf);
+// 
+// #elif  OPTIMIZE_OS
+
+   spi_select_device(&SPIC, &spi_device_conf);
+     b0c:	60 e0       	ldi	r22, 0x00	; 0
+     b0e:	70 e2       	ldi	r23, 0x20	; 32
+     b10:	80 ee       	ldi	r24, 0xE0	; 224
+     b12:	98 e0       	ldi	r25, 0x08	; 8
+     b14:	09 d2       	rcall	.+1042   	; 0xf28 <spi_select_device>
+   spi_put(&SPIC, addr | 0x80);
+     b16:	d0 68       	ori	r29, 0x80	; 128
+ * \param data The data byte to be loaded
+ *
+ */
+static inline void spi_put(SPI_t *spi, uint8_t data)
+{
+	spi->DATA = data;
+     b18:	d0 93 e3 08 	sts	0x08E3, r29
+ *
+ * \return \c 1 if the SPI Receive Holding Register is full, otherwise \c 0.
+ */
+static inline bool spi_is_tx_ok(SPI_t *spi)
+{
+	return spi->STATUS & SPI_IF_bm ? true : false;
+     b1c:	e0 ee       	ldi	r30, 0xE0	; 224
+     b1e:	f8 e0       	ldi	r31, 0x08	; 8
+     b20:	82 81       	ldd	r24, Z+2	; 0x02
+   
+   while (!spi_is_rx_ready(&SPIC));
+     b22:	88 23       	and	r24, r24
+     b24:	ec f7       	brge	.-6      	; 0xb20 <SX1276WriteBuffer+0x22>
+   // 			spi_write_single(&SPIC,0x00);
+   // 			while (!spi_is_tx_ready(&SPIC));
+   // 			spi_read_single(&SPIC, &bCtsValue);			// Read command buffer; get CTS value
+   spi_write_packet(&SPIC,buffer,size);
+     b26:	4c 2f       	mov	r20, r28
+     b28:	50 e0       	ldi	r21, 0x00	; 0
+     b2a:	b8 01       	movw	r22, r16
+     b2c:	80 ee       	ldi	r24, 0xE0	; 224
+     b2e:	98 e0       	ldi	r25, 0x08	; 8
+     b30:	d9 d1       	rcall	.+946    	; 0xee4 <spi_write_packet>
+   spi_deselect_device(&SPIC, &spi_device_conf);
+     b32:	60 e0       	ldi	r22, 0x00	; 0
+     b34:	70 e2       	ldi	r23, 0x20	; 32
+     b36:	80 ee       	ldi	r24, 0xE0	; 224
+     b38:	98 e0       	ldi	r25, 0x08	; 8
+     b3a:	0c d2       	rcall	.+1048   	; 0xf54 <spi_deselect_device>
+// #else
+// 	#error Neni definovana optimalizace
+// #endif
+
+
+}
+     b3c:	df 91       	pop	r29
+     b3e:	cf 91       	pop	r28
+     b40:	1f 91       	pop	r17
+     b42:	0f 91       	pop	r16
+     b44:	08 95       	ret
+
+00000b46 <SX1276Write>:
+		ioport_set_pin_level(SX1276_RESET_PIN, false);
+    }
+}
+
+void SX1276Write( uint8_t addr, uint8_t data )
+{
+     b46:	cf 93       	push	r28
+     b48:	df 93       	push	r29
+     b4a:	1f 92       	push	r1
+     b4c:	cd b7       	in	r28, 0x3d	; 61
+     b4e:	de b7       	in	r29, 0x3e	; 62
+     b50:	69 83       	std	Y+1, r22	; 0x01
+    SX1276WriteBuffer( addr, &data, 1 );
+     b52:	41 e0       	ldi	r20, 0x01	; 1
+     b54:	be 01       	movw	r22, r28
+     b56:	6f 5f       	subi	r22, 0xFF	; 255
+     b58:	7f 4f       	sbci	r23, 0xFF	; 255
+     b5a:	d1 df       	rcall	.-94     	; 0xafe <SX1276WriteBuffer>
+}
+     b5c:	0f 90       	pop	r0
+     b5e:	df 91       	pop	r29
+     b60:	cf 91       	pop	r28
+     b62:	08 95       	ret
+
+00000b64 <SX1276ReadBuffer>:
+
+
+}
+
+void SX1276ReadBuffer( uint8_t addr, uint8_t *buffer, uint8_t size )
+{
+     b64:	0f 93       	push	r16
+     b66:	1f 93       	push	r17
+     b68:	cf 93       	push	r28
+     b6a:	df 93       	push	r29
+     b6c:	d8 2f       	mov	r29, r24
+     b6e:	8b 01       	movw	r16, r22
+     b70:	c4 2f       	mov	r28, r20
+//     spi_read_packet(&SPIC,buffer,size);
+//     spi_deselect_device(&SPIC, &spi_device_conf);
+// 
+// #elif OPTIMIZE_OS
+
+	spi_select_device(&SPIC, &spi_device_conf);
+     b72:	60 e0       	ldi	r22, 0x00	; 0
+     b74:	70 e2       	ldi	r23, 0x20	; 32
+     b76:	80 ee       	ldi	r24, 0xE0	; 224
+     b78:	98 e0       	ldi	r25, 0x08	; 8
+     b7a:	d6 d1       	rcall	.+940    	; 0xf28 <spi_select_device>
+    spi_put(&SPIC, addr & 0x7F);
+     b7c:	df 77       	andi	r29, 0x7F	; 127
+ * \param data The data byte to be loaded
+ *
+ */
+static inline void spi_put(SPI_t *spi, uint8_t data)
+{
+	spi->DATA = data;
+     b7e:	d0 93 e3 08 	sts	0x08E3, r29
+ *
+ * \return \c 1 if the SPI Receive Holding Register is full, otherwise \c 0.
+ */
+static inline bool spi_is_tx_ok(SPI_t *spi)
+{
+	return spi->STATUS & SPI_IF_bm ? true : false;
+     b82:	e0 ee       	ldi	r30, 0xE0	; 224
+     b84:	f8 e0       	ldi	r31, 0x08	; 8
+     b86:	82 81       	ldd	r24, Z+2	; 0x02
+	
+	while (!spi_is_rx_ready(&SPIC));
+     b88:	88 23       	and	r24, r24
+     b8a:	ec f7       	brge	.-6      	; 0xb86 <SX1276ReadBuffer+0x22>
+// 			spi_write_single(&SPIC,0x00);
+// 			while (!spi_is_tx_ready(&SPIC));
+// 			spi_read_single(&SPIC, &bCtsValue);			// Read command buffer; get CTS value
+    spi_read_packet(&SPIC,buffer,size);
+     b8c:	4c 2f       	mov	r20, r28
+     b8e:	50 e0       	ldi	r21, 0x00	; 0
+     b90:	b8 01       	movw	r22, r16
+     b92:	80 ee       	ldi	r24, 0xE0	; 224
+     b94:	98 e0       	ldi	r25, 0x08	; 8
+     b96:	b5 d1       	rcall	.+874    	; 0xf02 <spi_read_packet>
+    spi_deselect_device(&SPIC, &spi_device_conf);
+     b98:	60 e0       	ldi	r22, 0x00	; 0
+     b9a:	70 e2       	ldi	r23, 0x20	; 32
+     b9c:	80 ee       	ldi	r24, 0xE0	; 224
+     b9e:	98 e0       	ldi	r25, 0x08	; 8
+     ba0:	d9 d1       	rcall	.+946    	; 0xf54 <spi_deselect_device>
+
+// #else 
+// 	#error Neni definovana optimalizace
+// #endif
+		
+}
+     ba2:	df 91       	pop	r29
+     ba4:	cf 91       	pop	r28
+     ba6:	1f 91       	pop	r17
+     ba8:	0f 91       	pop	r16
+     baa:	08 95       	ret
+
+00000bac <SX1276Read>:
+    SX1276WriteBuffer( addr, &data, 1 );
+}
+
+void SX1276Read( uint8_t addr, uint8_t *data )
+{
+    SX1276ReadBuffer( addr, data, 1 );
+     bac:	41 e0       	ldi	r20, 0x01	; 1
+     bae:	da cf       	rjmp	.-76     	; 0xb64 <SX1276ReadBuffer>
+     bb0:	08 95       	ret
+
+00000bb2 <SX1276WriteFifo>:
+// #endif
+		
+}
+
+void SX1276WriteFifo( uint8_t *buffer, uint8_t size )
+{
+     bb2:	46 2f       	mov	r20, r22
+///   	tc45_disable(&TCD5);
+	    SX1276WriteBuffer( 0, buffer, size );
+     bb4:	bc 01       	movw	r22, r24
+     bb6:	80 e0       	ldi	r24, 0x00	; 0
+     bb8:	a2 cf       	rjmp	.-188    	; 0xafe <SX1276WriteBuffer>
+     bba:	08 95       	ret
+
+00000bbc <SX1276LoRaSetDefaults>:
+
+    SX1276SetReset( RADIO_RESET_OFF );
+    
+    // Wait 6ms
+    delay_ms(60)    ;
+}
+     bbc:	cf 93       	push	r28
+     bbe:	df 93       	push	r29
+     bc0:	80 91 07 20 	lds	r24, 0x2007
+     bc4:	89 30       	cpi	r24, 0x09	; 9
+     bc6:	60 f4       	brcc	.+24     	; 0xbe0 <SX1276LoRaSetDefaults+0x24>
+     bc8:	ca e4       	ldi	r28, 0x4A	; 74
+     bca:	d0 e2       	ldi	r29, 0x20	; 32
+     bcc:	68 a9       	ldd	r22, Y+48	; 0x30
+     bce:	70 e0       	ldi	r23, 0x00	; 0
+     bd0:	81 e3       	ldi	r24, 0x31	; 49
+     bd2:	ec df       	rcall	.-40     	; 0xbac <SX1276Read>
+     bd4:	68 a9       	ldd	r22, Y+48	; 0x30
+     bd6:	6f 77       	andi	r22, 0x7F	; 127
+     bd8:	68 ab       	std	Y+48, r22	; 0x30
+     bda:	81 e3       	ldi	r24, 0x31	; 49
+     bdc:	b4 df       	rcall	.-152    	; 0xb46 <SX1276Write>
+     bde:	11 c0       	rjmp	.+34     	; 0xc02 <SX1276LoRaSetDefaults+0x46>
+     be0:	ca e4       	ldi	r28, 0x4A	; 74
+     be2:	d0 e2       	ldi	r29, 0x20	; 32
+     be4:	68 a9       	ldd	r22, Y+48	; 0x30
+     be6:	70 e0       	ldi	r23, 0x00	; 0
+     be8:	81 e3       	ldi	r24, 0x31	; 49
+     bea:	e0 df       	rcall	.-64     	; 0xbac <SX1276Read>
+     bec:	68 a9       	ldd	r22, Y+48	; 0x30
+     bee:	60 68       	ori	r22, 0x80	; 128
+     bf0:	68 ab       	std	Y+48, r22	; 0x30
+     bf2:	81 e3       	ldi	r24, 0x31	; 49
+     bf4:	a8 df       	rcall	.-176    	; 0xb46 <SX1276Write>
+     bf6:	62 e0       	ldi	r22, 0x02	; 2
+     bf8:	86 e3       	ldi	r24, 0x36	; 54
+     bfa:	a5 df       	rcall	.-182    	; 0xb46 <SX1276Write>
+     bfc:	64 e6       	ldi	r22, 0x64	; 100
+     bfe:	8a e3       	ldi	r24, 0x3A	; 58
+     c00:	a2 df       	rcall	.-188    	; 0xb46 <SX1276Write>
+     c02:	80 91 07 20 	lds	r24, 0x2007
+     c06:	81 11       	cpse	r24, r1
+     c08:	03 c0       	rjmp	.+6      	; 0xc10 <SX1276LoRaSetDefaults+0x54>
+     c0a:	68 e4       	ldi	r22, 0x48	; 72
+     c0c:	8f e2       	ldi	r24, 0x2F	; 47
+     c0e:	9b df       	rcall	.-202    	; 0xb46 <SX1276Write>
+     c10:	80 91 07 20 	lds	r24, 0x2007
+     c14:	86 30       	cpi	r24, 0x06	; 6
+     c16:	18 f4       	brcc	.+6      	; 0xc1e <SX1276LoRaSetDefaults+0x62>
+     c18:	64 e4       	ldi	r22, 0x44	; 68
+     c1a:	8f e2       	ldi	r24, 0x2F	; 47
+     c1c:	94 df       	rcall	.-216    	; 0xb46 <SX1276Write>
+     c1e:	80 91 07 20 	lds	r24, 0x2007
+     c22:	86 50       	subi	r24, 0x06	; 6
+     c24:	83 30       	cpi	r24, 0x03	; 3
+     c26:	18 f4       	brcc	.+6      	; 0xc2e <SX1276LoRaSetDefaults+0x72>
+     c28:	60 e4       	ldi	r22, 0x40	; 64
+     c2a:	8f e2       	ldi	r24, 0x2F	; 47
+     c2c:	8c df       	rcall	.-232    	; 0xb46 <SX1276Write>
+     c2e:	ca e4       	ldi	r28, 0x4A	; 74
+     c30:	d0 e2       	ldi	r29, 0x20	; 32
+     c32:	68 a9       	ldd	r22, Y+48	; 0x30
+     c34:	70 e0       	ldi	r23, 0x00	; 0
+     c36:	80 e3       	ldi	r24, 0x30	; 48
+     c38:	b9 df       	rcall	.-142    	; 0xbac <SX1276Read>
+     c3a:	68 a9       	ldd	r22, Y+48	; 0x30
+     c3c:	6e 7f       	andi	r22, 0xFE	; 254
+     c3e:	68 ab       	std	Y+48, r22	; 0x30
+     c40:	80 e3       	ldi	r24, 0x30	; 48
+     c42:	81 df       	rcall	.-254    	; 0xb46 <SX1276Write>
+     c44:	df 91       	pop	r29
+     c46:	cf 91       	pop	r28
+     c48:	08 95       	ret
+
+00000c4a <SX1276LoRaSetOpMode>:
+
+void SX1276LoRaSetOpMode( uint8_t opMode )
+{	
+     c4a:	1f 93       	push	r17
+     c4c:	cf 93       	push	r28
+     c4e:	df 93       	push	r29
+     c50:	18 2f       	mov	r17, r24
+		static uint8_t opModePrev = RFLR_OPMODE_STANDBY;
+		static bool antennaSwitchTxOnPrev = true;
+		bool antennaSwitchTxOn = false;
+
+		opModePrev = SX1276LR.RegOpMode & ~RFLR_OPMODE_MASK;
+     c52:	ca e4       	ldi	r28, 0x4A	; 74
+     c54:	d0 e2       	ldi	r29, 0x20	; 32
+     c56:	99 81       	ldd	r25, Y+1	; 0x01
+     c58:	89 2f       	mov	r24, r25
+     c5a:	87 70       	andi	r24, 0x07	; 7
+     c5c:	80 93 01 20 	sts	0x2001, r24
+			antennaSwitchTxOn = false;
+		}
+
+	//	RXTX( antennaSwitchTxOn ); // Antenna switch control
+
+		SX1276LR.RegOpMode = ( SX1276LR.RegOpMode & RFLR_OPMODE_MASK ) | opMode;
+     c60:	98 7f       	andi	r25, 0xF8	; 248
+     c62:	91 2b       	or	r25, r17
+     c64:	99 83       	std	Y+1, r25	; 0x01
+		
+		SX1276Read( REG_LR_OPMODE, SX1276LR.RegOpMode );
+     c66:	69 2f       	mov	r22, r25
+     c68:	70 e0       	ldi	r23, 0x00	; 0
+     c6a:	81 e0       	ldi	r24, 0x01	; 1
+     c6c:	9f df       	rcall	.-194    	; 0xbac <SX1276Read>
+		
+		SX1276LR.RegOpMode = ( SX1276LR.RegOpMode & RFLR_OPMODE_MASK ) | opMode;
+     c6e:	69 81       	ldd	r22, Y+1	; 0x01
+     c70:	68 7f       	andi	r22, 0xF8	; 248
+     c72:	61 2b       	or	r22, r17
+     c74:	69 83       	std	Y+1, r22	; 0x01
+		SX1276Write( REG_LR_OPMODE, SX1276LR.RegOpMode );
+     c76:	81 e0       	ldi	r24, 0x01	; 1
+     c78:	66 df       	rcall	.-308    	; 0xb46 <SX1276Write>
+}
+     c7a:	df 91       	pop	r29
+     c7c:	cf 91       	pop	r28
+     c7e:	1f 91       	pop	r17
+     c80:	08 95       	ret
+
+00000c82 <SX1276LoRaInit>:
+#define MODULE_SX1276RF1IAS							1
+#define MODULE_SX1276RF1KAS							0
+#define MODULE_SX1276RF1JAS							0
+
+void SX1276LoRaInit( void )
+{
+     c82:	cf 93       	push	r28
+     c84:	df 93       	push	r29
+   
+    SX1276LoRaSetOpMode( RFLR_OPMODE_SLEEP );	
+     c86:	80 e0       	ldi	r24, 0x00	; 0
+     c88:	e0 df       	rcall	.-64     	; 0xc4a <SX1276LoRaSetOpMode>
+	SX1276LoRaSetDefaults( );
+     c8a:	98 df       	rcall	.-208    	; 0xbbc <SX1276LoRaSetDefaults>
+		
+	SX1276ReadBuffer( 0x1,&SX1276LR, 0x70 - 1 );
+     c8c:	4f e6       	ldi	r20, 0x6F	; 111
+     c8e:	6a e4       	ldi	r22, 0x4A	; 74
+     c90:	70 e2       	ldi	r23, 0x20	; 32
+     c92:	81 e0       	ldi	r24, 0x01	; 1
+     c94:	67 df       	rcall	.-306    	; 0xb64 <SX1276ReadBuffer>
+       
+    // set the RF settings 
+   SX1276LoRaSetRFFrequency( LoRaSettings.RFFrequency,&SX1276LR );
+     c96:	c2 e0       	ldi	r28, 0x02	; 2
+     c98:	d0 e2       	ldi	r29, 0x20	; 32
+     c9a:	68 81       	ld	r22, Y
+     c9c:	79 81       	ldd	r23, Y+1	; 0x01
+     c9e:	8a 81       	ldd	r24, Y+2	; 0x02
+     ca0:	9b 81       	ldd	r25, Y+3	; 0x03
+     ca2:	4a e4       	ldi	r20, 0x4A	; 74
+     ca4:	50 e2       	ldi	r21, 0x20	; 32
+     ca6:	dc dd       	rcall	.-1096   	; 0x860 <SX1276LoRaSetRFFrequency>
+   SX1276LoRaSetSpreadingFactor( LoRaSettings.SpreadingFactor,&SX1276LR ); // SF6 only operates in implicit header mode.
+     ca8:	6a e4       	ldi	r22, 0x4A	; 74
+     caa:	70 e2       	ldi	r23, 0x20	; 32
+     cac:	8e 81       	ldd	r24, Y+6	; 0x06
+     cae:	04 de       	rcall	.-1016   	; 0x8b8 <SX1276LoRaSetSpreadingFactor>
+   SX1276LoRaSetErrorCoding( LoRaSettings.ErrorCoding,&SX1276LR );
+     cb0:	6a e4       	ldi	r22, 0x4A	; 74
+     cb2:	70 e2       	ldi	r23, 0x20	; 32
+     cb4:	8f 81       	ldd	r24, Y+7	; 0x07
+     cb6:	28 de       	rcall	.-944    	; 0x908 <SX1276LoRaSetErrorCoding>
+   SX1276LoRaSetPacketCrcOn( LoRaSettings.CrcOn,&SX1276LR );
+     cb8:	6a e4       	ldi	r22, 0x4A	; 74
+     cba:	70 e2       	ldi	r23, 0x20	; 32
+     cbc:	88 85       	ldd	r24, Y+8	; 0x08
+     cbe:	39 de       	rcall	.-910    	; 0x932 <SX1276LoRaSetPacketCrcOn>
+   SX1276LoRaSetSignalBandwidth( LoRaSettings.SignalBw,&SX1276LR );
+     cc0:	6a e4       	ldi	r22, 0x4A	; 74
+     cc2:	70 e2       	ldi	r23, 0x20	; 32
+     cc4:	8d 81       	ldd	r24, Y+5	; 0x05
+     cc6:	4b de       	rcall	.-874    	; 0x95e <SX1276LoRaSetSignalBandwidth>
+   
+   SX1276LoRaSetImplicitHeaderOn( LoRaSettings.ImplicitHeaderOn,&SX1276LR );
+     cc8:	6a e4       	ldi	r22, 0x4A	; 74
+     cca:	70 e2       	ldi	r23, 0x20	; 32
+     ccc:	89 85       	ldd	r24, Y+9	; 0x09
+     cce:	5e de       	rcall	.-836    	; 0x98c <SX1276LoRaSetImplicitHeaderOn>
+   SX1276LoRaSetSymbTimeout( 0x3FF,&SX1276LR );	//Maximum - casove okno pro hledani preamble v single rezimu
+     cd0:	6a e4       	ldi	r22, 0x4A	; 74
+     cd2:	70 e2       	ldi	r23, 0x20	; 32
+     cd4:	8f ef       	ldi	r24, 0xFF	; 255
+     cd6:	93 e0       	ldi	r25, 0x03	; 3
+     cd8:	6d de       	rcall	.-806    	; 0x9b4 <SX1276LoRaSetSymbTimeout>
+   SX1276LoRaSetPayloadLength( LoRaSettings.PayloadLength,&SX1276LR );	//
+     cda:	6a e4       	ldi	r22, 0x4A	; 74
+     cdc:	70 e2       	ldi	r23, 0x20	; 32
+     cde:	8d 89       	ldd	r24, Y+21	; 0x15
+     ce0:	8c de       	rcall	.-744    	; 0x9fa <SX1276LoRaSetPayloadLength>
+    
+	 if (LoRaSettings.SpreadingFactor>=11)
+     ce2:	8e 81       	ldd	r24, Y+6	; 0x06
+     ce4:	8b 30       	cpi	r24, 0x0B	; 11
+     ce6:	28 f0       	brcs	.+10     	; 0xcf2 <SX1276LoRaInit+0x70>
+	 {
+		 SX1276LoRaSetLowDatarateOptimize( true,&SX1276LR );	//pouze pro SF11 a SF12
+     ce8:	6a e4       	ldi	r22, 0x4A	; 74
+     cea:	70 e2       	ldi	r23, 0x20	; 32
+     cec:	81 e0       	ldi	r24, 0x01	; 1
+     cee:	8b de       	rcall	.-746    	; 0xa06 <SX1276LoRaSetLowDatarateOptimize>
+     cf0:	04 c0       	rjmp	.+8      	; 0xcfa <SX1276LoRaInit+0x78>
+	 }else
+	 {
+		 
+		 SX1276LoRaSetLowDatarateOptimize( false,&SX1276LR );	//pouze pro SF11 a SF12
+     cf2:	6a e4       	ldi	r22, 0x4A	; 74
+     cf4:	70 e2       	ldi	r23, 0x20	; 32
+     cf6:	80 e0       	ldi	r24, 0x00	; 0
+     cf8:	86 de       	rcall	.-756    	; 0xa06 <SX1276LoRaSetLowDatarateOptimize>
+	 // 	SX1276LR.RegModemConfig3|=0x4;
+	 // 	SX1276Write( REG_LR_MODEMCONFIG3,SX1276LR.RegModemConfig3 );
+	 
+#if( ( MODULE_SX1276RF1IAS == 1 ) || ( MODULE_SX1276RF1KAS == 1 ) )
+	 
+	 if( LoRaSettings.RFFrequency > 860000000 )
+     cfa:	80 91 02 20 	lds	r24, 0x2002
+     cfe:	90 91 03 20 	lds	r25, 0x2003
+     d02:	a0 91 04 20 	lds	r26, 0x2004
+     d06:	b0 91 05 20 	lds	r27, 0x2005
+     d0a:	81 30       	cpi	r24, 0x01	; 1
+     d0c:	9f 48       	sbci	r25, 0x8F	; 143
+     d0e:	a2 44       	sbci	r26, 0x42	; 66
+     d10:	b3 43       	sbci	r27, 0x33	; 51
+     d12:	70 f0       	brcs	.+28     	; 0xd30 <SX1276LoRaInit+0xae>
+	 {
+		 SX1276LoRaSetPAOutput( RFLR_PACONFIG_PASELECT_RFO,&SX1276LR );
+     d14:	6a e4       	ldi	r22, 0x4A	; 74
+     d16:	70 e2       	ldi	r23, 0x20	; 32
+     d18:	80 e0       	ldi	r24, 0x00	; 0
+     d1a:	67 dd       	rcall	.-1330   	; 0x7ea <SX1276LoRaSetPAOutput>
+		 SX1276LoRaSetPa20dBm( false,&SX1276LR );
+     d1c:	6a e4       	ldi	r22, 0x4A	; 74
+     d1e:	70 e2       	ldi	r23, 0x20	; 32
+     d20:	80 e0       	ldi	r24, 0x00	; 0
+     d22:	77 dd       	rcall	.-1298   	; 0x812 <SX1276LoRaSetPa20dBm>
+		 //LoRaSettings.Power = 14;
+		 SX1276LoRaSetRFPower( LoRaSettings.Power,&SX1276LR );
+     d24:	6a e4       	ldi	r22, 0x4A	; 74
+     d26:	70 e2       	ldi	r23, 0x20	; 32
+     d28:	80 91 06 20 	lds	r24, 0x2006
+     d2c:	14 dd       	rcall	.-1496   	; 0x756 <SX1276LoRaSetRFPower>
+     d2e:	0e c0       	rjmp	.+28     	; 0xd4c <SX1276LoRaInit+0xca>
+	 }
+	 else
+	 {
+		 SX1276LoRaSetPAOutput( RFLR_PACONFIG_PASELECT_PABOOST,&SX1276LR );
+     d30:	6a e4       	ldi	r22, 0x4A	; 74
+     d32:	70 e2       	ldi	r23, 0x20	; 32
+     d34:	80 e8       	ldi	r24, 0x80	; 128
+     d36:	59 dd       	rcall	.-1358   	; 0x7ea <SX1276LoRaSetPAOutput>
+		 SX1276LoRaSetPa20dBm( true,&SX1276LR );
+     d38:	6a e4       	ldi	r22, 0x4A	; 74
+     d3a:	70 e2       	ldi	r23, 0x20	; 32
+     d3c:	81 e0       	ldi	r24, 0x01	; 1
+     d3e:	69 dd       	rcall	.-1326   	; 0x812 <SX1276LoRaSetPa20dBm>
+		 LoRaSettings.Power = 20;
+     d40:	84 e1       	ldi	r24, 0x14	; 20
+     d42:	80 93 06 20 	sts	0x2006, r24
+		 SX1276LoRaSetRFPower( LoRaSettings.Power,&SX1276LR );
+     d46:	6a e4       	ldi	r22, 0x4A	; 74
+     d48:	70 e2       	ldi	r23, 0x20	; 32
+     d4a:	05 dd       	rcall	.-1526   	; 0x756 <SX1276LoRaSetRFPower>
+	 
+#else
+	 #error "Not defined Module for SX1276"
+#endif
+
+	 SX1276LoRaSetOpMode( RFLR_OPMODE_STANDBY );
+     d4c:	81 e0       	ldi	r24, 0x01	; 1
+     d4e:	7d df       	rcall	.-262    	; 0xc4a <SX1276LoRaSetOpMode>
+}
+     d50:	df 91       	pop	r29
+     d52:	cf 91       	pop	r28
+     d54:	08 95       	ret
+
+00000d56 <SX1276Reset>:
+}
+
+void SX1276Reset( void )
+{
+    
+    SX1276SetReset( RADIO_RESET_OFF );
+     d56:	80 e0       	ldi	r24, 0x00	; 0
+     d58:	c8 de       	rcall	.-624    	; 0xaea <SX1276SetReset>
+     d5a:	80 e0       	ldi	r24, 0x00	; 0
+     d5c:	90 e0       	ldi	r25, 0x00	; 0
+     d5e:	01 96       	adiw	r24, 0x01	; 1
+     d60:	85 35       	cpi	r24, 0x55	; 85
+     d62:	20 ed       	ldi	r18, 0xD0	; 208
+     d64:	92 07       	cpc	r25, r18
+     d66:	d9 f7       	brne	.-10     	; 0xd5e <SX1276Reset+0x8>
+    
+    // Wait 10ms
+    delay_ms(10);
+    SX1276SetReset( RADIO_RESET_ON );
+     d68:	81 e0       	ldi	r24, 0x01	; 1
+     d6a:	bf de       	rcall	.-642    	; 0xaea <SX1276SetReset>
+     d6c:	80 e8       	ldi	r24, 0x80	; 128
+     d6e:	98 e3       	ldi	r25, 0x38	; 56
+     d70:	a1 e0       	ldi	r26, 0x01	; 1
+     d72:	b0 e0       	ldi	r27, 0x00	; 0
+     d74:	01 97       	sbiw	r24, 0x01	; 1
+     d76:	a1 09       	sbc	r26, r1
+     d78:	b1 09       	sbc	r27, r1
+     d7a:	e1 f7       	brne	.-8      	; 0xd74 <SX1276Reset+0x1e>
+    
+    // Wait 10ms
+    delay_ms(15);
+}
+     d7c:	08 95       	ret
+
+00000d7e <SX1276SetLoRaOn>:
+
+void SX1276SetLoRaOn(void)
+{
+    SX1276LoRaSetOpMode( RFLR_OPMODE_SLEEP );
+     d7e:	80 e0       	ldi	r24, 0x00	; 0
+     d80:	64 df       	rcall	.-312    	; 0xc4a <SX1276LoRaSetOpMode>
+        
+    SX1276LR.RegOpMode = ( SX1276LR.RegOpMode & RFLR_OPMODE_LONGRANGEMODE_MASK ) | RFLR_OPMODE_LONGRANGEMODE_ON;	
+     d82:	ea e4       	ldi	r30, 0x4A	; 74
+     d84:	f0 e2       	ldi	r31, 0x20	; 32
+     d86:	61 81       	ldd	r22, Z+1	; 0x01
+     d88:	60 68       	ori	r22, 0x80	; 128
+	SX1276LR.RegOpMode&=~0x8;//-0x08 - HF
+     d8a:	67 7f       	andi	r22, 0xF7	; 247
+     d8c:	61 83       	std	Z+1, r22	; 0x01
+	
+    SX1276Write( REG_LR_OPMODE, SX1276LR.RegOpMode );
+     d8e:	81 e0       	ldi	r24, 0x01	; 1
+     d90:	da de       	rcall	.-588    	; 0xb46 <SX1276Write>
+        
+    SX1276LoRaSetOpMode( RFLR_OPMODE_STANDBY );
+     d92:	81 e0       	ldi	r24, 0x01	; 1
+     d94:	5a df       	rcall	.-332    	; 0xc4a <SX1276LoRaSetOpMode>
+                                    // RxDone               RxTimeout                   FhssChangeChannel           CadDone
+    SX1276LR.RegDioMapping1 = 
+     d96:	80 e4       	ldi	r24, 0x40	; 64
+     d98:	80 93 89 20 	sts	0x2089, r24
+	RFLR_DIOMAPPING1_DIO0_01|
+	RFLR_DIOMAPPING1_DIO2_00 | 
+	RFLR_DIOMAPPING1_DIO3_00;	//TX_Done
+
+                                    // CadDetected          ModeReady
+    SX1276LR.RegDioMapping2 = RFLR_DIOMAPPING2_DIO4_00 | RFLR_DIOMAPPING2_DIO5_00;
+     d9c:	10 92 8a 20 	sts	0x208A, r1
+	
+    SX1276WriteBuffer( REG_LR_DIOMAPPING1, &SX1276LR.RegDioMapping1, 2 );
+     da0:	42 e0       	ldi	r20, 0x02	; 2
+     da2:	69 e8       	ldi	r22, 0x89	; 137
+     da4:	70 e2       	ldi	r23, 0x20	; 32
+     da6:	ab ce       	rjmp	.-682    	; 0xafe <SX1276WriteBuffer>
+     da8:	08 95       	ret
+
+00000daa <SX1276Init>:
+ * SX1276 registers variable
+ */
+extern tSX1276LR SX1276LR;
+
+void SX1276Init( void )
+{
+     daa:	cf 93       	push	r28
+     dac:	df 93       	push	r29
+    // InitializeLoRa registers structure
+    //SX1276LR = ( tSX1276LR* )SX1276Regs;
+	
+	//SX1276Read( REG_LR_VERSION, &SX1276LR.RegVersion );
+	
+    SX1276InitIo( );
+     dae:	42 de       	rcall	.-892    	; 0xa34 <SX1276InitIo>
+	//SX1276Read( REG_LR_VERSION, &SX1276LR.RegVersion );
+	
+    SX1276Reset( );
+     db0:	d2 df       	rcall	.-92     	; 0xd56 <SX1276Reset>
+	
+	//SX1276Write( REG_LR_OPMODE, 0x09 );
+	
+	SX1276Read( REG_LR_VERSION, &SX1276LR.RegVersion );
+     db2:	6b e8       	ldi	r22, 0x8B	; 139
+     db4:	70 e2       	ldi	r23, 0x20	; 32
+     db6:	82 e4       	ldi	r24, 0x42	; 66
+     db8:	f9 de       	rcall	.-526    	; 0xbac <SX1276Read>
+	if ((SX1276LR.RegVersion==0x11)||(SX1276LR.RegVersion==0x12))
+     dba:	80 91 8b 20 	lds	r24, 0x208B
+     dbe:	81 51       	subi	r24, 0x11	; 17
+     dc0:	82 30       	cpi	r24, 0x02	; 2
+     dc2:	08 f0       	brcs	.+2      	; 0xdc6 <SX1276Init+0x1c>
+     dc4:	5c c0       	rjmp	.+184    	; 0xe7e <SX1276Init+0xd4>
+     dc6:	24 e0       	ldi	r18, 0x04	; 4
+
+__always_inline static void arch_ioport_toggle_pin_level(ioport_pin_t pin)
+{
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	base->OUTTGL = arch_ioport_pin_to_mask(pin);
+     dc8:	e0 e4       	ldi	r30, 0x40	; 64
+     dca:	f6 e0       	ldi	r31, 0x06	; 6
+     dcc:	71 e0       	ldi	r23, 0x01	; 1
+     dce:	60 e8       	ldi	r22, 0x80	; 128
+     dd0:	5a e1       	ldi	r21, 0x1A	; 26
+     dd2:	46 e0       	ldi	r20, 0x06	; 6
+     dd4:	30 e0       	ldi	r19, 0x00	; 0
+     dd6:	77 83       	std	Z+7, r23	; 0x07
+     dd8:	86 2f       	mov	r24, r22
+     dda:	95 2f       	mov	r25, r21
+     ddc:	a4 2f       	mov	r26, r20
+     dde:	b3 2f       	mov	r27, r19
+     de0:	01 97       	sbiw	r24, 0x01	; 1
+     de2:	a1 09       	sbc	r26, r1
+     de4:	b1 09       	sbc	r27, r1
+     de6:	e1 f7       	brne	.-8      	; 0xde0 <SX1276Init+0x36>
+     de8:	21 50       	subi	r18, 0x01	; 1
+	{
+		for (uint8_t i=0;i<4;i++)
+     dea:	a9 f7       	brne	.-22     	; 0xdd6 <SX1276Init+0x2c>
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	if (level) {
+		base->OUTSET = arch_ioport_pin_to_mask(pin);
+	} else {
+		base->OUTCLR = arch_ioport_pin_to_mask(pin);
+     dec:	81 e0       	ldi	r24, 0x01	; 1
+     dee:	80 93 46 06 	sts	0x0646, r24
+     df2:	22 e0       	ldi	r18, 0x02	; 2
+
+__always_inline static void arch_ioport_toggle_pin_level(ioport_pin_t pin)
+{
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	base->OUTTGL = arch_ioport_pin_to_mask(pin);
+     df4:	c0 e4       	ldi	r28, 0x40	; 64
+     df6:	d6 e0       	ldi	r29, 0x06	; 6
+     df8:	72 e0       	ldi	r23, 0x02	; 2
+		((TC4_t *)tc)->CTRLA
+			= (((TC4_t *)tc)->CTRLA & ~TC4_CLKSEL_gm) |
+				TC45_CLKSEL_enum;
+	} else if (tc45_is_TC5(void *tc)) {
+		((TC5_t *)tc)->CTRLA
+			= (((TC5_t *)tc)->CTRLA & ~TC5_CLKSEL_gm) |
+     dfa:	e0 e4       	ldi	r30, 0x40	; 64
+     dfc:	f9 e0       	ldi	r31, 0x09	; 9
+     dfe:	65 e5       	ldi	r22, 0x55	; 85
+     e00:	53 e2       	ldi	r21, 0x23	; 35
+     e02:	48 e0       	ldi	r20, 0x08	; 8
+     e04:	30 e0       	ldi	r19, 0x00	; 0
+     e06:	7f 83       	std	Y+7, r23	; 0x07
+     e08:	80 81       	ld	r24, Z
+     e0a:	80 7f       	andi	r24, 0xF0	; 240
+     e0c:	84 60       	ori	r24, 0x04	; 4
+     e0e:	80 83       	st	Z, r24
+     e10:	86 2f       	mov	r24, r22
+     e12:	95 2f       	mov	r25, r21
+     e14:	a4 2f       	mov	r26, r20
+     e16:	b3 2f       	mov	r27, r19
+     e18:	01 97       	sbiw	r24, 0x01	; 1
+     e1a:	a1 09       	sbc	r26, r1
+     e1c:	b1 09       	sbc	r27, r1
+     e1e:	e1 f7       	brne	.-8      	; 0xe18 <SX1276Init+0x6e>
+     e20:	7f 83       	std	Y+7, r23	; 0x07
+     e22:	80 81       	ld	r24, Z
+     e24:	80 7f       	andi	r24, 0xF0	; 240
+     e26:	80 83       	st	Z, r24
+     e28:	86 2f       	mov	r24, r22
+     e2a:	95 2f       	mov	r25, r21
+     e2c:	a4 2f       	mov	r26, r20
+     e2e:	b3 2f       	mov	r27, r19
+     e30:	01 97       	sbiw	r24, 0x01	; 1
+     e32:	a1 09       	sbc	r26, r1
+     e34:	b1 09       	sbc	r27, r1
+     e36:	e1 f7       	brne	.-8      	; 0xe30 <SX1276Init+0x86>
+     e38:	21 50       	subi	r18, 0x01	; 1
+			delay_ms(75)	;
+		}
+		
+		ioport_set_pin_level(LED_G,LOW);
+		
+		 for (uint8_t i=0; i<2;i++)
+     e3a:	29 f7       	brne	.-54     	; 0xe06 <SX1276Init+0x5c>
+     e3c:	81 e0       	ldi	r24, 0x01	; 1
+     e3e:	80 93 47 06 	sts	0x0647, r24
+static inline void tc45_write_period(volatile void *tc, uint16_t per_value)
+{
+	if (tc45_is_TC4(void *tc)) {
+		((TC4_t *)tc)->PER = per_value;
+	} else if (tc45_is_TC5(void *tc)) {
+		((TC5_t *)tc)->PER = per_value;
+     e42:	e0 e4       	ldi	r30, 0x40	; 64
+     e44:	f9 e0       	ldi	r31, 0x09	; 9
+     e46:	80 e2       	ldi	r24, 0x20	; 32
+     e48:	93 e0       	ldi	r25, 0x03	; 3
+     e4a:	86 a3       	std	Z+38, r24	; 0x26
+     e4c:	97 a3       	std	Z+39, r25	; 0x27
+		case TC45_CCA:
+			((TC5_t *)tc)->CCA = value;
+			break;
+
+		case TC45_CCB:
+			((TC5_t *)tc)->CCB = value;
+     e4e:	82 ec       	ldi	r24, 0xC2	; 194
+     e50:	91 e0       	ldi	r25, 0x01	; 1
+     e52:	82 a7       	std	Z+42, r24	; 0x2a
+     e54:	93 a7       	std	Z+43, r25	; 0x2b
+		((TC4_t *)tc)->CTRLA
+			= (((TC4_t *)tc)->CTRLA & ~TC4_CLKSEL_gm) |
+				TC45_CLKSEL_enum;
+	} else if (tc45_is_TC5(void *tc)) {
+		((TC5_t *)tc)->CTRLA
+			= (((TC5_t *)tc)->CTRLA & ~TC5_CLKSEL_gm) |
+     e56:	80 81       	ld	r24, Z
+     e58:	80 7f       	andi	r24, 0xF0	; 240
+     e5a:	84 60       	ori	r24, 0x04	; 4
+     e5c:	80 83       	st	Z, r24
+     e5e:	85 e5       	ldi	r24, 0x55	; 85
+     e60:	93 e2       	ldi	r25, 0x23	; 35
+     e62:	a8 e0       	ldi	r26, 0x08	; 8
+     e64:	b0 e0       	ldi	r27, 0x00	; 0
+     e66:	01 97       	sbiw	r24, 0x01	; 1
+     e68:	a1 09       	sbc	r26, r1
+     e6a:	b1 09       	sbc	r27, r1
+     e6c:	e1 f7       	brne	.-8      	; 0xe66 <SX1276Init+0xbc>
+     e6e:	e0 e4       	ldi	r30, 0x40	; 64
+     e70:	f9 e0       	ldi	r31, 0x09	; 9
+     e72:	80 81       	ld	r24, Z
+     e74:	80 7f       	andi	r24, 0xF0	; 240
+     e76:	80 83       	st	Z, r24
+     e78:	81 e0       	ldi	r24, 0x01	; 1
+     e7a:	80 93 47 06 	sts	0x0647, r24
+			
+			//ioport_toggle_pin(LED_G);
+			
+	}
+		
+    SX1276SetLoRaOn();
+     e7e:	7f df       	rcall	.-258    	; 0xd7e <SX1276SetLoRaOn>
+	
+    // Initialize LoRa modem
+    SX1276LoRaInit( );
+     e80:	00 df       	rcall	.-512    	; 0xc82 <SX1276LoRaInit>
+
+
+}
+     e82:	df 91       	pop	r29
+     e84:	cf 91       	pop	r28
+     e86:	08 95       	ret
+
+00000e88 <spi_master_init>:
+ *
+ * \param spi       Base address of the SPI instance.
+ *
+ */
+void spi_master_init(SPI_t *spi)
+{
+     e88:	cf 93       	push	r28
+     e8a:	df 93       	push	r29
+     e8c:	ec 01       	movw	r28, r24
+	if ((uint16_t)spi == (uint16_t)&SPIB) {
+		sysclk_enable_module(SYSCLK_PORT_B, PR_SPI_bm);
+	}
+#endif
+#ifdef SPIC
+	if ((uint16_t)spi == (uint16_t)&SPIC) {
+     e8e:	c0 3e       	cpi	r28, 0xE0	; 224
+     e90:	88 e0       	ldi	r24, 0x08	; 8
+     e92:	d8 07       	cpc	r29, r24
+     e94:	19 f4       	brne	.+6      	; 0xe9c <spi_master_init+0x14>
+		sysclk_enable_module(SYSCLK_PORT_C, PR_SPI_bm);
+     e96:	68 e0       	ldi	r22, 0x08	; 8
+     e98:	83 e0       	ldi	r24, 0x03	; 3
+     e9a:	fd d1       	rcall	.+1018   	; 0x1296 <sysclk_enable_module>
+ *
+ * \warning This may cause data loss if used on a slave SPI.
+ */
+static inline void spi_enable_master_mode(SPI_t *spi)
+{
+	spi->CTRL |= SPI_MASTER_bm;
+     e9c:	88 81       	ld	r24, Y
+     e9e:	80 61       	ori	r24, 0x10	; 16
+     ea0:	88 83       	st	Y, r24
+	if ((uint16_t)spi == (uint16_t)&SPIF) {
+		sysclk_enable_module(SYSCLK_PORT_F, PR_SPI_bm);
+	}
+#endif
+	spi_enable_master_mode(spi);
+}
+     ea2:	df 91       	pop	r29
+     ea4:	cf 91       	pop	r28
+     ea6:	08 95       	ret
+
+00000ea8 <spi_master_setup_device>:
+ * \param sel_id    Board specific select id
+ */
+void spi_master_setup_device(SPI_t *spi, struct spi_device *device,
+		spi_flags_t flags, uint32_t baud_rate,
+		board_spi_select_id_t sel_id)
+{
+     ea8:	ef 92       	push	r14
+     eaa:	ff 92       	push	r15
+     eac:	0f 93       	push	r16
+     eae:	1f 93       	push	r17
+     eb0:	cf 93       	push	r28
+     eb2:	7c 01       	movw	r14, r24
+     eb4:	c4 2f       	mov	r28, r20
+     eb6:	b9 01       	movw	r22, r18
+     eb8:	a8 01       	movw	r20, r16
+	if (spi_xmega_set_baud_div(spi, baud_rate, sysclk_get_cpu_hz()) < 0) {
+     eba:	00 e0       	ldi	r16, 0x00	; 0
+     ebc:	18 e4       	ldi	r17, 0x48	; 72
+     ebe:	28 ee       	ldi	r18, 0xE8	; 232
+     ec0:	31 e0       	ldi	r19, 0x01	; 1
+     ec2:	00 d2       	rcall	.+1024   	; 0x12c4 <spi_xmega_set_baud_div>
+     ec4:	88 23       	and	r24, r24
+     ec6:	44 f0       	brlt	.+16     	; 0xed8 <spi_master_setup_device+0x30>
+		Assert(false);
+		return;
+	}
+
+	/* Clear any set SPI mode flags and set them to the user-specified mode */
+	spi->CTRL = (spi->CTRL & ~SPI_MODE_gm) |
+     ec8:	f7 01       	movw	r30, r14
+     eca:	90 81       	ld	r25, Z
+			((flags << SPI_MODE_gp) & SPI_MODE_gm);
+     ecc:	cc 0f       	add	r28, r28
+     ece:	cc 0f       	add	r28, r28
+		Assert(false);
+		return;
+	}
+
+	/* Clear any set SPI mode flags and set them to the user-specified mode */
+	spi->CTRL = (spi->CTRL & ~SPI_MODE_gm) |
+     ed0:	cc 70       	andi	r28, 0x0C	; 12
+     ed2:	93 7f       	andi	r25, 0xF3	; 243
+     ed4:	c9 2b       	or	r28, r25
+     ed6:	c0 83       	st	Z, r28
+			((flags << SPI_MODE_gp) & SPI_MODE_gm);
+}
+     ed8:	cf 91       	pop	r28
+     eda:	1f 91       	pop	r17
+     edc:	0f 91       	pop	r16
+     ede:	ff 90       	pop	r15
+     ee0:	ef 90       	pop	r14
+     ee2:	08 95       	ret
+
+00000ee4 <spi_write_packet>:
+ * \param len    Length of data
+ *
+ * \pre SPI device must be selected with spi_select_device() first
+ */
+status_code_t spi_write_packet(SPI_t *spi, const uint8_t *data, size_t len)
+{
+     ee4:	fc 01       	movw	r30, r24
+     ee6:	db 01       	movw	r26, r22
+     ee8:	46 0f       	add	r20, r22
+     eea:	57 1f       	adc	r21, r23
+	while (len--) {
+     eec:	05 c0       	rjmp	.+10     	; 0xef8 <spi_write_packet+0x14>
+		spi_write_single(spi, *data++);
+     eee:	8d 91       	ld	r24, X+
+ * \param data The data byte to be loaded
+ *
+ */
+static inline void spi_put(SPI_t *spi, uint8_t data)
+{
+	spi->DATA = data;
+     ef0:	83 83       	std	Z+3, r24	; 0x03
+ *
+ * \return \c 1 if the SPI Receive Holding Register is full, otherwise \c 0.
+ */
+static inline bool spi_is_tx_ok(SPI_t *spi)
+{
+	return spi->STATUS & SPI_IF_bm ? true : false;
+     ef2:	92 81       	ldd	r25, Z+2	; 0x02
+		
+		while (!spi_is_rx_full(spi)) {
+     ef4:	99 23       	and	r25, r25
+     ef6:	ec f7       	brge	.-6      	; 0xef2 <spi_write_packet+0xe>
+ *
+ * \pre SPI device must be selected with spi_select_device() first
+ */
+status_code_t spi_write_packet(SPI_t *spi, const uint8_t *data, size_t len)
+{
+	while (len--) {
+     ef8:	a4 17       	cp	r26, r20
+     efa:	b5 07       	cpc	r27, r21
+     efc:	c1 f7       	brne	.-16     	; 0xeee <spi_write_packet+0xa>
+		while (!spi_is_rx_full(spi)) {
+		}
+	}
+	
+	return STATUS_OK;
+}
+     efe:	80 e0       	ldi	r24, 0x00	; 0
+     f00:	08 95       	ret
+
+00000f02 <spi_read_packet>:
+ * \param len    Length of data
+ *
+ * \pre SPI device must be selected with spi_select_device() first
+ */
+status_code_t spi_read_packet(SPI_t *spi, uint8_t *data, size_t len)
+{
+     f02:	fc 01       	movw	r30, r24
+     f04:	db 01       	movw	r26, r22
+	while (len--) {
+     f06:	41 15       	cp	r20, r1
+     f08:	51 05       	cpc	r21, r1
+     f0a:	61 f0       	breq	.+24     	; 0xf24 <spi_read_packet+0x22>
+     f0c:	46 0f       	add	r20, r22
+     f0e:	57 1f       	adc	r21, r23
+ * \param data The data byte to be loaded
+ *
+ */
+static inline void spi_put(SPI_t *spi, uint8_t data)
+{
+	spi->DATA = data;
+     f10:	2f ef       	ldi	r18, 0xFF	; 255
+     f12:	23 83       	std	Z+3, r18	; 0x03
+ *
+ * \return \c 1 if the SPI Receive Holding Register is full, otherwise \c 0.
+ */
+static inline bool spi_is_tx_ok(SPI_t *spi)
+{
+	return spi->STATUS & SPI_IF_bm ? true : false;
+     f14:	92 81       	ldd	r25, Z+2	; 0x02
+		spi_write_single(spi,CONFIG_SPI_MASTER_DUMMY); //Dummy write
+
+		while (!spi_is_rx_full(spi)) {
+     f16:	99 23       	and	r25, r25
+     f18:	ec f7       	brge	.-6      	; 0xf14 <spi_read_packet+0x12>
+ * \return The data byte
+ *
+ */
+static inline uint8_t spi_get(SPI_t *spi)
+{
+	return spi->DATA;
+     f1a:	83 81       	ldd	r24, Z+3	; 0x03
+ * \param data Pointer to the data byte where to store the received data.
+ *
+ */
+inline static void spi_read_single(SPI_t *spi, uint8_t *data)
+{
+	*data=spi_get(spi);
+     f1c:	8d 93       	st	X+, r24
+ *
+ * \pre SPI device must be selected with spi_select_device() first
+ */
+status_code_t spi_read_packet(SPI_t *spi, uint8_t *data, size_t len)
+{
+	while (len--) {
+     f1e:	a4 17       	cp	r26, r20
+     f20:	b5 07       	cpc	r27, r21
+     f22:	b9 f7       	brne	.-18     	; 0xf12 <spi_read_packet+0x10>
+		spi_read_single(spi, data);
+		data++;
+	}
+	
+	return STATUS_OK;
+}
+     f24:	80 e0       	ldi	r24, 0x00	; 0
+     f26:	08 95       	ret
+
+00000f28 <spi_select_device>:
+ * \param device SPI device
+ *
+ */
+void spi_select_device(SPI_t *spi, struct spi_device *device)
+{
+	ioport_set_pin_low(device->id);
+     f28:	fb 01       	movw	r30, r22
+     f2a:	80 81       	ld	r24, Z
+typedef uint8_t ioport_port_t;
+typedef uint8_t ioport_port_mask_t;
+
+__always_inline static ioport_port_t arch_ioport_pin_to_port_id(ioport_pin_t pin)
+{
+	return pin >> 3;
+     f2c:	e8 2f       	mov	r30, r24
+     f2e:	e6 95       	lsr	r30
+     f30:	e6 95       	lsr	r30
+     f32:	e6 95       	lsr	r30
+}
+
+__always_inline static PORT_t *arch_ioport_port_to_base(ioport_port_t port)
+{
+	return (PORT_t *)((uintptr_t)IOPORT_BASE_ADDRESS +
+	       (port * IOPORT_PORT_OFFSET));
+     f34:	40 e2       	ldi	r20, 0x20	; 32
+     f36:	e4 9f       	mul	r30, r20
+     f38:	f0 01       	movw	r30, r0
+     f3a:	11 24       	eor	r1, r1
+	return pin >> 3;
+}
+
+__always_inline static PORT_t *arch_ioport_port_to_base(ioport_port_t port)
+{
+	return (PORT_t *)((uintptr_t)IOPORT_BASE_ADDRESS +
+     f3c:	fa 5f       	subi	r31, 0xFA	; 250
+}
+
+__always_inline static ioport_port_mask_t arch_ioport_pin_to_mask(
+		ioport_pin_t pin)
+{
+	return 1U << (pin & 0x07);
+     f3e:	87 70       	andi	r24, 0x07	; 7
+     f40:	21 e0       	ldi	r18, 0x01	; 1
+     f42:	30 e0       	ldi	r19, 0x00	; 0
+     f44:	a9 01       	movw	r20, r18
+     f46:	02 c0       	rjmp	.+4      	; 0xf4c <spi_select_device+0x24>
+     f48:	44 0f       	add	r20, r20
+     f4a:	55 1f       	adc	r21, r21
+     f4c:	8a 95       	dec	r24
+     f4e:	e2 f7       	brpl	.-8      	; 0xf48 <spi_select_device+0x20>
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	if (level) {
+		base->OUTSET = arch_ioport_pin_to_mask(pin);
+	} else {
+		base->OUTCLR = arch_ioport_pin_to_mask(pin);
+     f50:	46 83       	std	Z+6, r20	; 0x06
+     f52:	08 95       	ret
+
+00000f54 <spi_deselect_device>:
+ *
+ * \pre SPI device must be selected with spi_select_device() first
+ */
+void spi_deselect_device(SPI_t *spi, struct spi_device *device)
+{
+	ioport_set_pin_high(device->id);
+     f54:	fb 01       	movw	r30, r22
+     f56:	80 81       	ld	r24, Z
+typedef uint8_t ioport_port_t;
+typedef uint8_t ioport_port_mask_t;
+
+__always_inline static ioport_port_t arch_ioport_pin_to_port_id(ioport_pin_t pin)
+{
+	return pin >> 3;
+     f58:	e8 2f       	mov	r30, r24
+     f5a:	e6 95       	lsr	r30
+     f5c:	e6 95       	lsr	r30
+     f5e:	e6 95       	lsr	r30
+}
+
+__always_inline static PORT_t *arch_ioport_port_to_base(ioport_port_t port)
+{
+	return (PORT_t *)((uintptr_t)IOPORT_BASE_ADDRESS +
+	       (port * IOPORT_PORT_OFFSET));
+     f60:	40 e2       	ldi	r20, 0x20	; 32
+     f62:	e4 9f       	mul	r30, r20
+     f64:	f0 01       	movw	r30, r0
+     f66:	11 24       	eor	r1, r1
+	return pin >> 3;
+}
+
+__always_inline static PORT_t *arch_ioport_port_to_base(ioport_port_t port)
+{
+	return (PORT_t *)((uintptr_t)IOPORT_BASE_ADDRESS +
+     f68:	fa 5f       	subi	r31, 0xFA	; 250
+}
+
+__always_inline static ioport_port_mask_t arch_ioport_pin_to_mask(
+		ioport_pin_t pin)
+{
+	return 1U << (pin & 0x07);
+     f6a:	87 70       	andi	r24, 0x07	; 7
+     f6c:	21 e0       	ldi	r18, 0x01	; 1
+     f6e:	30 e0       	ldi	r19, 0x00	; 0
+     f70:	a9 01       	movw	r20, r18
+     f72:	02 c0       	rjmp	.+4      	; 0xf78 <spi_deselect_device+0x24>
+     f74:	44 0f       	add	r20, r20
+     f76:	55 1f       	adc	r21, r21
+     f78:	8a 95       	dec	r24
+     f7a:	e2 f7       	brpl	.-8      	; 0xf74 <spi_deselect_device+0x20>
+		bool level)
+{
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	if (level) {
+		base->OUTSET = arch_ioport_pin_to_mask(pin);
+     f7c:	45 83       	std	Z+5, r20	; 0x05
+     f7e:	08 95       	ret
+
+00000f80 <adc_set_callback>:
+ *
+ * \param adc Pointer to ADC module.
+ * \param callback Pointer to the callback function to set.
+ */
+void adc_set_callback(ADC_t *adc, adc_callback_t callback)
+{
+     f80:	9c 01       	movw	r18, r24
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+     f82:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+     f84:	f8 94       	cli
+	Assert(callback);
+
+	flags = cpu_irq_save();
+
+#ifdef ADCA
+	if ((uintptr_t)adc == (uintptr_t)&ADCA) {
+     f86:	21 15       	cp	r18, r1
+     f88:	32 40       	sbci	r19, 0x02	; 2
+     f8a:	21 f4       	brne	.+8      	; 0xf94 <adc_set_callback+0x14>
+		adca_callback = callback;
+     f8c:	60 93 b9 20 	sts	0x20B9, r22
+     f90:	70 93 ba 20 	sts	0x20BA, r23
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+     f94:	9f bf       	out	0x3f, r25	; 63
+     f96:	08 95       	ret
+
+00000f98 <adc_enable_clock>:
+void adc_enable_clock(ADC_t *adc);
+
+void adc_enable_clock(ADC_t *adc)
+{
+#ifdef ADCA
+	if ((uintptr_t)adc == (uintptr_t)(&ADCA)) {
+     f98:	81 15       	cp	r24, r1
+     f9a:	92 40       	sbci	r25, 0x02	; 2
+     f9c:	59 f4       	brne	.+22     	; 0xfb4 <adc_enable_clock+0x1c>
+		Assert(adca_enable_count < 0xff);
+		if (!adca_enable_count++) {
+     f9e:	80 91 3c 20 	lds	r24, 0x203C
+     fa2:	91 e0       	ldi	r25, 0x01	; 1
+     fa4:	98 0f       	add	r25, r24
+     fa6:	90 93 3c 20 	sts	0x203C, r25
+     faa:	81 11       	cpse	r24, r1
+     fac:	03 c0       	rjmp	.+6      	; 0xfb4 <adc_enable_clock+0x1c>
+			sysclk_enable_module(SYSCLK_PORT_A, SYSCLK_ADC);
+     fae:	62 e0       	ldi	r22, 0x02	; 2
+     fb0:	81 e0       	ldi	r24, 0x01	; 1
+     fb2:	71 c1       	rjmp	.+738    	; 0x1296 <sysclk_enable_module>
+     fb4:	08 95       	ret
+
+00000fb6 <adc_disable_clock>:
+void adc_disable_clock(ADC_t *adc);
+
+void adc_disable_clock(ADC_t *adc)
+{
+#ifdef ADCA
+	if ((uintptr_t)adc == (uintptr_t)(&ADCA)) {
+     fb6:	81 15       	cp	r24, r1
+     fb8:	92 40       	sbci	r25, 0x02	; 2
+     fba:	51 f4       	brne	.+20     	; 0xfd0 <adc_disable_clock+0x1a>
+		Assert(adca_enable_count);
+		if (!--adca_enable_count) {
+     fbc:	80 91 3c 20 	lds	r24, 0x203C
+     fc0:	81 50       	subi	r24, 0x01	; 1
+     fc2:	80 93 3c 20 	sts	0x203C, r24
+     fc6:	81 11       	cpse	r24, r1
+     fc8:	03 c0       	rjmp	.+6      	; 0xfd0 <adc_disable_clock+0x1a>
+			sysclk_disable_module(SYSCLK_PORT_A, SYSCLK_ADC);
+     fca:	62 e0       	ldi	r22, 0x02	; 2
+     fcc:	81 e0       	ldi	r24, 0x01	; 1
+     fce:	6f c1       	rjmp	.+734    	; 0x12ae <sysclk_disable_module>
+     fd0:	08 95       	ret
+
+00000fd2 <adc_enable>:
+ * a conversion. For most XMEGA devices the start-up time is specified
+ * to be a maximum of 24 ADC clock cycles. Please verify the start-up time for
+ * the device in use.
+ */
+void adc_enable(ADC_t *adc)
+{
+     fd2:	1f 93       	push	r17
+     fd4:	cf 93       	push	r28
+     fd6:	df 93       	push	r29
+     fd8:	ec 01       	movw	r28, r24
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+     fda:	1f b7       	in	r17, 0x3f	; 63
+	cpu_irq_disable();
+     fdc:	f8 94       	cli
+	irqflags_t flags = cpu_irq_save();
+	adc_enable_clock(adc);
+     fde:	dc df       	rcall	.-72     	; 0xf98 <adc_enable_clock>
+	adc->CTRLA |= ADC_ENABLE_bm;
+     fe0:	88 81       	ld	r24, Y
+     fe2:	81 60       	ori	r24, 0x01	; 1
+     fe4:	88 83       	st	Y, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+     fe6:	1f bf       	out	0x3f, r17	; 63
+static inline void sleepmgr_lock_mode(enum sleepmgr_mode mode)
+{
+#ifdef CONFIG_SLEEPMGR_ENABLE
+	irqflags_t flags;
+
+	if(sleepmgr_locks[mode] >= 0xff) {
+     fe8:	80 91 bc 20 	lds	r24, 0x20BC
+     fec:	8f 3f       	cpi	r24, 0xFF	; 255
+     fee:	09 f4       	brne	.+2      	; 0xff2 <adc_enable+0x20>
+     ff0:	ff cf       	rjmp	.-2      	; 0xff0 <adc_enable+0x1e>
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+     ff2:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+     ff4:	f8 94       	cli
+	}
+
+	// Enter a critical section
+	flags = cpu_irq_save();
+
+	++sleepmgr_locks[mode];
+     ff6:	eb eb       	ldi	r30, 0xBB	; 187
+     ff8:	f0 e2       	ldi	r31, 0x20	; 32
+     ffa:	81 81       	ldd	r24, Z+1	; 0x01
+     ffc:	8f 5f       	subi	r24, 0xFF	; 255
+     ffe:	81 83       	std	Z+1, r24	; 0x01
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1000:	9f bf       	out	0x3f, r25	; 63
+	cpu_irq_restore(flags);
+
+	sleepmgr_lock_mode(SLEEPMGR_IDLE);
+}
+    1002:	df 91       	pop	r29
+    1004:	cf 91       	pop	r28
+    1006:	1f 91       	pop	r17
+    1008:	08 95       	ret
+
+0000100a <adc_disable>:
+ * Disables the ADC and unlocks IDLE mode for the sleep manager.
+ *
+ * \param adc Pointer to ADC module
+ */
+void adc_disable(ADC_t *adc)
+{
+    100a:	cf 93       	push	r28
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    100c:	cf b7       	in	r28, 0x3f	; 63
+	cpu_irq_disable();
+    100e:	f8 94       	cli
+	irqflags_t flags = cpu_irq_save();
+	adc->CTRLA &= ~ADC_ENABLE_bm;
+    1010:	fc 01       	movw	r30, r24
+    1012:	20 81       	ld	r18, Z
+    1014:	2e 7f       	andi	r18, 0xFE	; 254
+    1016:	20 83       	st	Z, r18
+	adc_disable_clock(adc);
+    1018:	ce df       	rcall	.-100    	; 0xfb6 <adc_disable_clock>
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    101a:	cf bf       	out	0x3f, r28	; 63
+static inline void sleepmgr_unlock_mode(enum sleepmgr_mode mode)
+{
+#ifdef CONFIG_SLEEPMGR_ENABLE
+	irqflags_t flags;
+
+	if(sleepmgr_locks[mode] == 0) {
+    101c:	80 91 bc 20 	lds	r24, 0x20BC
+    1020:	81 11       	cpse	r24, r1
+    1022:	01 c0       	rjmp	.+2      	; 0x1026 <adc_disable+0x1c>
+    1024:	ff cf       	rjmp	.-2      	; 0x1024 <adc_disable+0x1a>
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1026:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    1028:	f8 94       	cli
+	}
+
+	// Enter a critical section
+	flags = cpu_irq_save();
+
+	--sleepmgr_locks[mode];
+    102a:	eb eb       	ldi	r30, 0xBB	; 187
+    102c:	f0 e2       	ldi	r31, 0x20	; 32
+    102e:	81 81       	ldd	r24, Z+1	; 0x01
+    1030:	81 50       	subi	r24, 0x01	; 1
+    1032:	81 83       	std	Z+1, r24	; 0x01
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1034:	9f bf       	out	0x3f, r25	; 63
+	cpu_irq_restore(flags);
+
+	sleepmgr_unlock_mode(SLEEPMGR_IDLE);
+}
+    1036:	cf 91       	pop	r28
+    1038:	08 95       	ret
+
+0000103a <__vector_34>:
+ *
+ * Calls the callback function that has been set for the ADC when the channel's
+ * interrupt flag is set, if its interrupt has been enabled.
+ */
+ISR(ADCA_CH0_vect)
+{
+    103a:	1f 92       	push	r1
+    103c:	0f 92       	push	r0
+    103e:	0f b6       	in	r0, 0x3f	; 63
+    1040:	0f 92       	push	r0
+    1042:	11 24       	eor	r1, r1
+    1044:	2f 93       	push	r18
+    1046:	3f 93       	push	r19
+    1048:	4f 93       	push	r20
+    104a:	5f 93       	push	r21
+    104c:	6f 93       	push	r22
+    104e:	7f 93       	push	r23
+    1050:	8f 93       	push	r24
+    1052:	9f 93       	push	r25
+    1054:	af 93       	push	r26
+    1056:	bf 93       	push	r27
+    1058:	ef 93       	push	r30
+    105a:	ff 93       	push	r31
+	adca_callback(&ADCA, ADC_CH0, adc_get_result(&ADCA, ADC_CH0));
+    105c:	40 91 24 02 	lds	r20, 0x0224
+    1060:	50 91 25 02 	lds	r21, 0x0225
+    1064:	e0 91 b9 20 	lds	r30, 0x20B9
+    1068:	f0 91 ba 20 	lds	r31, 0x20BA
+    106c:	61 e0       	ldi	r22, 0x01	; 1
+    106e:	80 e0       	ldi	r24, 0x00	; 0
+    1070:	92 e0       	ldi	r25, 0x02	; 2
+    1072:	09 95       	icall
+}
+    1074:	ff 91       	pop	r31
+    1076:	ef 91       	pop	r30
+    1078:	bf 91       	pop	r27
+    107a:	af 91       	pop	r26
+    107c:	9f 91       	pop	r25
+    107e:	8f 91       	pop	r24
+    1080:	7f 91       	pop	r23
+    1082:	6f 91       	pop	r22
+    1084:	5f 91       	pop	r21
+    1086:	4f 91       	pop	r20
+    1088:	3f 91       	pop	r19
+    108a:	2f 91       	pop	r18
+    108c:	0f 90       	pop	r0
+    108e:	0f be       	out	0x3f, r0	; 63
+    1090:	0f 90       	pop	r0
+    1092:	1f 90       	pop	r1
+    1094:	18 95       	reti
+
+00001096 <adc_write_configuration>:
+ *
+ * \param adc Pointer to ADC module.
+ * \param conf Pointer to ADC module configuration.
+ */
+void adc_write_configuration(ADC_t *adc, const struct adc_config *conf)
+{
+    1096:	df 92       	push	r13
+    1098:	ef 92       	push	r14
+    109a:	ff 92       	push	r15
+    109c:	0f 93       	push	r16
+    109e:	1f 93       	push	r17
+    10a0:	cf 93       	push	r28
+    10a2:	df 93       	push	r29
+	uint16_t cal;
+	uint8_t enable;
+	irqflags_t flags;
+
+#ifdef ADCA
+	if ((uintptr_t)adc == (uintptr_t)&ADCA) {
+    10a4:	81 15       	cp	r24, r1
+    10a6:	22 e0       	ldi	r18, 0x02	; 2
+    10a8:	92 07       	cpc	r25, r18
+    10aa:	61 f5       	brne	.+88     	; 0x1104 <adc_write_configuration+0x6e>
+    10ac:	8b 01       	movw	r16, r22
+    10ae:	ec 01       	movw	r28, r24
+ *
+ * \param address Byte offset into the signature row
+ */
+static inline uint8_t nvm_read_production_signature_row(uint8_t address)
+{
+	return nvm_read_byte(NVM_CMD_READ_CALIB_ROW_gc, address);
+    10b0:	61 e2       	ldi	r22, 0x21	; 33
+    10b2:	70 e0       	ldi	r23, 0x00	; 0
+    10b4:	82 e0       	ldi	r24, 0x02	; 2
+    10b6:	4d d1       	rcall	.+666    	; 0x1352 <nvm_read_byte>
+	uint16_t data;
+
+	switch (cal) {
+#ifdef ADCA
+	case ADC_CAL_ADCA:
+		data = nvm_read_production_signature_row(ADCACAL1);
+    10b8:	e8 2e       	mov	r14, r24
+    10ba:	f1 2c       	mov	r15, r1
+    10bc:	60 e2       	ldi	r22, 0x20	; 32
+    10be:	70 e0       	ldi	r23, 0x00	; 0
+    10c0:	82 e0       	ldi	r24, 0x02	; 2
+    10c2:	47 d1       	rcall	.+654    	; 0x1352 <nvm_read_byte>
+		data <<= 8;
+    10c4:	fe 2c       	mov	r15, r14
+    10c6:	ee 24       	eor	r14, r14
+		data |= nvm_read_production_signature_row(ADCACAL0);
+    10c8:	e8 2a       	or	r14, r24
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    10ca:	df b6       	in	r13, 0x3f	; 63
+	cpu_irq_disable();
+    10cc:	f8 94       	cli
+		Assert(0);
+		return;
+	}
+
+	flags = cpu_irq_save();
+	adc_enable_clock(adc);
+    10ce:	ce 01       	movw	r24, r28
+    10d0:	63 df       	rcall	.-314    	; 0xf98 <adc_enable_clock>
+	enable = adc->CTRLA & ADC_ENABLE_bm;
+    10d2:	88 81       	ld	r24, Y
+    10d4:	81 70       	andi	r24, 0x01	; 1
+
+	adc->CTRLA = ADC_FLUSH_bm;
+    10d6:	92 e0       	ldi	r25, 0x02	; 2
+    10d8:	98 83       	st	Y, r25
+	adc->CAL = cal;
+    10da:	ec 86       	std	Y+12, r14	; 0x0c
+    10dc:	fd 86       	std	Y+13, r15	; 0x0d
+	adc->CMP = conf->cmp;
+    10de:	f8 01       	movw	r30, r16
+    10e0:	24 81       	ldd	r18, Z+4	; 0x04
+    10e2:	35 81       	ldd	r19, Z+5	; 0x05
+    10e4:	28 8f       	std	Y+24, r18	; 0x18
+    10e6:	39 8f       	std	Y+25, r19	; 0x19
+	adc->REFCTRL = conf->refctrl;
+    10e8:	91 81       	ldd	r25, Z+1	; 0x01
+    10ea:	9a 83       	std	Y+2, r25	; 0x02
+	adc->PRESCALER = conf->prescaler;
+    10ec:	93 81       	ldd	r25, Z+3	; 0x03
+    10ee:	9c 83       	std	Y+4, r25	; 0x04
+	adc->EVCTRL = conf->evctrl;
+    10f0:	92 81       	ldd	r25, Z+2	; 0x02
+    10f2:	9b 83       	std	Y+3, r25	; 0x03
+	adc->CTRLB = conf->ctrlb;
+    10f4:	90 81       	ld	r25, Z
+    10f6:	99 83       	std	Y+1, r25	; 0x01
+	adc->SAMPCTRL = conf->sampctrl;
+    10f8:	96 81       	ldd	r25, Z+6	; 0x06
+    10fa:	98 87       	std	Y+8, r25	; 0x08
+
+	adc->CTRLA = enable;
+    10fc:	88 83       	st	Y, r24
+
+	adc_disable_clock(adc);
+    10fe:	ce 01       	movw	r24, r28
+    1100:	5a df       	rcall	.-332    	; 0xfb6 <adc_disable_clock>
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1102:	df be       	out	0x3f, r13	; 63
+
+	cpu_irq_restore(flags);
+}
+    1104:	df 91       	pop	r29
+    1106:	cf 91       	pop	r28
+    1108:	1f 91       	pop	r17
+    110a:	0f 91       	pop	r16
+    110c:	ff 90       	pop	r15
+    110e:	ef 90       	pop	r14
+    1110:	df 90       	pop	r13
+    1112:	08 95       	ret
+
+00001114 <adc_read_configuration>:
+ *
+ * \param adc Pointer to ADC module.
+ * \param conf Pointer to ADC module configuration.
+ */
+void adc_read_configuration(ADC_t *adc, struct adc_config *conf)
+{
+    1114:	ff 92       	push	r15
+    1116:	0f 93       	push	r16
+    1118:	1f 93       	push	r17
+    111a:	cf 93       	push	r28
+    111c:	df 93       	push	r29
+    111e:	ec 01       	movw	r28, r24
+    1120:	8b 01       	movw	r16, r22
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1122:	ff b6       	in	r15, 0x3f	; 63
+	cpu_irq_disable();
+    1124:	f8 94       	cli
+	irqflags_t flags = cpu_irq_save();
+
+	adc_enable_clock(adc);
+    1126:	38 df       	rcall	.-400    	; 0xf98 <adc_enable_clock>
+
+	conf->cmp = adc->CMP;
+    1128:	88 8d       	ldd	r24, Y+24	; 0x18
+    112a:	99 8d       	ldd	r25, Y+25	; 0x19
+    112c:	f8 01       	movw	r30, r16
+    112e:	84 83       	std	Z+4, r24	; 0x04
+    1130:	95 83       	std	Z+5, r25	; 0x05
+	conf->refctrl = adc->REFCTRL;
+    1132:	8a 81       	ldd	r24, Y+2	; 0x02
+    1134:	81 83       	std	Z+1, r24	; 0x01
+	conf->prescaler = adc->PRESCALER;
+    1136:	8c 81       	ldd	r24, Y+4	; 0x04
+    1138:	83 83       	std	Z+3, r24	; 0x03
+	conf->evctrl = adc->EVCTRL;
+    113a:	8b 81       	ldd	r24, Y+3	; 0x03
+    113c:	82 83       	std	Z+2, r24	; 0x02
+	conf->ctrlb = adc->CTRLB;
+    113e:	89 81       	ldd	r24, Y+1	; 0x01
+    1140:	80 83       	st	Z, r24
+	conf->sampctrl = adc->SAMPCTRL;
+    1142:	88 85       	ldd	r24, Y+8	; 0x08
+    1144:	86 83       	std	Z+6, r24	; 0x06
+
+	adc_disable_clock(adc);
+    1146:	ce 01       	movw	r24, r28
+    1148:	36 df       	rcall	.-404    	; 0xfb6 <adc_disable_clock>
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    114a:	ff be       	out	0x3f, r15	; 63
+
+	cpu_irq_restore(flags);
+}
+    114c:	df 91       	pop	r29
+    114e:	cf 91       	pop	r28
+    1150:	1f 91       	pop	r17
+    1152:	0f 91       	pop	r16
+    1154:	ff 90       	pop	r15
+    1156:	08 95       	ret
+
+00001158 <adcch_write_configuration>:
+ * is called if callbacks are enabled and interrupts are enabled in the
+ * channel configuration.
+ */
+void adcch_write_configuration(ADC_t *adc, uint8_t ch_mask,
+		const struct adc_channel_config *ch_conf)
+{
+    1158:	ff 92       	push	r15
+    115a:	0f 93       	push	r16
+    115c:	1f 93       	push	r17
+    115e:	cf 93       	push	r28
+    1160:	df 93       	push	r29
+    1162:	ec 01       	movw	r28, r24
+    1164:	8a 01       	movw	r16, r20
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1166:	ff b6       	in	r15, 0x3f	; 63
+	cpu_irq_disable();
+    1168:	f8 94       	cli
+			return;
+		}
+	}
+#endif
+
+	adc_enable_clock(adc);
+    116a:	16 df       	rcall	.-468    	; 0xf98 <adc_enable_clock>
+
+	adc_ch->CTRL = ch_conf->ctrl;
+    116c:	f8 01       	movw	r30, r16
+    116e:	80 81       	ld	r24, Z
+    1170:	88 a3       	std	Y+32, r24	; 0x20
+	adc_ch->INTCTRL = ch_conf->intctrl;
+    1172:	82 81       	ldd	r24, Z+2	; 0x02
+    1174:	8a a3       	std	Y+34, r24	; 0x22
+	adc_ch->MUXCTRL = ch_conf->muxctrl;
+    1176:	81 81       	ldd	r24, Z+1	; 0x01
+    1178:	89 a3       	std	Y+33, r24	; 0x21
+	adc_ch->SCAN = ch_conf->scan;
+    117a:	83 81       	ldd	r24, Z+3	; 0x03
+    117c:	8e a3       	std	Y+38, r24	; 0x26
+	adc_ch->CORRCTRL = ch_conf->corrctrl;
+    117e:	84 81       	ldd	r24, Z+4	; 0x04
+    1180:	8f a3       	std	Y+39, r24	; 0x27
+	adc_ch->OFFSETCORR0 = ch_conf->offsetcorr0;
+    1182:	85 81       	ldd	r24, Z+5	; 0x05
+    1184:	88 a7       	std	Y+40, r24	; 0x28
+	adc_ch->OFFSETCORR1 = ch_conf->offsetcorr1;
+    1186:	86 81       	ldd	r24, Z+6	; 0x06
+    1188:	89 a7       	std	Y+41, r24	; 0x29
+	adc_ch->GAINCORR0 = ch_conf->gaincorr0;
+    118a:	87 81       	ldd	r24, Z+7	; 0x07
+    118c:	8a a7       	std	Y+42, r24	; 0x2a
+	adc_ch->GAINCORR1 = ch_conf->gaincorr1;
+    118e:	80 85       	ldd	r24, Z+8	; 0x08
+    1190:	8b a7       	std	Y+43, r24	; 0x2b
+	adc_ch->AVGCTRL = ch_conf->avgctrl;
+    1192:	81 85       	ldd	r24, Z+9	; 0x09
+    1194:	8c a7       	std	Y+44, r24	; 0x2c
+
+	adc_disable_clock(adc);
+    1196:	ce 01       	movw	r24, r28
+    1198:	0e df       	rcall	.-484    	; 0xfb6 <adc_disable_clock>
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    119a:	ff be       	out	0x3f, r15	; 63
+
+	cpu_irq_restore(flags);
+}
+    119c:	df 91       	pop	r29
+    119e:	cf 91       	pop	r28
+    11a0:	1f 91       	pop	r17
+    11a2:	0f 91       	pop	r16
+    11a4:	ff 90       	pop	r15
+    11a6:	08 95       	ret
+
+000011a8 <adcch_read_configuration>:
+ * can be given in mask)
+ * \param ch_conf Pointer to ADC channel configuration.
+ */
+void adcch_read_configuration(ADC_t *adc, uint8_t ch_mask,
+		struct adc_channel_config *ch_conf)
+{
+    11a8:	ff 92       	push	r15
+    11aa:	0f 93       	push	r16
+    11ac:	1f 93       	push	r17
+    11ae:	cf 93       	push	r28
+    11b0:	df 93       	push	r29
+    11b2:	ec 01       	movw	r28, r24
+    11b4:	8a 01       	movw	r16, r20
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    11b6:	ff b6       	in	r15, 0x3f	; 63
+	cpu_irq_disable();
+    11b8:	f8 94       	cli
+
+	adc_ch = adc_get_channel(adc, ch_mask);
+
+	flags = cpu_irq_save();
+
+	adc_enable_clock(adc);
+    11ba:	ee de       	rcall	.-548    	; 0xf98 <adc_enable_clock>
+	ch_conf->ctrl = adc_ch->CTRL;
+    11bc:	88 a1       	ldd	r24, Y+32	; 0x20
+    11be:	f8 01       	movw	r30, r16
+    11c0:	80 83       	st	Z, r24
+	ch_conf->intctrl = adc_ch->INTCTRL;
+    11c2:	8a a1       	ldd	r24, Y+34	; 0x22
+    11c4:	82 83       	std	Z+2, r24	; 0x02
+	ch_conf->muxctrl = adc_ch->MUXCTRL;
+    11c6:	89 a1       	ldd	r24, Y+33	; 0x21
+    11c8:	81 83       	std	Z+1, r24	; 0x01
+	ch_conf->scan = adc_ch->SCAN;
+    11ca:	8e a1       	ldd	r24, Y+38	; 0x26
+    11cc:	83 83       	std	Z+3, r24	; 0x03
+	ch_conf->corrctrl = adc_ch->CORRCTRL;
+    11ce:	8f a1       	ldd	r24, Y+39	; 0x27
+    11d0:	84 83       	std	Z+4, r24	; 0x04
+	ch_conf->offsetcorr0 = adc_ch->OFFSETCORR0;
+    11d2:	88 a5       	ldd	r24, Y+40	; 0x28
+    11d4:	85 83       	std	Z+5, r24	; 0x05
+	ch_conf->offsetcorr1 = adc_ch->OFFSETCORR1;
+    11d6:	89 a5       	ldd	r24, Y+41	; 0x29
+    11d8:	86 83       	std	Z+6, r24	; 0x06
+	ch_conf->gaincorr0 = adc_ch->GAINCORR0;
+    11da:	8a a5       	ldd	r24, Y+42	; 0x2a
+    11dc:	87 83       	std	Z+7, r24	; 0x07
+	ch_conf->gaincorr1 = adc_ch->GAINCORR1;
+    11de:	8b a5       	ldd	r24, Y+43	; 0x2b
+    11e0:	80 87       	std	Z+8, r24	; 0x08
+	ch_conf->avgctrl = adc_ch->AVGCTRL;
+    11e2:	8c a5       	ldd	r24, Y+44	; 0x2c
+    11e4:	81 87       	std	Z+9, r24	; 0x09
+	adc_disable_clock(adc);
+    11e6:	ce 01       	movw	r24, r28
+    11e8:	e6 de       	rcall	.-564    	; 0xfb6 <adc_disable_clock>
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    11ea:	ff be       	out	0x3f, r15	; 63
+
+	cpu_irq_restore(flags);
+}
+    11ec:	df 91       	pop	r29
+    11ee:	cf 91       	pop	r28
+    11f0:	1f 91       	pop	r17
+    11f2:	0f 91       	pop	r16
+    11f4:	ff 90       	pop	r15
+    11f6:	08 95       	ret
+
+000011f8 <ioport_configure_port_pin>:
+#include "ioport_compat.h"
+
+#if defined(IOPORT_XMEGA_COMPAT)
+void ioport_configure_port_pin(void *port, pin_mask_t pin_mask,
+		port_pin_flags_t flags)
+{
+    11f8:	cf 93       	push	r28
+    11fa:	df 93       	push	r29
+    11fc:	fc 01       	movw	r30, r24
+    11fe:	70 96       	adiw	r30, 0x10	; 16
+	uint8_t pin;
+
+	for (pin = 0; pin < 8; pin++) {
+		if (pin_mask & (1 << pin)) {
+			*((uint8_t *)port + PORT_PIN0CTRL + pin) = flags >> 8;
+    1200:	20 e0       	ldi	r18, 0x00	; 0
+    1202:	30 e0       	ldi	r19, 0x00	; 0
+		port_pin_flags_t flags)
+{
+	uint8_t pin;
+
+	for (pin = 0; pin < 8; pin++) {
+		if (pin_mask & (1 << pin)) {
+    1204:	c6 2f       	mov	r28, r22
+    1206:	d0 e0       	ldi	r29, 0x00	; 0
+    1208:	de 01       	movw	r26, r28
+    120a:	02 2e       	mov	r0, r18
+    120c:	02 c0       	rjmp	.+4      	; 0x1212 <ioport_configure_port_pin+0x1a>
+    120e:	b5 95       	asr	r27
+    1210:	a7 95       	ror	r26
+    1212:	0a 94       	dec	r0
+    1214:	e2 f7       	brpl	.-8      	; 0x120e <ioport_configure_port_pin+0x16>
+    1216:	a0 fd       	sbrc	r26, 0
+			*((uint8_t *)port + PORT_PIN0CTRL + pin) = flags >> 8;
+    1218:	50 83       	st	Z, r21
+    121a:	2f 5f       	subi	r18, 0xFF	; 255
+    121c:	3f 4f       	sbci	r19, 0xFF	; 255
+    121e:	31 96       	adiw	r30, 0x01	; 1
+void ioport_configure_port_pin(void *port, pin_mask_t pin_mask,
+		port_pin_flags_t flags)
+{
+	uint8_t pin;
+
+	for (pin = 0; pin < 8; pin++) {
+    1220:	28 30       	cpi	r18, 0x08	; 8
+    1222:	31 05       	cpc	r19, r1
+    1224:	89 f7       	brne	.-30     	; 0x1208 <ioport_configure_port_pin+0x10>
+		if (pin_mask & (1 << pin)) {
+			*((uint8_t *)port + PORT_PIN0CTRL + pin) = flags >> 8;
+		}
+	}
+	/* Select direction and initial pin state */
+	if (flags & IOPORT_DIR_OUTPUT) {
+    1226:	40 ff       	sbrs	r20, 0
+    1228:	0a c0       	rjmp	.+20     	; 0x123e <ioport_configure_port_pin+0x46>
+		if (flags & IOPORT_INIT_HIGH) {
+    122a:	41 ff       	sbrs	r20, 1
+    122c:	03 c0       	rjmp	.+6      	; 0x1234 <ioport_configure_port_pin+0x3c>
+			*((uint8_t *)port + PORT_OUTSET) = pin_mask;
+    122e:	fc 01       	movw	r30, r24
+    1230:	65 83       	std	Z+5, r22	; 0x05
+    1232:	02 c0       	rjmp	.+4      	; 0x1238 <ioport_configure_port_pin+0x40>
+		} else {
+			*((uint8_t *)port + PORT_OUTCLR) = pin_mask;
+    1234:	fc 01       	movw	r30, r24
+    1236:	66 83       	std	Z+6, r22	; 0x06
+		}
+
+		*((uint8_t *)port + PORT_DIRSET) = pin_mask;
+    1238:	fc 01       	movw	r30, r24
+    123a:	61 83       	std	Z+1, r22	; 0x01
+    123c:	02 c0       	rjmp	.+4      	; 0x1242 <ioport_configure_port_pin+0x4a>
+	} else {
+		*((uint8_t *)port + PORT_DIRCLR) = pin_mask;
+    123e:	fc 01       	movw	r30, r24
+    1240:	62 83       	std	Z+2, r22	; 0x02
+	}
+}
+    1242:	df 91       	pop	r29
+    1244:	cf 91       	pop	r28
+    1246:	08 95       	ret
+
+00001248 <sysclk_init>:
+#endif
+	bool need_rc2mhz = false;
+
+	/* Turn off all peripheral clocks that can be turned off. */
+	for (i = 0; i <= SYSCLK_PORT_F; i++) {
+		*(reg++) = 0xff;
+    1248:	8f ef       	ldi	r24, 0xFF	; 255
+    124a:	80 93 70 00 	sts	0x0070, r24
+    124e:	80 93 71 00 	sts	0x0071, r24
+    1252:	80 93 72 00 	sts	0x0072, r24
+    1256:	80 93 73 00 	sts	0x0073, r24
+    125a:	80 93 74 00 	sts	0x0074, r24
+    125e:	80 93 75 00 	sts	0x0075, r24
+    1262:	80 93 76 00 	sts	0x0076, r24
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1266:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    1268:	f8 94       	cli
+	irqflags_t flags;
+
+	Assert(id != OSC_ID_USBSOF);
+
+	flags = cpu_irq_save();
+	OSC.CTRL |= id;
+    126a:	e0 e5       	ldi	r30, 0x50	; 80
+    126c:	f0 e0       	ldi	r31, 0x00	; 0
+    126e:	80 81       	ld	r24, Z
+    1270:	82 60       	ori	r24, 0x02	; 2
+    1272:	80 83       	st	Z, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1274:	9f bf       	out	0x3f, r25	; 63
+
+static inline bool osc_is_ready(uint8_t id)
+{
+	Assert(id != OSC_ID_USBSOF);
+
+	return OSC.STATUS & id;
+    1276:	81 81       	ldd	r24, Z+1	; 0x01
+ *
+ * \param id A number identifying the oscillator to wait for.
+ */
+static inline void osc_wait_ready(uint8_t id)
+{
+	while (!osc_is_ready(id)) {
+    1278:	81 ff       	sbrs	r24, 1
+    127a:	fd cf       	rjmp	.-6      	; 0x1276 <sysclk_init+0x2e>
+		default:
+			//unhandled_case(CONFIG_SYSCLK_SOURCE);
+			return;
+		}
+
+		ccp_write_io((uint8_t *)&CLK.CTRL, CONFIG_SYSCLK_SOURCE);
+    127c:	61 e0       	ldi	r22, 0x01	; 1
+    127e:	80 e4       	ldi	r24, 0x40	; 64
+    1280:	90 e0       	ldi	r25, 0x00	; 0
+    1282:	71 d0       	rcall	.+226    	; 0x1366 <ccp_write_io>
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1284:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    1286:	f8 94       	cli
+	irqflags_t flags;
+
+	Assert(id != OSC_ID_USBSOF);
+
+	flags = cpu_irq_save();
+	OSC.CTRL &= ~id;
+    1288:	e0 e5       	ldi	r30, 0x50	; 80
+    128a:	f0 e0       	ldi	r31, 0x00	; 0
+    128c:	80 81       	ld	r24, Z
+    128e:	8e 7f       	andi	r24, 0xFE	; 254
+    1290:	80 83       	st	Z, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1292:	9f bf       	out	0x3f, r25	; 63
+    1294:	08 95       	ret
+
+00001296 <sysclk_enable_module>:
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1296:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    1298:	f8 94       	cli
+
+void sysclk_enable_module(enum sysclk_port_id port, uint8_t id)
+{
+	irqflags_t flags = cpu_irq_save();
+
+	*((uint8_t *)&PR.PRGEN + port) &= ~id;
+    129a:	e8 2f       	mov	r30, r24
+    129c:	f0 e0       	ldi	r31, 0x00	; 0
+    129e:	e0 59       	subi	r30, 0x90	; 144
+    12a0:	ff 4f       	sbci	r31, 0xFF	; 255
+    12a2:	60 95       	com	r22
+    12a4:	80 81       	ld	r24, Z
+    12a6:	68 23       	and	r22, r24
+    12a8:	60 83       	st	Z, r22
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    12aa:	9f bf       	out	0x3f, r25	; 63
+    12ac:	08 95       	ret
+
+000012ae <sysclk_disable_module>:
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    12ae:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    12b0:	f8 94       	cli
+
+void sysclk_disable_module(enum sysclk_port_id port, uint8_t id)
+{
+	irqflags_t flags = cpu_irq_save();
+
+	*((uint8_t *)&PR.PRGEN + port) |= id;
+    12b2:	e8 2f       	mov	r30, r24
+    12b4:	f0 e0       	ldi	r31, 0x00	; 0
+    12b6:	e0 59       	subi	r30, 0x90	; 144
+    12b8:	ff 4f       	sbci	r31, 0xFF	; 255
+    12ba:	80 81       	ld	r24, Z
+    12bc:	68 2b       	or	r22, r24
+    12be:	60 83       	st	Z, r22
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    12c0:	9f bf       	out	0x3f, r25	; 63
+    12c2:	08 95       	ret
+
+000012c4 <spi_xmega_set_baud_div>:
+ * \return Status of operation.
+ *   \retval >=0  Success.
+ *   \retval  <0  Error.
+ */
+int8_t spi_xmega_set_baud_div(SPI_t *spi, uint32_t baudrate, uint32_t clkper_hz)
+{
+    12c4:	cf 92       	push	r12
+    12c6:	df 92       	push	r13
+    12c8:	ef 92       	push	r14
+    12ca:	ff 92       	push	r15
+    12cc:	0f 93       	push	r16
+    12ce:	1f 93       	push	r17
+    12d0:	cf 93       	push	r28
+    12d2:	df 93       	push	r29
+    12d4:	ec 01       	movw	r28, r24
+    12d6:	6a 01       	movw	r12, r20
+    12d8:	7b 01       	movw	r14, r22
+    12da:	db 01       	movw	r26, r22
+    12dc:	ca 01       	movw	r24, r20
+    12de:	01 97       	sbiw	r24, 0x01	; 1
+    12e0:	a1 09       	sbc	r26, r1
+    12e2:	b1 09       	sbc	r27, r1
+
+	/*
+	 * Get wanted divisor rounded up so we don't get speed higher than
+	 * requested baudrate.
+	 */
+	divisor = (clkper_hz + baudrate - 1) / baudrate;
+    12e4:	bc 01       	movw	r22, r24
+    12e6:	cd 01       	movw	r24, r26
+    12e8:	60 0f       	add	r22, r16
+    12ea:	71 1f       	adc	r23, r17
+    12ec:	82 1f       	adc	r24, r18
+    12ee:	93 1f       	adc	r25, r19
+    12f0:	a7 01       	movw	r20, r14
+    12f2:	96 01       	movw	r18, r12
+    12f4:	b2 d3       	rcall	.+1892   	; 0x1a5a <__udivmodsi4>
+
+	if (divisor > 128) {
+    12f6:	21 38       	cpi	r18, 0x81	; 129
+    12f8:	31 05       	cpc	r19, r1
+    12fa:	41 05       	cpc	r20, r1
+    12fc:	51 05       	cpc	r21, r1
+    12fe:	f8 f4       	brcc	.+62     	; 0x133e <spi_xmega_set_baud_div+0x7a>
+
+	/*
+	 * For divisor values between the possible ones round up to the closest
+	 * higher one to avoid higher baudrate than requested.
+	 */
+	if (divisor_8bit > 64) {
+    1300:	21 34       	cpi	r18, 0x41	; 65
+    1302:	60 f4       	brcc	.+24     	; 0x131c <spi_xmega_set_baud_div+0x58>
+		ctrl = SPI_PRESCALER_DIV128_gc;
+	}
+	else if (divisor_8bit > 32) {
+    1304:	21 32       	cpi	r18, 0x21	; 33
+    1306:	60 f4       	brcc	.+24     	; 0x1320 <spi_xmega_set_baud_div+0x5c>
+		ctrl = SPI_PRESCALER_DIV64_gc;
+	}
+	else if (divisor_8bit > 16) {
+    1308:	21 31       	cpi	r18, 0x11	; 17
+    130a:	60 f4       	brcc	.+24     	; 0x1324 <spi_xmega_set_baud_div+0x60>
+		ctrl = SPI_CLK2X_bm | SPI_PRESCALER_DIV64_gc;
+	}
+	else if (divisor_8bit > 8) {
+    130c:	29 30       	cpi	r18, 0x09	; 9
+    130e:	60 f4       	brcc	.+24     	; 0x1328 <spi_xmega_set_baud_div+0x64>
+		ctrl = SPI_PRESCALER_DIV16_gc;
+	}
+	else if (divisor_8bit > 4) {
+    1310:	25 30       	cpi	r18, 0x05	; 5
+    1312:	60 f4       	brcc	.+24     	; 0x132c <spi_xmega_set_baud_div+0x68>
+		ctrl = SPI_CLK2X_bm | SPI_PRESCALER_DIV16_gc;
+	}
+	else if (divisor_8bit > 2) {
+    1314:	23 30       	cpi	r18, 0x03	; 3
+    1316:	60 f4       	brcc	.+24     	; 0x1330 <spi_xmega_set_baud_div+0x6c>
+		ctrl = SPI_PRESCALER_DIV4_gc;
+	}
+	else {
+		ctrl = SPI_CLK2X_bm | SPI_PRESCALER_DIV4_gc;
+    1318:	80 e8       	ldi	r24, 0x80	; 128
+    131a:	0b c0       	rjmp	.+22     	; 0x1332 <spi_xmega_set_baud_div+0x6e>
+	/*
+	 * For divisor values between the possible ones round up to the closest
+	 * higher one to avoid higher baudrate than requested.
+	 */
+	if (divisor_8bit > 64) {
+		ctrl = SPI_PRESCALER_DIV128_gc;
+    131c:	83 e0       	ldi	r24, 0x03	; 3
+    131e:	09 c0       	rjmp	.+18     	; 0x1332 <spi_xmega_set_baud_div+0x6e>
+	}
+	else if (divisor_8bit > 32) {
+		ctrl = SPI_PRESCALER_DIV64_gc;
+    1320:	82 e0       	ldi	r24, 0x02	; 2
+    1322:	07 c0       	rjmp	.+14     	; 0x1332 <spi_xmega_set_baud_div+0x6e>
+	}
+	else if (divisor_8bit > 16) {
+		ctrl = SPI_CLK2X_bm | SPI_PRESCALER_DIV64_gc;
+    1324:	82 e8       	ldi	r24, 0x82	; 130
+    1326:	05 c0       	rjmp	.+10     	; 0x1332 <spi_xmega_set_baud_div+0x6e>
+	}
+	else if (divisor_8bit > 8) {
+		ctrl = SPI_PRESCALER_DIV16_gc;
+    1328:	81 e0       	ldi	r24, 0x01	; 1
+    132a:	03 c0       	rjmp	.+6      	; 0x1332 <spi_xmega_set_baud_div+0x6e>
+	}
+	else if (divisor_8bit > 4) {
+		ctrl = SPI_CLK2X_bm | SPI_PRESCALER_DIV16_gc;
+    132c:	81 e8       	ldi	r24, 0x81	; 129
+    132e:	01 c0       	rjmp	.+2      	; 0x1332 <spi_xmega_set_baud_div+0x6e>
+	}
+	else if (divisor_8bit > 2) {
+		ctrl = SPI_PRESCALER_DIV4_gc;
+    1330:	80 e0       	ldi	r24, 0x00	; 0
+	else {
+		ctrl = SPI_CLK2X_bm | SPI_PRESCALER_DIV4_gc;
+	}
+
+	// Update register and make sure to clear out any leftover bits
+	spi->CTRL = (spi->CTRL & ~(SPI_CLK2X_bm | SPI_PRESCALER_gm)) | ctrl;
+    1332:	98 81       	ld	r25, Y
+    1334:	9c 77       	andi	r25, 0x7C	; 124
+    1336:	98 2b       	or	r25, r24
+    1338:	98 83       	st	Y, r25
+
+	return 1;
+    133a:	81 e0       	ldi	r24, 0x01	; 1
+    133c:	01 c0       	rjmp	.+2      	; 0x1340 <spi_xmega_set_baud_div+0x7c>
+	if (divisor > 128) {
+		/*
+		 * Highest possible divisor is 128 so fail since we can't get
+		 * low enough baudrate.
+		 */
+		return -1;
+    133e:	8f ef       	ldi	r24, 0xFF	; 255
+
+	// Update register and make sure to clear out any leftover bits
+	spi->CTRL = (spi->CTRL & ~(SPI_CLK2X_bm | SPI_PRESCALER_gm)) | ctrl;
+
+	return 1;
+}
+    1340:	df 91       	pop	r29
+    1342:	cf 91       	pop	r28
+    1344:	1f 91       	pop	r17
+    1346:	0f 91       	pop	r16
+    1348:	ff 90       	pop	r15
+    134a:	ef 90       	pop	r14
+    134c:	df 90       	pop	r13
+    134e:	cf 90       	pop	r12
+    1350:	08 95       	ret
+
+00001352 <nvm_read_byte>:
+#endif
+
+#ifndef __DOXYGEN__
+	PUBLIC_FUNCTION(nvm_read_byte)
+#if defined(__GNUC__)
+	lds r20, NVM_CMD          ; Store NVM command register
+    1352:	40 91 ca 01 	lds	r20, 0x01CA
+	mov ZL, r22               ; Load byte index into low byte of Z.
+    1356:	e6 2f       	mov	r30, r22
+	mov ZH, r23               ; Load high byte into Z.
+    1358:	f7 2f       	mov	r31, r23
+	sts NVM_CMD, r24          ; Load prepared command into NVM Command register.
+    135a:	80 93 ca 01 	sts	0x01CA, r24
+	lpm r24, Z                ; Perform an LPM to read out byte
+    135e:	84 91       	lpm	r24, Z
+	sts NVM_CMD, r20          ; Restore NVM command register
+    1360:	40 93 ca 01 	sts	0x01CA, r20
+	sts NVM_CMD, r16          ; Load prepared command into NVM Command register.
+	lpm r16, Z                ; Perform an LPM to read out byte
+	sts NVM_CMD, r20          ; Restore NVM command register
+#endif
+
+	ret
+    1364:	08 95       	ret
+
+00001366 <ccp_write_io>:
+
+	PUBLIC_FUNCTION(ccp_write_io)
+
+#if defined(__GNUC__)
+
+	out     RAMPZ, r1               // Reset bits 23:16 of Z
+    1366:	1b be       	out	0x3b, r1	; 59
+	movw    r30, r24                // Load addr into Z
+    1368:	fc 01       	movw	r30, r24
+	ldi     r18, CCP_IOREG          // Load magic CCP value
+    136a:	28 ed       	ldi	r18, 0xD8	; 216
+	out     CCP, r18                // Start CCP handshake
+    136c:	24 bf       	out	0x34, r18	; 52
+	st      Z, r22                  // Write value to I/O register
+    136e:	60 83       	st	Z, r22
+	ret                             // Return to caller
+    1370:	08 95       	ret
+
+00001372 <board_init>:
+#include <asf.h>
+#include <board.h>
+#include <conf_board.h>
+
+void board_init(void)
+{	
+    1372:	1f 93       	push	r17
+    1374:	cf 93       	push	r28
+    1376:	df 93       	push	r29
+    1378:	41 e0       	ldi	r20, 0x01	; 1
+    137a:	50 e0       	ldi	r21, 0x00	; 0
+    137c:	62 e0       	ldi	r22, 0x02	; 2
+    137e:	80 e4       	ldi	r24, 0x40	; 64
+    1380:	96 e0       	ldi	r25, 0x06	; 6
+    1382:	3a df       	rcall	.-396    	; 0x11f8 <ioport_configure_port_pin>
+    1384:	41 e0       	ldi	r20, 0x01	; 1
+    1386:	50 e0       	ldi	r21, 0x00	; 0
+    1388:	61 e0       	ldi	r22, 0x01	; 1
+    138a:	80 e4       	ldi	r24, 0x40	; 64
+    138c:	96 e0       	ldi	r25, 0x06	; 6
+    138e:	34 df       	rcall	.-408    	; 0x11f8 <ioport_configure_port_pin>
+    1390:	41 e0       	ldi	r20, 0x01	; 1
+    1392:	50 e0       	ldi	r21, 0x00	; 0
+    1394:	64 e0       	ldi	r22, 0x04	; 4
+    1396:	80 e0       	ldi	r24, 0x00	; 0
+    1398:	96 e0       	ldi	r25, 0x06	; 6
+    139a:	2e df       	rcall	.-420    	; 0x11f8 <ioport_configure_port_pin>
+    139c:	41 e0       	ldi	r20, 0x01	; 1
+    139e:	50 e0       	ldi	r21, 0x00	; 0
+    13a0:	60 e8       	ldi	r22, 0x80	; 128
+    13a2:	80 e6       	ldi	r24, 0x60	; 96
+    13a4:	96 e0       	ldi	r25, 0x06	; 6
+    13a6:	28 df       	rcall	.-432    	; 0x11f8 <ioport_configure_port_pin>
+    13a8:	41 e0       	ldi	r20, 0x01	; 1
+    13aa:	50 e0       	ldi	r21, 0x00	; 0
+    13ac:	60 e2       	ldi	r22, 0x20	; 32
+    13ae:	80 e6       	ldi	r24, 0x60	; 96
+    13b0:	96 e0       	ldi	r25, 0x06	; 6
+    13b2:	22 df       	rcall	.-444    	; 0x11f8 <ioport_configure_port_pin>
+	} else {
+		base->OUTCLR = arch_ioport_pin_to_mask(pin);
+    13b4:	e0 e4       	ldi	r30, 0x40	; 64
+    13b6:	f6 e0       	ldi	r31, 0x06	; 6
+    13b8:	12 e0       	ldi	r17, 0x02	; 2
+    13ba:	16 83       	std	Z+6, r17	; 0x06
+    13bc:	81 e0       	ldi	r24, 0x01	; 1
+    13be:	86 83       	std	Z+6, r24	; 0x06
+    13c0:	c0 e0       	ldi	r28, 0x00	; 0
+    13c2:	d6 e0       	ldi	r29, 0x06	; 6
+    13c4:	84 e0       	ldi	r24, 0x04	; 4
+    13c6:	8e 83       	std	Y+6, r24	; 0x06
+    13c8:	80 e8       	ldi	r24, 0x80	; 128
+    13ca:	80 93 66 06 	sts	0x0666, r24
+    13ce:	40 e0       	ldi	r20, 0x00	; 0
+    13d0:	50 e0       	ldi	r21, 0x00	; 0
+    13d2:	61 e0       	ldi	r22, 0x01	; 1
+    13d4:	80 e0       	ldi	r24, 0x00	; 0
+    13d6:	96 e0       	ldi	r25, 0x06	; 6
+    13d8:	0f df       	rcall	.-482    	; 0x11f8 <ioport_configure_port_pin>
+    13da:	41 e0       	ldi	r20, 0x01	; 1
+    13dc:	50 e0       	ldi	r21, 0x00	; 0
+    13de:	62 e0       	ldi	r22, 0x02	; 2
+    13e0:	80 e0       	ldi	r24, 0x00	; 0
+    13e2:	96 e0       	ldi	r25, 0x06	; 6
+    13e4:	09 df       	rcall	.-494    	; 0x11f8 <ioport_configure_port_pin>
+    13e6:	1e 83       	std	Y+6, r17	; 0x06
+    13e8:	40 e0       	ldi	r20, 0x00	; 0
+    13ea:	50 e0       	ldi	r21, 0x00	; 0
+    13ec:	68 e0       	ldi	r22, 0x08	; 8
+    13ee:	80 e0       	ldi	r24, 0x00	; 0
+    13f0:	96 e0       	ldi	r25, 0x06	; 6
+    13f2:	02 df       	rcall	.-508    	; 0x11f8 <ioport_configure_port_pin>
+    13f4:	40 e0       	ldi	r20, 0x00	; 0
+    13f6:	50 e0       	ldi	r21, 0x00	; 0
+    13f8:	62 e0       	ldi	r22, 0x02	; 2
+    13fa:	80 e6       	ldi	r24, 0x60	; 96
+    13fc:	96 e0       	ldi	r25, 0x06	; 6
+    13fe:	fc de       	rcall	.-520    	; 0x11f8 <ioport_configure_port_pin>
+    1400:	40 e0       	ldi	r20, 0x00	; 0
+    1402:	50 e0       	ldi	r21, 0x00	; 0
+    1404:	64 e0       	ldi	r22, 0x04	; 4
+    1406:	80 e6       	ldi	r24, 0x60	; 96
+    1408:	96 e0       	ldi	r25, 0x06	; 6
+    140a:	f6 de       	rcall	.-532    	; 0x11f8 <ioport_configure_port_pin>
+    140c:	40 e0       	ldi	r20, 0x00	; 0
+    140e:	50 e0       	ldi	r21, 0x00	; 0
+    1410:	60 e1       	ldi	r22, 0x10	; 16
+    1412:	80 e0       	ldi	r24, 0x00	; 0
+    1414:	96 e0       	ldi	r25, 0x06	; 6
+    1416:	f0 de       	rcall	.-544    	; 0x11f8 <ioport_configure_port_pin>
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1418:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    141a:	f8 94       	cli
+	volatile uint8_t *pin_ctrl
+		= (&base->PIN0CTRL + arch_ioport_pin_to_index(pin));
+
+	uint8_t flags = cpu_irq_save();
+
+	*pin_ctrl |= PORT_ISC_INPUT_DISABLE_gc;
+    141c:	e3 e1       	ldi	r30, 0x13	; 19
+    141e:	f6 e0       	ldi	r31, 0x06	; 6
+    1420:	80 81       	ld	r24, Z
+    1422:	87 60       	ori	r24, 0x07	; 7
+    1424:	80 83       	st	Z, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1426:	9f bf       	out	0x3f, r25	; 63
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1428:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    142a:	f8 94       	cli
+    142c:	e1 e7       	ldi	r30, 0x71	; 113
+    142e:	f6 e0       	ldi	r31, 0x06	; 6
+    1430:	80 81       	ld	r24, Z
+    1432:	87 60       	ori	r24, 0x07	; 7
+    1434:	80 83       	st	Z, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1436:	9f bf       	out	0x3f, r25	; 63
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1438:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    143a:	f8 94       	cli
+    143c:	e2 e7       	ldi	r30, 0x72	; 114
+    143e:	f6 e0       	ldi	r31, 0x06	; 6
+    1440:	80 81       	ld	r24, Z
+    1442:	87 60       	ori	r24, 0x07	; 7
+    1444:	80 83       	st	Z, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1446:	9f bf       	out	0x3f, r25	; 63
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1448:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    144a:	f8 94       	cli
+    144c:	e4 e1       	ldi	r30, 0x14	; 20
+    144e:	f6 e0       	ldi	r31, 0x06	; 6
+    1450:	80 81       	ld	r24, Z
+    1452:	87 60       	ori	r24, 0x07	; 7
+    1454:	80 83       	st	Z, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1456:	9f bf       	out	0x3f, r25	; 63
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1458:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    145a:	f8 94       	cli
+    145c:	88 89       	ldd	r24, Y+16	; 0x10
+    145e:	87 60       	ori	r24, 0x07	; 7
+    1460:	88 8b       	std	Y+16, r24	; 0x10
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1462:	9f bf       	out	0x3f, r25	; 63
+	ioport_disable_pin(ADC4);
+	ioport_disable_pin(ADC_BATT);
+	
+	
+	
+}
+    1464:	df 91       	pop	r29
+    1466:	cf 91       	pop	r28
+    1468:	1f 91       	pop	r17
+    146a:	08 95       	ret
+
+0000146c <adc_init>:
+	cpu_irq_restore(LocSREG);
+
+	
+}
+static void adc_init(uint8_t mux)
+{
+    146c:	1f 93       	push	r17
+    146e:	cf 93       	push	r28
+    1470:	df 93       	push	r29
+    1472:	cd b7       	in	r28, 0x3d	; 61
+    1474:	de b7       	in	r29, 0x3e	; 62
+    1476:	61 97       	sbiw	r28, 0x11	; 17
+    1478:	cd bf       	out	0x3d, r28	; 61
+    147a:	de bf       	out	0x3e, r29	; 62
+    147c:	18 2f       	mov	r17, r24
+	struct adc_config adc_conf;
+	struct adc_channel_config adcch_conf;
+	adc_read_configuration(&MY_ADC, &adc_conf);
+    147e:	be 01       	movw	r22, r28
+    1480:	6f 5f       	subi	r22, 0xFF	; 255
+    1482:	7f 4f       	sbci	r23, 0xFF	; 255
+    1484:	80 e0       	ldi	r24, 0x00	; 0
+    1486:	92 e0       	ldi	r25, 0x02	; 2
+    1488:	45 de       	rcall	.-886    	; 0x1114 <adc_read_configuration>
+	adcch_read_configuration(&MY_ADC, ADC_CH0, &adcch_conf);
+    148a:	ae 01       	movw	r20, r28
+    148c:	48 5f       	subi	r20, 0xF8	; 248
+    148e:	5f 4f       	sbci	r21, 0xFF	; 255
+    1490:	61 e0       	ldi	r22, 0x01	; 1
+    1492:	80 e0       	ldi	r24, 0x00	; 0
+    1494:	92 e0       	ldi	r25, 0x02	; 2
+    1496:	88 de       	rcall	.-752    	; 0x11a8 <adcch_read_configuration>
+static inline void adc_set_conversion_parameters(struct adc_config *conf,
+		enum adc_sign sign, enum adc_resolution res,
+		enum adc_reference ref)
+{
+	/* Preserve all but conversion and resolution config. */
+	conf->ctrlb &= ~(ADC_CONMODE_bm | ADC_RESOLUTION_gm);
+    1498:	99 81       	ldd	r25, Y+1	; 0x01
+    149a:	99 7e       	andi	r25, 0xE9	; 233
+	conf->ctrlb |= (uint8_t)res | (uint8_t)sign;
+
+	conf->refctrl &= ~ADC_REFSEL_gm;
+    149c:	8a 81       	ldd	r24, Y+2	; 0x02
+    149e:	8f 78       	andi	r24, 0x8F	; 143
+    14a0:	8a 83       	std	Y+2, r24	; 0x02
+		conf->evctrl = (base_ev_ch << ADC_EVSEL_gp) |
+				(nr_of_ch << ADC_EVACT_gp);
+		break;
+
+	case ADC_TRIG_FREERUN:
+		conf->ctrlb |= ADC_FREERUN_bm;
+    14a2:	98 60       	ori	r25, 0x08	; 8
+    14a4:	99 83       	std	Y+1, r25	; 0x01
+		psc = ADC_PRESCALER_DIV256_gc;
+	} else {
+		psc = ADC_PRESCALER_DIV512_gc;
+	}
+
+	conf->prescaler = psc;
+    14a6:	83 e0       	ldi	r24, 0x03	; 3
+    14a8:	8c 83       	std	Y+4, r24	; 0x04
+		rshift = 2;
+	} else {
+		rshift = 1;
+	}
+
+	ch_conf->avgctrl = sample | (rshift << ADC_CH_RIGHTSHIFT_gp);
+    14aa:	89 e4       	ldi	r24, 0x49	; 73
+    14ac:	89 8b       	std	Y+17, r24	; 0x11
+	
+	adc_set_conversion_parameters(&adc_conf, ADC_SIGN_OFF, ADC_RES_12,	ADC_REF_BANDGAP); //ref 1 V
+	adc_set_conversion_trigger(&adc_conf, ADC_TRIG_FREERUN, 1, 0);
+	adc_set_clock_rate(&adc_conf, 1800000UL);
+	adcch_enable_averaging(&adcch_conf, ADC_SAMPNUM_512X);
+	adc_set_callback(&MY_ADC, &adc_handler);
+    14ae:	65 ea       	ldi	r22, 0xA5	; 165
+    14b0:	7a e0       	ldi	r23, 0x0A	; 10
+    14b2:	80 e0       	ldi	r24, 0x00	; 0
+    14b4:	92 e0       	ldi	r25, 0x02	; 2
+    14b6:	64 dd       	rcall	.-1336   	; 0xf80 <adc_set_callback>
+	adc_write_configuration(&MY_ADC, &adc_conf);
+    14b8:	be 01       	movw	r22, r28
+    14ba:	6f 5f       	subi	r22, 0xFF	; 255
+    14bc:	7f 4f       	sbci	r23, 0xFF	; 255
+    14be:	80 e0       	ldi	r24, 0x00	; 0
+    14c0:	92 e0       	ldi	r25, 0x02	; 2
+    14c2:	e9 dd       	rcall	.-1070   	; 0x1096 <adc_write_configuration>
+ *
+ * \param ch_conf Pointer to ADC channel configuration.
+ */
+static inline void adcch_enable_interrupt(struct adc_channel_config *ch_conf)
+{
+	ch_conf->intctrl &= ~ADC_CH_INTLVL_gm;
+    14c4:	9a 85       	ldd	r25, Y+10	; 0x0a
+    14c6:	9c 7f       	andi	r25, 0xFC	; 252
+	ch_conf->intctrl |= CONFIG_ADC_INTLVL;
+    14c8:	91 60       	ori	r25, 0x01	; 1
+    14ca:	9a 87       	std	Y+10, r25	; 0x0a
+	adcch_enable_interrupt(&adcch_conf);
+
+	switch (mux)
+    14cc:	12 30       	cpi	r17, 0x02	; 2
+    14ce:	a9 f0       	breq	.+42     	; 0x14fa <adc_init+0x8e>
+    14d0:	28 f4       	brcc	.+10     	; 0x14dc <adc_init+0x70>
+    14d2:	11 23       	and	r17, r17
+    14d4:	41 f0       	breq	.+16     	; 0x14e6 <adc_init+0x7a>
+    14d6:	11 30       	cpi	r17, 0x01	; 1
+    14d8:	59 f0       	breq	.+22     	; 0x14f0 <adc_init+0x84>
+    14da:	1c c0       	rjmp	.+56     	; 0x1514 <adc_init+0xa8>
+    14dc:	13 30       	cpi	r17, 0x03	; 3
+    14de:	91 f0       	breq	.+36     	; 0x1504 <adc_init+0x98>
+    14e0:	14 30       	cpi	r17, 0x04	; 4
+    14e2:	a9 f0       	breq	.+42     	; 0x150e <adc_init+0xa2>
+    14e4:	17 c0       	rjmp	.+46     	; 0x1514 <adc_init+0xa8>
+				ADC_CH_MUXPOS_gp;
+	} else if (neg == ADCCH_NEG_NONE) {
+		/* Configure for single-ended measurement. */
+		Assert(gain == 1);
+
+		ch_conf->ctrl = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+    14e6:	81 e0       	ldi	r24, 0x01	; 1
+    14e8:	88 87       	std	Y+8, r24	; 0x08
+		ch_conf->muxctrl = pos << ADC_CH_MUXPOS_gp;
+    14ea:	88 e1       	ldi	r24, 0x18	; 24
+    14ec:	89 87       	std	Y+9, r24	; 0x09
+    14ee:	12 c0       	rjmp	.+36     	; 0x1514 <adc_init+0xa8>
+				ADC_CH_MUXPOS_gp;
+	} else if (neg == ADCCH_NEG_NONE) {
+		/* Configure for single-ended measurement. */
+		Assert(gain == 1);
+
+		ch_conf->ctrl = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+    14f0:	81 e0       	ldi	r24, 0x01	; 1
+    14f2:	88 87       	std	Y+8, r24	; 0x08
+		ch_conf->muxctrl = pos << ADC_CH_MUXPOS_gp;
+    14f4:	88 e4       	ldi	r24, 0x48	; 72
+    14f6:	89 87       	std	Y+9, r24	; 0x09
+    14f8:	0d c0       	rjmp	.+26     	; 0x1514 <adc_init+0xa8>
+				ADC_CH_MUXPOS_gp;
+	} else if (neg == ADCCH_NEG_NONE) {
+		/* Configure for single-ended measurement. */
+		Assert(gain == 1);
+
+		ch_conf->ctrl = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+    14fa:	81 e0       	ldi	r24, 0x01	; 1
+    14fc:	88 87       	std	Y+8, r24	; 0x08
+		ch_conf->muxctrl = pos << ADC_CH_MUXPOS_gp;
+    14fe:	80 e5       	ldi	r24, 0x50	; 80
+    1500:	89 87       	std	Y+9, r24	; 0x09
+    1502:	08 c0       	rjmp	.+16     	; 0x1514 <adc_init+0xa8>
+				ADC_CH_MUXPOS_gp;
+	} else if (neg == ADCCH_NEG_NONE) {
+		/* Configure for single-ended measurement. */
+		Assert(gain == 1);
+
+		ch_conf->ctrl = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+    1504:	81 e0       	ldi	r24, 0x01	; 1
+    1506:	88 87       	std	Y+8, r24	; 0x08
+		ch_conf->muxctrl = pos << ADC_CH_MUXPOS_gp;
+    1508:	80 e2       	ldi	r24, 0x20	; 32
+    150a:	89 87       	std	Y+9, r24	; 0x09
+    150c:	03 c0       	rjmp	.+6      	; 0x1514 <adc_init+0xa8>
+				ADC_CH_MUXPOS_gp;
+	} else if (neg == ADCCH_NEG_NONE) {
+		/* Configure for single-ended measurement. */
+		Assert(gain == 1);
+
+		ch_conf->ctrl = ADC_CH_INPUTMODE_SINGLEENDED_gc;
+    150e:	81 e0       	ldi	r24, 0x01	; 1
+    1510:	88 87       	std	Y+8, r24	; 0x08
+		ch_conf->muxctrl = pos << ADC_CH_MUXPOS_gp;
+    1512:	19 86       	std	Y+9, r1	; 0x09
+// 	adcch_read_configuration(&ADCA, ADC_CH0, &adcch_conf);
+ 	
+// 	adcch_write_configuration(&ADCA, ADC_CH0, &adcch_conf);
+	
+	
+	adcch_write_configuration(&MY_ADC, ADC_CH0, &adcch_conf);
+    1514:	ae 01       	movw	r20, r28
+    1516:	48 5f       	subi	r20, 0xF8	; 248
+    1518:	5f 4f       	sbci	r21, 0xFF	; 255
+    151a:	61 e0       	ldi	r22, 0x01	; 1
+    151c:	80 e0       	ldi	r24, 0x00	; 0
+    151e:	92 e0       	ldi	r25, 0x02	; 2
+    1520:	1b de       	rcall	.-970    	; 0x1158 <adcch_write_configuration>
+	
+	adc_enable(&MY_ADC);
+    1522:	80 e0       	ldi	r24, 0x00	; 0
+    1524:	92 e0       	ldi	r25, 0x02	; 2
+    1526:	55 dd       	rcall	.-1366   	; 0xfd2 <adc_enable>
+ *
+ * \note The ADC must be enabled for this function to have any effect.
+ */
+static inline void adc_clear_interrupt_flag(ADC_t *adc, uint8_t ch_mask)
+{
+	adc->INTFLAGS = ch_mask << ADC_CH0IF_bp;
+    1528:	e0 e0       	ldi	r30, 0x00	; 0
+    152a:	f2 e0       	ldi	r31, 0x02	; 2
+    152c:	81 e0       	ldi	r24, 0x01	; 1
+    152e:	86 83       	std	Z+6, r24	; 0x06
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1530:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    1532:	f8 94       	cli
+{
+	irqflags_t flags = cpu_irq_save();
+#if !XMEGA_E
+	adc->CTRLA |= ch_mask << ADC_CH0START_bp;
+#else
+	adc->CTRLA |= ch_mask << ADC_START_bp;
+    1534:	80 81       	ld	r24, Z
+    1536:	84 60       	ori	r24, 0x04	; 4
+    1538:	80 83       	st	Z, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    153a:	9f bf       	out	0x3f, r25	; 63
+	adc_clear_interrupt_flag (&MY_ADC, ADC_CH0);
+	adc_start_conversion(&MY_ADC, ADC_CH0);
+}
+    153c:	61 96       	adiw	r28, 0x11	; 17
+    153e:	cd bf       	out	0x3d, r28	; 61
+    1540:	de bf       	out	0x3e, r29	; 62
+    1542:	df 91       	pop	r29
+    1544:	cf 91       	pop	r28
+    1546:	1f 91       	pop	r17
+    1548:	08 95       	ret
+
+0000154a <adc_handler>:
+
+}
+
+
+static void adc_handler(ADC_t *adc, uint8_t ch_mask, adc_result_t result)
+{	
+    154a:	cf 93       	push	r28
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    154c:	cf b7       	in	r28, 0x3f	; 63
+	cpu_irq_disable();
+    154e:	f8 94       	cli
+	#define POCET	30
+	struct adc_channel_config adcch_conf;
+	irqflags_t LocSREG;
+	LocSREG=cpu_irq_save();
+	sleep_disable();
+    1550:	e8 e4       	ldi	r30, 0x48	; 72
+    1552:	f0 e0       	ldi	r31, 0x00	; 0
+    1554:	80 81       	ld	r24, Z
+    1556:	8e 7f       	andi	r24, 0xFE	; 254
+    1558:	80 83       	st	Z, r24
+// 		pole[counter[mux]][mux]=result;
+// 		counter[mux]++;
+// 		if (counter[mux]==POCET) counter[mux]=0;
+// 		Suma[mux]-=pole[counter[mux]][mux];
+				
+		Suma[mux]=result;
+    155a:	af e3       	ldi	r26, 0x3F	; 63
+    155c:	b0 e2       	ldi	r27, 0x20	; 32
+    155e:	e0 91 49 20 	lds	r30, 0x2049
+    1562:	f0 e0       	ldi	r31, 0x00	; 0
+    1564:	ee 0f       	add	r30, r30
+    1566:	ff 1f       	adc	r31, r31
+    1568:	e1 5c       	subi	r30, 0xC1	; 193
+    156a:	ff 4d       	sbci	r31, 0xDF	; 223
+    156c:	40 83       	st	Z, r20
+    156e:	51 83       	std	Z+1, r21	; 0x01
+		ch0_result=Suma[0];
+    1570:	8d 91       	ld	r24, X+
+    1572:	9c 91       	ld	r25, X
+    1574:	11 97       	sbiw	r26, 0x01	; 1
+    1576:	80 93 9f 21 	sts	0x219F, r24
+    157a:	90 93 a0 21 	sts	0x21A0, r25
+		ch1_result=(Suma[1]);///POCET);
+    157e:	12 96       	adiw	r26, 0x02	; 2
+    1580:	8d 91       	ld	r24, X+
+    1582:	9c 91       	ld	r25, X
+    1584:	13 97       	sbiw	r26, 0x03	; 3
+    1586:	80 93 c1 20 	sts	0x20C1, r24
+    158a:	90 93 c2 20 	sts	0x20C2, r25
+		ch2_result=(Suma[2]);///POCET);
+    158e:	14 96       	adiw	r26, 0x04	; 4
+    1590:	8d 91       	ld	r24, X+
+    1592:	9c 91       	ld	r25, X
+    1594:	15 97       	sbiw	r26, 0x05	; 5
+    1596:	80 93 c4 20 	sts	0x20C4, r24
+    159a:	90 93 c5 20 	sts	0x20C5, r25
+		ch3_result=(Suma[3]);///POCET);
+    159e:	16 96       	adiw	r26, 0x06	; 6
+    15a0:	8d 91       	ld	r24, X+
+    15a2:	9c 91       	ld	r25, X
+    15a4:	17 97       	sbiw	r26, 0x07	; 7
+    15a6:	80 93 e7 21 	sts	0x21E7, r24
+    15aa:	90 93 e8 21 	sts	0x21E8, r25
+		ch4_result_batt=(Suma[4]);///POCET);
+    15ae:	18 96       	adiw	r26, 0x08	; 8
+    15b0:	8d 91       	ld	r24, X+
+    15b2:	9c 91       	ld	r25, X
+    15b4:	19 97       	sbiw	r26, 0x09	; 9
+    15b6:	80 93 c6 20 	sts	0x20C6, r24
+    15ba:	90 93 c7 20 	sts	0x20C7, r25
+						   
+		counter++;
+    15be:	80 91 3d 20 	lds	r24, 0x203D
+    15c2:	90 91 3e 20 	lds	r25, 0x203E
+    15c6:	01 96       	adiw	r24, 0x01	; 1
+    15c8:	80 93 3d 20 	sts	0x203D, r24
+    15cc:	90 93 3e 20 	sts	0x203E, r25
+		if (counter>1)
+    15d0:	02 97       	sbiw	r24, 0x02	; 2
+    15d2:	a0 f0       	brcs	.+40     	; 0x15fc <adc_handler+0xb2>
+		{	
+			adc_disable(&MY_ADC);
+    15d4:	80 e0       	ldi	r24, 0x00	; 0
+    15d6:	92 e0       	ldi	r25, 0x02	; 2
+    15d8:	18 dd       	rcall	.-1488   	; 0x100a <adc_disable>
+			/* incerase pin mux*/
+			mux+=1;
+    15da:	80 91 49 20 	lds	r24, 0x2049
+    15de:	8f 5f       	subi	r24, 0xFF	; 255
+			if (mux>4)	mux=0;
+    15e0:	85 30       	cpi	r24, 0x05	; 5
+    15e2:	18 f4       	brcc	.+6      	; 0x15ea <adc_handler+0xa0>
+		counter++;
+		if (counter>1)
+		{	
+			adc_disable(&MY_ADC);
+			/* incerase pin mux*/
+			mux+=1;
+    15e4:	80 93 49 20 	sts	0x2049, r24
+    15e8:	02 c0       	rjmp	.+4      	; 0x15ee <adc_handler+0xa4>
+			if (mux>4)	mux=0;
+    15ea:	10 92 49 20 	sts	0x2049, r1
+			adc_init(mux);
+    15ee:	80 91 49 20 	lds	r24, 0x2049
+    15f2:	3c df       	rcall	.-392    	; 0x146c <adc_init>
+			counter=0;
+    15f4:	10 92 3d 20 	sts	0x203D, r1
+    15f8:	10 92 3e 20 	sts	0x203E, r1
+		}
+		//adc_disable(&MY_ADC);
+		
+		//adc_enable(&MY_ADC);
+		DataForTask.DataToRF.GPS_New_Data=0x63;
+    15fc:	83 e6       	ldi	r24, 0x63	; 99
+    15fe:	80 93 98 21 	sts	0x2198, r24
+ *
+ * \note The ADC must be enabled for this function to have any effect.
+ */
+static inline void adc_clear_interrupt_flag(ADC_t *adc, uint8_t ch_mask)
+{
+	adc->INTFLAGS = ch_mask << ADC_CH0IF_bp;
+    1602:	e0 e0       	ldi	r30, 0x00	; 0
+    1604:	f2 e0       	ldi	r31, 0x02	; 2
+    1606:	81 e0       	ldi	r24, 0x01	; 1
+    1608:	86 83       	std	Z+6, r24	; 0x06
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    160a:	9f b7       	in	r25, 0x3f	; 63
+	cpu_irq_disable();
+    160c:	f8 94       	cli
+{
+	irqflags_t flags = cpu_irq_save();
+#if !XMEGA_E
+	adc->CTRLA |= ch_mask << ADC_CH0START_bp;
+#else
+	adc->CTRLA |= ch_mask << ADC_START_bp;
+    160e:	80 81       	ld	r24, Z
+    1610:	84 60       	ori	r24, 0x04	; 4
+    1612:	80 83       	st	Z, r24
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1614:	9f bf       	out	0x3f, r25	; 63
+    1616:	cf bf       	out	0x3f, r28	; 63
+	
+	
+	cpu_irq_restore(LocSREG);
+
+	
+}
+    1618:	cf 91       	pop	r28
+    161a:	08 95       	ret
+
+0000161c <__vector_9>:
+
+static void adc_init(uint8_t mux);
+
+
+ISR(PORTC_INT_vect)
+{
+    161c:	1f 92       	push	r1
+    161e:	0f 92       	push	r0
+    1620:	0f b6       	in	r0, 0x3f	; 63
+    1622:	0f 92       	push	r0
+    1624:	11 24       	eor	r1, r1
+    1626:	2f 93       	push	r18
+    1628:	3f 93       	push	r19
+    162a:	4f 93       	push	r20
+    162c:	5f 93       	push	r21
+    162e:	6f 93       	push	r22
+    1630:	7f 93       	push	r23
+    1632:	8f 93       	push	r24
+    1634:	9f 93       	push	r25
+    1636:	af 93       	push	r26
+    1638:	bf 93       	push	r27
+    163a:	cf 93       	push	r28
+    163c:	ef 93       	push	r30
+    163e:	ff 93       	push	r31
+
+typedef uint8_t irqflags_t;
+
+static inline irqflags_t cpu_irq_save(void)
+{
+	irqflags_t flags = SREG;
+    1640:	cf b7       	in	r28, 0x3f	; 63
+	cpu_irq_disable();
+    1642:	f8 94       	cli
+	irqflags_t LocSREG;
+	//struct spi_device	device;
+
+	LocSREG=cpu_irq_save();
+	
+	DataForTask.DataToRF.Packet_sent=Check_status();
+    1644:	76 d8       	rcall	.-3860   	; 0x732 <Check_status>
+    1646:	80 93 97 21 	sts	0x2197, r24
+
+__always_inline static void arch_ioport_toggle_pin_level(ioport_pin_t pin)
+{
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	base->OUTTGL = arch_ioport_pin_to_mask(pin);
+    164a:	e0 e4       	ldi	r30, 0x40	; 64
+    164c:	f6 e0       	ldi	r31, 0x06	; 6
+    164e:	81 e0       	ldi	r24, 0x01	; 1
+    1650:	87 83       	std	Z+7, r24	; 0x07
+	ioport_toggle_pin(LED_G);
+	
+	PORTC.INTFLAGS|=0x04;
+    1652:	84 85       	ldd	r24, Z+12	; 0x0c
+    1654:	84 60       	ori	r24, 0x04	; 4
+    1656:	84 87       	std	Z+12, r24	; 0x0c
+}
+
+static inline void cpu_irq_restore(irqflags_t flags)
+{
+	barrier();
+	SREG = flags;
+    1658:	cf bf       	out	0x3f, r28	; 63
+	cpu_irq_restore(LocSREG);
+
+}
+    165a:	ff 91       	pop	r31
+    165c:	ef 91       	pop	r30
+    165e:	cf 91       	pop	r28
+    1660:	bf 91       	pop	r27
+    1662:	af 91       	pop	r26
+    1664:	9f 91       	pop	r25
+    1666:	8f 91       	pop	r24
+    1668:	7f 91       	pop	r23
+    166a:	6f 91       	pop	r22
+    166c:	5f 91       	pop	r21
+    166e:	4f 91       	pop	r20
+    1670:	3f 91       	pop	r19
+    1672:	2f 91       	pop	r18
+    1674:	0f 90       	pop	r0
+    1676:	0f be       	out	0x3f, r0	; 63
+    1678:	0f 90       	pop	r0
+    167a:	1f 90       	pop	r1
+    167c:	18 95       	reti
+
+0000167e <main>:
+}
+
+
+
+int main (void)
+{	
+    167e:	cf 93       	push	r28
+    1680:	df 93       	push	r29
+    1682:	00 d0       	rcall	.+0      	; 0x1684 <main+0x6>
+    1684:	00 d0       	rcall	.+0      	; 0x1686 <main+0x8>
+    1686:	cd b7       	in	r28, 0x3d	; 61
+    1688:	de b7       	in	r29, 0x3e	; 62
+	uint32_t temp=0;
+	bool timer_run=0;
+	sysclk_init();
+    168a:	de dd       	rcall	.-1092   	; 0x1248 <sysclk_init>
+ * Enables all interrupt levels, with vectors located in the application section
+ * and fixed priority scheduling.
+ */
+static inline void pmic_init(void)
+{
+	PMIC.CTRL = PMIC_LVL_LOW | PMIC_LVL_MEDIUM |
+    168c:	87 e0       	ldi	r24, 0x07	; 7
+    168e:	80 93 a2 00 	sts	0x00A2, r24
+	pmic_init();
+	
+	board_init();
+    1692:	6f de       	rcall	.-802    	; 0x1372 <board_init>
+	adc_init(0);
+    1694:	80 e0       	ldi	r24, 0x00	; 0
+    1696:	ea de       	rcall	.-556    	; 0x146c <adc_init>
+	
+	cpu_irq_enable();
+    1698:	78 94       	sei
+ 	
+	 /* Timer for Beep */
+ 	tc45_enable(&TCD5);
+    169a:	80 e4       	ldi	r24, 0x40	; 64
+    169c:	99 e0       	ldi	r25, 0x09	; 9
+    169e:	0e 94 b2 02 	call	0x564	; 0x564 <tc45_enable>
+	if (tc45_is_TC4(void *tc)) {
+		((TC4_t *)tc)->CTRLB
+			= (((TC4_t *)tc)->CTRLB & ~TC4_WGMODE_gm) | wgm;
+	} else if (tc45_is_TC5(void *tc)) {
+		((TC5_t *)tc)->CTRLB
+			= (((TC5_t *)tc)->CTRLB & ~TC5_WGMODE_gm) | wgm;
+    16a2:	e0 e4       	ldi	r30, 0x40	; 64
+    16a4:	f9 e0       	ldi	r31, 0x09	; 9
+    16a6:	81 81       	ldd	r24, Z+1	; 0x01
+    16a8:	88 7f       	andi	r24, 0xF8	; 248
+    16aa:	83 60       	ori	r24, 0x03	; 3
+    16ac:	81 83       	std	Z+1, r24	; 0x01
+static inline void tc45_write_period(volatile void *tc, uint16_t per_value)
+{
+	if (tc45_is_TC4(void *tc)) {
+		((TC4_t *)tc)->PER = per_value;
+	} else if (tc45_is_TC5(void *tc)) {
+		((TC5_t *)tc)->PER = per_value;
+    16ae:	80 ec       	ldi	r24, 0xC0	; 192
+    16b0:	93 e0       	ldi	r25, 0x03	; 3
+    16b2:	86 a3       	std	Z+38, r24	; 0x26
+    16b4:	97 a3       	std	Z+39, r25	; 0x27
+		case TC45_CCA:
+			((TC5_t *)tc)->CCA = value;
+			break;
+
+		case TC45_CCB:
+			((TC5_t *)tc)->CCB = value;
+    16b6:	8c e2       	ldi	r24, 0x2C	; 44
+    16b8:	91 e0       	ldi	r25, 0x01	; 1
+    16ba:	82 a7       	std	Z+42, r24	; 0x2a
+    16bc:	93 a7       	std	Z+43, r25	; 0x2b
+{
+	if (tc45_is_TC4(void *tc)) {
+		((TC4_t *)tc)->CTRLE |= enablemask;
+	} else if (tc45_is_TC5(void *tc)) {
+		((TC5_t *)tc)->CTRLE
+			|= enablemask &
+    16be:	84 81       	ldd	r24, Z+4	; 0x04
+    16c0:	84 60       	ori	r24, 0x04	; 4
+    16c2:	84 83       	std	Z+4, r24	; 0x04
+ 	tc45_write_period(&TCD5, 960);
+ 	tc45_write_cc(&TCD5, TC45_CCB, 300);
+ 	tc45_enable_cc_channels(&TCD5,TC45_CCBCOMP);
+ 
+	 /* RF init */
+	RF_init();
+    16c4:	0e 94 37 03 	call	0x66e	; 0x66e <RF_init>
+    16c8:	80 e0       	ldi	r24, 0x00	; 0
+    16ca:	90 e0       	ldi	r25, 0x00	; 0
+    16cc:	01 96       	adiw	r24, 0x01	; 1
+    16ce:	85 35       	cpi	r24, 0x55	; 85
+    16d0:	20 ed       	ldi	r18, 0xD0	; 208
+    16d2:	92 07       	cpc	r25, r18
+    16d4:	d9 f7       	brne	.-10     	; 0x16cc <main+0x4e>
+// tc45_write_period(&TCD5, 60);
+// tc45_write_cc(&TCD5, TC45_CCB, 20);
+// tc45_enable_cc_channels(&TCD5,TC45_CCBCOMP);
+		 
+	//TaskState.XmegaState=TASK_ON;
+	DataForTask.DataToRF.Packet_sent=0x63;
+    16d6:	83 e6       	ldi	r24, 0x63	; 99
+    16d8:	80 93 97 21 	sts	0x2197, r24
+
+
+int main (void)
+{	
+	uint32_t temp=0;
+	bool timer_run=0;
+    16dc:	31 2c       	mov	r3, r1
+
+
+
+int main (void)
+{	
+	uint32_t temp=0;
+    16de:	19 82       	std	Y+1, r1	; 0x01
+    16e0:	1a 82       	std	Y+2, r1	; 0x02
+    16e2:	1b 82       	std	Y+3, r1	; 0x03
+    16e4:	1c 82       	std	Y+4, r1	; 0x04
+// 		 result = adc_get_result(&MY_ADC, ADC_CH0);
+	
+	
+	
+ 		cpu_irq_disable();
+		DataForTask.DataToRF.TX_Buff[0]=(uint8_t)ch0_result;
+    16e6:	0f 2e       	mov	r0, r31
+    16e8:	f9 e9       	ldi	r31, 0x99	; 153
+    16ea:	af 2e       	mov	r10, r31
+    16ec:	f1 e2       	ldi	r31, 0x21	; 33
+    16ee:	bf 2e       	mov	r11, r31
+    16f0:	f0 2d       	mov	r31, r0
+		DataForTask.DataToRF.TX_Buff[1]=(uint8_t)(ch0_result>>8);
+    16f2:	0f 2e       	mov	r0, r31
+    16f4:	fa e9       	ldi	r31, 0x9A	; 154
+    16f6:	cf 2e       	mov	r12, r31
+    16f8:	f1 e2       	ldi	r31, 0x21	; 33
+    16fa:	df 2e       	mov	r13, r31
+    16fc:	f0 2d       	mov	r31, r0
+		
+		DataForTask.DataToRF.TX_Buff[2]=(uint8_t)ch1_result;
+    16fe:	0f 2e       	mov	r0, r31
+    1700:	fb e9       	ldi	r31, 0x9B	; 155
+    1702:	ef 2e       	mov	r14, r31
+    1704:	f1 e2       	ldi	r31, 0x21	; 33
+    1706:	ff 2e       	mov	r15, r31
+    1708:	f0 2d       	mov	r31, r0
+		DataForTask.DataToRF.TX_Buff[3]=(uint8_t)(ch1_result>>8);
+    170a:	0c e9       	ldi	r16, 0x9C	; 156
+    170c:	11 e2       	ldi	r17, 0x21	; 33
+		
+		DataForTask.DataToRF.TX_Buff[4]=(uint8_t)ch2_result;
+    170e:	0f 2e       	mov	r0, r31
+    1710:	fd e9       	ldi	r31, 0x9D	; 157
+    1712:	8f 2e       	mov	r8, r31
+    1714:	f1 e2       	ldi	r31, 0x21	; 33
+    1716:	9f 2e       	mov	r9, r31
+    1718:	f0 2d       	mov	r31, r0
+		DataForTask.DataToRF.TX_Buff[5]=(uint8_t)(ch2_result>>8);
+    171a:	0f 2e       	mov	r0, r31
+    171c:	fe e9       	ldi	r31, 0x9E	; 158
+    171e:	6f 2e       	mov	r6, r31
+    1720:	f1 e2       	ldi	r31, 0x21	; 33
+    1722:	7f 2e       	mov	r7, r31
+    1724:	f0 2d       	mov	r31, r0
+				
+		DataForTask.DataToRF.TX_Buff[6]=(uint8_t)ch3_result;
+    1726:	0f 2e       	mov	r0, r31
+    1728:	ff e9       	ldi	r31, 0x9F	; 159
+    172a:	4f 2e       	mov	r4, r31
+    172c:	f1 e2       	ldi	r31, 0x21	; 33
+    172e:	5f 2e       	mov	r5, r31
+    1730:	f0 2d       	mov	r31, r0
+// 
+// 		 result = adc_get_result(&MY_ADC, ADC_CH0);
+	
+	
+	
+ 		cpu_irq_disable();
+    1732:	f8 94       	cli
+		DataForTask.DataToRF.TX_Buff[0]=(uint8_t)ch0_result;
+    1734:	80 91 9f 21 	lds	r24, 0x219F
+    1738:	90 91 a0 21 	lds	r25, 0x21A0
+    173c:	d5 01       	movw	r26, r10
+    173e:	8c 93       	st	X, r24
+		DataForTask.DataToRF.TX_Buff[1]=(uint8_t)(ch0_result>>8);
+    1740:	80 91 9f 21 	lds	r24, 0x219F
+    1744:	90 91 a0 21 	lds	r25, 0x21A0
+    1748:	f6 01       	movw	r30, r12
+    174a:	90 83       	st	Z, r25
+		
+		DataForTask.DataToRF.TX_Buff[2]=(uint8_t)ch1_result;
+    174c:	80 91 c1 20 	lds	r24, 0x20C1
+    1750:	90 91 c2 20 	lds	r25, 0x20C2
+    1754:	d7 01       	movw	r26, r14
+    1756:	8c 93       	st	X, r24
+		DataForTask.DataToRF.TX_Buff[3]=(uint8_t)(ch1_result>>8);
+    1758:	80 91 c1 20 	lds	r24, 0x20C1
+    175c:	90 91 c2 20 	lds	r25, 0x20C2
+    1760:	f8 01       	movw	r30, r16
+    1762:	90 83       	st	Z, r25
+		
+		DataForTask.DataToRF.TX_Buff[4]=(uint8_t)ch2_result;
+    1764:	80 91 c4 20 	lds	r24, 0x20C4
+    1768:	90 91 c5 20 	lds	r25, 0x20C5
+    176c:	d4 01       	movw	r26, r8
+    176e:	8c 93       	st	X, r24
+		DataForTask.DataToRF.TX_Buff[5]=(uint8_t)(ch2_result>>8);
+    1770:	80 91 c4 20 	lds	r24, 0x20C4
+    1774:	90 91 c5 20 	lds	r25, 0x20C5
+    1778:	f3 01       	movw	r30, r6
+    177a:	90 83       	st	Z, r25
+				
+		DataForTask.DataToRF.TX_Buff[6]=(uint8_t)ch3_result;
+    177c:	80 91 e7 21 	lds	r24, 0x21E7
+    1780:	90 91 e8 21 	lds	r25, 0x21E8
+    1784:	d2 01       	movw	r26, r4
+    1786:	8c 93       	st	X, r24
+		DataForTask.DataToRF.TX_Buff[7]=(uint8_t)(ch3_result>>8);
+    1788:	80 91 e7 21 	lds	r24, 0x21E7
+    178c:	90 91 e8 21 	lds	r25, 0x21E8
+    1790:	e0 ea       	ldi	r30, 0xA0	; 160
+    1792:	f1 e2       	ldi	r31, 0x21	; 33
+    1794:	90 83       	st	Z, r25
+		cpu_irq_enable();
+    1796:	78 94       	sei
+		
+		RF_Task(&TaskState,&DataForTask);
+    1798:	68 ec       	ldi	r22, 0xC8	; 200
+    179a:	70 e2       	ldi	r23, 0x20	; 32
+    179c:	88 e1       	ldi	r24, 0x18	; 24
+    179e:	90 e2       	ldi	r25, 0x20	; 32
+    17a0:	0e 94 7d 03 	call	0x6fa	; 0x6fa <RF_Task>
+// 		delay_ms(1)	;
+// 		ioport_set_pin_low(BEEP);
+// 		delay_ms(1)	;
+// 		
+		//delay_us(10)	;
+  		if (ch4_result_batt<3500)
+    17a4:	80 91 c6 20 	lds	r24, 0x20C6
+    17a8:	90 91 c7 20 	lds	r25, 0x20C7
+    17ac:	8c 3a       	cpi	r24, 0xAC	; 172
+    17ae:	9d 40       	sbci	r25, 0x0D	; 13
+    17b0:	08 f0       	brcs	.+2      	; 0x17b4 <main+0x136>
+    17b2:	bf cf       	rjmp	.-130    	; 0x1732 <main+0xb4>
+  		{
+	  		temp++;
+    17b4:	89 81       	ldd	r24, Y+1	; 0x01
+    17b6:	9a 81       	ldd	r25, Y+2	; 0x02
+    17b8:	ab 81       	ldd	r26, Y+3	; 0x03
+    17ba:	bc 81       	ldd	r27, Y+4	; 0x04
+    17bc:	01 96       	adiw	r24, 0x01	; 1
+    17be:	a1 1d       	adc	r26, r1
+    17c0:	b1 1d       	adc	r27, r1
+    17c2:	89 83       	std	Y+1, r24	; 0x01
+    17c4:	9a 83       	std	Y+2, r25	; 0x02
+    17c6:	ab 83       	std	Y+3, r26	; 0x03
+    17c8:	bc 83       	std	Y+4, r27	; 0x04
+	  		
+	  		if (temp>2000)
+    17ca:	81 3d       	cpi	r24, 0xD1	; 209
+    17cc:	97 40       	sbci	r25, 0x07	; 7
+    17ce:	a1 05       	cpc	r26, r1
+    17d0:	b1 05       	cpc	r27, r1
+    17d2:	e8 f0       	brcs	.+58     	; 0x180e <main+0x190>
+    17d4:	82 e0       	ldi	r24, 0x02	; 2
+    17d6:	80 93 47 06 	sts	0x0647, r24
+	  		{
+		  		ioport_toggle_pin(LED_R);
+		  		if(timer_run==0)
+    17da:	31 10       	cpse	r3, r1
+    17dc:	0d c0       	rjmp	.+26     	; 0x17f8 <main+0x17a>
+		((TC4_t *)tc)->CTRLA
+			= (((TC4_t *)tc)->CTRLA & ~TC4_CLKSEL_gm) |
+				TC45_CLKSEL_enum;
+	} else if (tc45_is_TC5(void *tc)) {
+		((TC5_t *)tc)->CTRLA
+			= (((TC5_t *)tc)->CTRLA & ~TC5_CLKSEL_gm) |
+    17de:	e0 e4       	ldi	r30, 0x40	; 64
+    17e0:	f9 e0       	ldi	r31, 0x09	; 9
+    17e2:	80 81       	ld	r24, Z
+    17e4:	80 7f       	andi	r24, 0xF0	; 240
+    17e6:	84 60       	ori	r24, 0x04	; 4
+    17e8:	80 83       	st	Z, r24
+		  		{
+			  		tc45_write_clock_source(&TCD5, TC45_CLKSEL_DIV8_gc);
+			  		timer_run=1;
+    17ea:	33 24       	eor	r3, r3
+    17ec:	33 94       	inc	r3
+		  		{
+			  		tc45_write_clock_source(&TCD5, TC45_CLKSEL_OFF_gc);
+			  		timer_run=0;
+			  		
+		  		}
+		  		temp=0;
+    17ee:	19 82       	std	Y+1, r1	; 0x01
+    17f0:	1a 82       	std	Y+2, r1	; 0x02
+    17f2:	1b 82       	std	Y+3, r1	; 0x03
+    17f4:	1c 82       	std	Y+4, r1	; 0x04
+    17f6:	9d cf       	rjmp	.-198    	; 0x1732 <main+0xb4>
+    17f8:	e0 e4       	ldi	r30, 0x40	; 64
+    17fa:	f9 e0       	ldi	r31, 0x09	; 9
+    17fc:	80 81       	ld	r24, Z
+    17fe:	80 7f       	andi	r24, 0xF0	; 240
+    1800:	80 83       	st	Z, r24
+			  		tc45_write_clock_source(&TCD5, TC45_CLKSEL_DIV8_gc);
+			  		timer_run=1;
+		  		}else
+		  		{
+			  		tc45_write_clock_source(&TCD5, TC45_CLKSEL_OFF_gc);
+			  		timer_run=0;
+    1802:	31 2c       	mov	r3, r1
+			  		
+		  		}
+		  		temp=0;
+    1804:	19 82       	std	Y+1, r1	; 0x01
+    1806:	1a 82       	std	Y+2, r1	; 0x02
+    1808:	1b 82       	std	Y+3, r1	; 0x03
+    180a:	1c 82       	std	Y+4, r1	; 0x04
+    180c:	92 cf       	rjmp	.-220    	; 0x1732 <main+0xb4>
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	if (level) {
+		base->OUTSET = arch_ioport_pin_to_mask(pin);
+	} else {
+		base->OUTCLR = arch_ioport_pin_to_mask(pin);
+    180e:	82 e0       	ldi	r24, 0x02	; 2
+    1810:	80 93 46 06 	sts	0x0646, r24
+    1814:	8e cf       	rjmp	.-228    	; 0x1732 <main+0xb4>
+
+00001816 <__divsf3>:
+    1816:	0c d0       	rcall	.+24     	; 0x1830 <__divsf3x>
+    1818:	e6 c0       	rjmp	.+460    	; 0x19e6 <__fp_round>
+    181a:	de d0       	rcall	.+444    	; 0x19d8 <__fp_pscB>
+    181c:	40 f0       	brcs	.+16     	; 0x182e <__divsf3+0x18>
+    181e:	d5 d0       	rcall	.+426    	; 0x19ca <__fp_pscA>
+    1820:	30 f0       	brcs	.+12     	; 0x182e <__divsf3+0x18>
+    1822:	21 f4       	brne	.+8      	; 0x182c <__divsf3+0x16>
+    1824:	5f 3f       	cpi	r21, 0xFF	; 255
+    1826:	19 f0       	breq	.+6      	; 0x182e <__divsf3+0x18>
+    1828:	c7 c0       	rjmp	.+398    	; 0x19b8 <__fp_inf>
+    182a:	51 11       	cpse	r21, r1
+    182c:	10 c1       	rjmp	.+544    	; 0x1a4e <__fp_szero>
+    182e:	ca c0       	rjmp	.+404    	; 0x19c4 <__fp_nan>
+
+00001830 <__divsf3x>:
+    1830:	eb d0       	rcall	.+470    	; 0x1a08 <__fp_split3>
+    1832:	98 f3       	brcs	.-26     	; 0x181a <__divsf3+0x4>
+
+00001834 <__divsf3_pse>:
+    1834:	99 23       	and	r25, r25
+    1836:	c9 f3       	breq	.-14     	; 0x182a <__divsf3+0x14>
+    1838:	55 23       	and	r21, r21
+    183a:	b1 f3       	breq	.-20     	; 0x1828 <__divsf3+0x12>
+    183c:	95 1b       	sub	r25, r21
+    183e:	55 0b       	sbc	r21, r21
+    1840:	bb 27       	eor	r27, r27
+    1842:	aa 27       	eor	r26, r26
+    1844:	62 17       	cp	r22, r18
+    1846:	73 07       	cpc	r23, r19
+    1848:	84 07       	cpc	r24, r20
+    184a:	38 f0       	brcs	.+14     	; 0x185a <__divsf3_pse+0x26>
+    184c:	9f 5f       	subi	r25, 0xFF	; 255
+    184e:	5f 4f       	sbci	r21, 0xFF	; 255
+    1850:	22 0f       	add	r18, r18
+    1852:	33 1f       	adc	r19, r19
+    1854:	44 1f       	adc	r20, r20
+    1856:	aa 1f       	adc	r26, r26
+    1858:	a9 f3       	breq	.-22     	; 0x1844 <__divsf3_pse+0x10>
+    185a:	33 d0       	rcall	.+102    	; 0x18c2 <__divsf3_pse+0x8e>
+    185c:	0e 2e       	mov	r0, r30
+    185e:	3a f0       	brmi	.+14     	; 0x186e <__divsf3_pse+0x3a>
+    1860:	e0 e8       	ldi	r30, 0x80	; 128
+    1862:	30 d0       	rcall	.+96     	; 0x18c4 <__divsf3_pse+0x90>
+    1864:	91 50       	subi	r25, 0x01	; 1
+    1866:	50 40       	sbci	r21, 0x00	; 0
+    1868:	e6 95       	lsr	r30
+    186a:	00 1c       	adc	r0, r0
+    186c:	ca f7       	brpl	.-14     	; 0x1860 <__divsf3_pse+0x2c>
+    186e:	29 d0       	rcall	.+82     	; 0x18c2 <__divsf3_pse+0x8e>
+    1870:	fe 2f       	mov	r31, r30
+    1872:	27 d0       	rcall	.+78     	; 0x18c2 <__divsf3_pse+0x8e>
+    1874:	66 0f       	add	r22, r22
+    1876:	77 1f       	adc	r23, r23
+    1878:	88 1f       	adc	r24, r24
+    187a:	bb 1f       	adc	r27, r27
+    187c:	26 17       	cp	r18, r22
+    187e:	37 07       	cpc	r19, r23
+    1880:	48 07       	cpc	r20, r24
+    1882:	ab 07       	cpc	r26, r27
+    1884:	b0 e8       	ldi	r27, 0x80	; 128
+    1886:	09 f0       	breq	.+2      	; 0x188a <__divsf3_pse+0x56>
+    1888:	bb 0b       	sbc	r27, r27
+    188a:	80 2d       	mov	r24, r0
+    188c:	bf 01       	movw	r22, r30
+    188e:	ff 27       	eor	r31, r31
+    1890:	93 58       	subi	r25, 0x83	; 131
+    1892:	5f 4f       	sbci	r21, 0xFF	; 255
+    1894:	2a f0       	brmi	.+10     	; 0x18a0 <__divsf3_pse+0x6c>
+    1896:	9e 3f       	cpi	r25, 0xFE	; 254
+    1898:	51 05       	cpc	r21, r1
+    189a:	68 f0       	brcs	.+26     	; 0x18b6 <__divsf3_pse+0x82>
+    189c:	8d c0       	rjmp	.+282    	; 0x19b8 <__fp_inf>
+    189e:	d7 c0       	rjmp	.+430    	; 0x1a4e <__fp_szero>
+    18a0:	5f 3f       	cpi	r21, 0xFF	; 255
+    18a2:	ec f3       	brlt	.-6      	; 0x189e <__divsf3_pse+0x6a>
+    18a4:	98 3e       	cpi	r25, 0xE8	; 232
+    18a6:	dc f3       	brlt	.-10     	; 0x189e <__divsf3_pse+0x6a>
+    18a8:	86 95       	lsr	r24
+    18aa:	77 95       	ror	r23
+    18ac:	67 95       	ror	r22
+    18ae:	b7 95       	ror	r27
+    18b0:	f7 95       	ror	r31
+    18b2:	9f 5f       	subi	r25, 0xFF	; 255
+    18b4:	c9 f7       	brne	.-14     	; 0x18a8 <__divsf3_pse+0x74>
+    18b6:	88 0f       	add	r24, r24
+    18b8:	91 1d       	adc	r25, r1
+    18ba:	96 95       	lsr	r25
+    18bc:	87 95       	ror	r24
+    18be:	97 f9       	bld	r25, 7
+    18c0:	08 95       	ret
+    18c2:	e1 e0       	ldi	r30, 0x01	; 1
+    18c4:	66 0f       	add	r22, r22
+    18c6:	77 1f       	adc	r23, r23
+    18c8:	88 1f       	adc	r24, r24
+    18ca:	bb 1f       	adc	r27, r27
+    18cc:	62 17       	cp	r22, r18
+    18ce:	73 07       	cpc	r23, r19
+    18d0:	84 07       	cpc	r24, r20
+    18d2:	ba 07       	cpc	r27, r26
+    18d4:	20 f0       	brcs	.+8      	; 0x18de <__divsf3_pse+0xaa>
+    18d6:	62 1b       	sub	r22, r18
+    18d8:	73 0b       	sbc	r23, r19
+    18da:	84 0b       	sbc	r24, r20
+    18dc:	ba 0b       	sbc	r27, r26
+    18de:	ee 1f       	adc	r30, r30
+    18e0:	88 f7       	brcc	.-30     	; 0x18c4 <__divsf3_pse+0x90>
+    18e2:	e0 95       	com	r30
+    18e4:	08 95       	ret
+
+000018e6 <__fixunssfsi>:
+    18e6:	98 d0       	rcall	.+304    	; 0x1a18 <__fp_splitA>
+    18e8:	88 f0       	brcs	.+34     	; 0x190c <__fixunssfsi+0x26>
+    18ea:	9f 57       	subi	r25, 0x7F	; 127
+    18ec:	90 f0       	brcs	.+36     	; 0x1912 <__fixunssfsi+0x2c>
+    18ee:	b9 2f       	mov	r27, r25
+    18f0:	99 27       	eor	r25, r25
+    18f2:	b7 51       	subi	r27, 0x17	; 23
+    18f4:	a0 f0       	brcs	.+40     	; 0x191e <__fixunssfsi+0x38>
+    18f6:	d1 f0       	breq	.+52     	; 0x192c <__fixunssfsi+0x46>
+    18f8:	66 0f       	add	r22, r22
+    18fa:	77 1f       	adc	r23, r23
+    18fc:	88 1f       	adc	r24, r24
+    18fe:	99 1f       	adc	r25, r25
+    1900:	1a f0       	brmi	.+6      	; 0x1908 <__fixunssfsi+0x22>
+    1902:	ba 95       	dec	r27
+    1904:	c9 f7       	brne	.-14     	; 0x18f8 <__fixunssfsi+0x12>
+    1906:	12 c0       	rjmp	.+36     	; 0x192c <__fixunssfsi+0x46>
+    1908:	b1 30       	cpi	r27, 0x01	; 1
+    190a:	81 f0       	breq	.+32     	; 0x192c <__fixunssfsi+0x46>
+    190c:	9f d0       	rcall	.+318    	; 0x1a4c <__fp_zero>
+    190e:	b1 e0       	ldi	r27, 0x01	; 1
+    1910:	08 95       	ret
+    1912:	9c c0       	rjmp	.+312    	; 0x1a4c <__fp_zero>
+    1914:	67 2f       	mov	r22, r23
+    1916:	78 2f       	mov	r23, r24
+    1918:	88 27       	eor	r24, r24
+    191a:	b8 5f       	subi	r27, 0xF8	; 248
+    191c:	39 f0       	breq	.+14     	; 0x192c <__fixunssfsi+0x46>
+    191e:	b9 3f       	cpi	r27, 0xF9	; 249
+    1920:	cc f3       	brlt	.-14     	; 0x1914 <__fixunssfsi+0x2e>
+    1922:	86 95       	lsr	r24
+    1924:	77 95       	ror	r23
+    1926:	67 95       	ror	r22
+    1928:	b3 95       	inc	r27
+    192a:	d9 f7       	brne	.-10     	; 0x1922 <__fixunssfsi+0x3c>
+    192c:	3e f4       	brtc	.+14     	; 0x193c <__fixunssfsi+0x56>
+    192e:	90 95       	com	r25
+    1930:	80 95       	com	r24
+    1932:	70 95       	com	r23
+    1934:	61 95       	neg	r22
+    1936:	7f 4f       	sbci	r23, 0xFF	; 255
+    1938:	8f 4f       	sbci	r24, 0xFF	; 255
+    193a:	9f 4f       	sbci	r25, 0xFF	; 255
+    193c:	08 95       	ret
+
+0000193e <__floatunsisf>:
+    193e:	e8 94       	clt
+    1940:	09 c0       	rjmp	.+18     	; 0x1954 <__floatsisf+0x12>
+
+00001942 <__floatsisf>:
+    1942:	97 fb       	bst	r25, 7
+    1944:	3e f4       	brtc	.+14     	; 0x1954 <__floatsisf+0x12>
+    1946:	90 95       	com	r25
+    1948:	80 95       	com	r24
+    194a:	70 95       	com	r23
+    194c:	61 95       	neg	r22
+    194e:	7f 4f       	sbci	r23, 0xFF	; 255
+    1950:	8f 4f       	sbci	r24, 0xFF	; 255
+    1952:	9f 4f       	sbci	r25, 0xFF	; 255
+    1954:	99 23       	and	r25, r25
+    1956:	a9 f0       	breq	.+42     	; 0x1982 <__floatsisf+0x40>
+    1958:	f9 2f       	mov	r31, r25
+    195a:	96 e9       	ldi	r25, 0x96	; 150
+    195c:	bb 27       	eor	r27, r27
+    195e:	93 95       	inc	r25
+    1960:	f6 95       	lsr	r31
+    1962:	87 95       	ror	r24
+    1964:	77 95       	ror	r23
+    1966:	67 95       	ror	r22
+    1968:	b7 95       	ror	r27
+    196a:	f1 11       	cpse	r31, r1
+    196c:	f8 cf       	rjmp	.-16     	; 0x195e <__floatsisf+0x1c>
+    196e:	fa f4       	brpl	.+62     	; 0x19ae <__floatsisf+0x6c>
+    1970:	bb 0f       	add	r27, r27
+    1972:	11 f4       	brne	.+4      	; 0x1978 <__floatsisf+0x36>
+    1974:	60 ff       	sbrs	r22, 0
+    1976:	1b c0       	rjmp	.+54     	; 0x19ae <__floatsisf+0x6c>
+    1978:	6f 5f       	subi	r22, 0xFF	; 255
+    197a:	7f 4f       	sbci	r23, 0xFF	; 255
+    197c:	8f 4f       	sbci	r24, 0xFF	; 255
+    197e:	9f 4f       	sbci	r25, 0xFF	; 255
+    1980:	16 c0       	rjmp	.+44     	; 0x19ae <__floatsisf+0x6c>
+    1982:	88 23       	and	r24, r24
+    1984:	11 f0       	breq	.+4      	; 0x198a <__floatsisf+0x48>
+    1986:	96 e9       	ldi	r25, 0x96	; 150
+    1988:	11 c0       	rjmp	.+34     	; 0x19ac <__floatsisf+0x6a>
+    198a:	77 23       	and	r23, r23
+    198c:	21 f0       	breq	.+8      	; 0x1996 <__floatsisf+0x54>
+    198e:	9e e8       	ldi	r25, 0x8E	; 142
+    1990:	87 2f       	mov	r24, r23
+    1992:	76 2f       	mov	r23, r22
+    1994:	05 c0       	rjmp	.+10     	; 0x19a0 <__floatsisf+0x5e>
+    1996:	66 23       	and	r22, r22
+    1998:	71 f0       	breq	.+28     	; 0x19b6 <__floatsisf+0x74>
+    199a:	96 e8       	ldi	r25, 0x86	; 134
+    199c:	86 2f       	mov	r24, r22
+    199e:	70 e0       	ldi	r23, 0x00	; 0
+    19a0:	60 e0       	ldi	r22, 0x00	; 0
+    19a2:	2a f0       	brmi	.+10     	; 0x19ae <__floatsisf+0x6c>
+    19a4:	9a 95       	dec	r25
+    19a6:	66 0f       	add	r22, r22
+    19a8:	77 1f       	adc	r23, r23
+    19aa:	88 1f       	adc	r24, r24
+    19ac:	da f7       	brpl	.-10     	; 0x19a4 <__floatsisf+0x62>
+    19ae:	88 0f       	add	r24, r24
+    19b0:	96 95       	lsr	r25
+    19b2:	87 95       	ror	r24
+    19b4:	97 f9       	bld	r25, 7
+    19b6:	08 95       	ret
+
+000019b8 <__fp_inf>:
+    19b8:	97 f9       	bld	r25, 7
+    19ba:	9f 67       	ori	r25, 0x7F	; 127
+    19bc:	80 e8       	ldi	r24, 0x80	; 128
+    19be:	70 e0       	ldi	r23, 0x00	; 0
+    19c0:	60 e0       	ldi	r22, 0x00	; 0
+    19c2:	08 95       	ret
+
+000019c4 <__fp_nan>:
+    19c4:	9f ef       	ldi	r25, 0xFF	; 255
+    19c6:	80 ec       	ldi	r24, 0xC0	; 192
+    19c8:	08 95       	ret
+
+000019ca <__fp_pscA>:
+    19ca:	00 24       	eor	r0, r0
+    19cc:	0a 94       	dec	r0
+    19ce:	16 16       	cp	r1, r22
+    19d0:	17 06       	cpc	r1, r23
+    19d2:	18 06       	cpc	r1, r24
+    19d4:	09 06       	cpc	r0, r25
+    19d6:	08 95       	ret
+
+000019d8 <__fp_pscB>:
+    19d8:	00 24       	eor	r0, r0
+    19da:	0a 94       	dec	r0
+    19dc:	12 16       	cp	r1, r18
+    19de:	13 06       	cpc	r1, r19
+    19e0:	14 06       	cpc	r1, r20
+    19e2:	05 06       	cpc	r0, r21
+    19e4:	08 95       	ret
+
+000019e6 <__fp_round>:
+    19e6:	09 2e       	mov	r0, r25
+    19e8:	03 94       	inc	r0
+    19ea:	00 0c       	add	r0, r0
+    19ec:	11 f4       	brne	.+4      	; 0x19f2 <__fp_round+0xc>
+    19ee:	88 23       	and	r24, r24
+    19f0:	52 f0       	brmi	.+20     	; 0x1a06 <__fp_round+0x20>
+    19f2:	bb 0f       	add	r27, r27
+    19f4:	40 f4       	brcc	.+16     	; 0x1a06 <__fp_round+0x20>
+    19f6:	bf 2b       	or	r27, r31
+    19f8:	11 f4       	brne	.+4      	; 0x19fe <__fp_round+0x18>
+    19fa:	60 ff       	sbrs	r22, 0
+    19fc:	04 c0       	rjmp	.+8      	; 0x1a06 <__fp_round+0x20>
+    19fe:	6f 5f       	subi	r22, 0xFF	; 255
+    1a00:	7f 4f       	sbci	r23, 0xFF	; 255
+    1a02:	8f 4f       	sbci	r24, 0xFF	; 255
+    1a04:	9f 4f       	sbci	r25, 0xFF	; 255
+    1a06:	08 95       	ret
+
+00001a08 <__fp_split3>:
+    1a08:	57 fd       	sbrc	r21, 7
+    1a0a:	90 58       	subi	r25, 0x80	; 128
+    1a0c:	44 0f       	add	r20, r20
+    1a0e:	55 1f       	adc	r21, r21
+    1a10:	59 f0       	breq	.+22     	; 0x1a28 <__fp_splitA+0x10>
+    1a12:	5f 3f       	cpi	r21, 0xFF	; 255
+    1a14:	71 f0       	breq	.+28     	; 0x1a32 <__fp_splitA+0x1a>
+    1a16:	47 95       	ror	r20
+
+00001a18 <__fp_splitA>:
+    1a18:	88 0f       	add	r24, r24
+    1a1a:	97 fb       	bst	r25, 7
+    1a1c:	99 1f       	adc	r25, r25
+    1a1e:	61 f0       	breq	.+24     	; 0x1a38 <__fp_splitA+0x20>
+    1a20:	9f 3f       	cpi	r25, 0xFF	; 255
+    1a22:	79 f0       	breq	.+30     	; 0x1a42 <__fp_splitA+0x2a>
+    1a24:	87 95       	ror	r24
+    1a26:	08 95       	ret
+    1a28:	12 16       	cp	r1, r18
+    1a2a:	13 06       	cpc	r1, r19
+    1a2c:	14 06       	cpc	r1, r20
+    1a2e:	55 1f       	adc	r21, r21
+    1a30:	f2 cf       	rjmp	.-28     	; 0x1a16 <__fp_split3+0xe>
+    1a32:	46 95       	lsr	r20
+    1a34:	f1 df       	rcall	.-30     	; 0x1a18 <__fp_splitA>
+    1a36:	08 c0       	rjmp	.+16     	; 0x1a48 <__fp_splitA+0x30>
+    1a38:	16 16       	cp	r1, r22
+    1a3a:	17 06       	cpc	r1, r23
+    1a3c:	18 06       	cpc	r1, r24
+    1a3e:	99 1f       	adc	r25, r25
+    1a40:	f1 cf       	rjmp	.-30     	; 0x1a24 <__fp_splitA+0xc>
+    1a42:	86 95       	lsr	r24
+    1a44:	71 05       	cpc	r23, r1
+    1a46:	61 05       	cpc	r22, r1
+    1a48:	08 94       	sec
+    1a4a:	08 95       	ret
+
+00001a4c <__fp_zero>:
+    1a4c:	e8 94       	clt
+
+00001a4e <__fp_szero>:
+    1a4e:	bb 27       	eor	r27, r27
+    1a50:	66 27       	eor	r22, r22
+    1a52:	77 27       	eor	r23, r23
+    1a54:	cb 01       	movw	r24, r22
+    1a56:	97 f9       	bld	r25, 7
+    1a58:	08 95       	ret
+
+00001a5a <__udivmodsi4>:
+    1a5a:	a1 e2       	ldi	r26, 0x21	; 33
+    1a5c:	1a 2e       	mov	r1, r26
+    1a5e:	aa 1b       	sub	r26, r26
+    1a60:	bb 1b       	sub	r27, r27
+    1a62:	fd 01       	movw	r30, r26
+    1a64:	0d c0       	rjmp	.+26     	; 0x1a80 <__udivmodsi4_ep>
+
+00001a66 <__udivmodsi4_loop>:
+    1a66:	aa 1f       	adc	r26, r26
+    1a68:	bb 1f       	adc	r27, r27
+    1a6a:	ee 1f       	adc	r30, r30
+    1a6c:	ff 1f       	adc	r31, r31
+    1a6e:	a2 17       	cp	r26, r18
+    1a70:	b3 07       	cpc	r27, r19
+    1a72:	e4 07       	cpc	r30, r20
+    1a74:	f5 07       	cpc	r31, r21
+    1a76:	20 f0       	brcs	.+8      	; 0x1a80 <__udivmodsi4_ep>
+    1a78:	a2 1b       	sub	r26, r18
+    1a7a:	b3 0b       	sbc	r27, r19
+    1a7c:	e4 0b       	sbc	r30, r20
+    1a7e:	f5 0b       	sbc	r31, r21
+
+00001a80 <__udivmodsi4_ep>:
+    1a80:	66 1f       	adc	r22, r22
+    1a82:	77 1f       	adc	r23, r23
+    1a84:	88 1f       	adc	r24, r24
+    1a86:	99 1f       	adc	r25, r25
+    1a88:	1a 94       	dec	r1
+    1a8a:	69 f7       	brne	.-38     	; 0x1a66 <__udivmodsi4_loop>
+    1a8c:	60 95       	com	r22
+    1a8e:	70 95       	com	r23
+    1a90:	80 95       	com	r24
+    1a92:	90 95       	com	r25
+    1a94:	9b 01       	movw	r18, r22
+    1a96:	ac 01       	movw	r20, r24
+    1a98:	bd 01       	movw	r22, r26
+    1a9a:	cf 01       	movw	r24, r30
+    1a9c:	08 95       	ret
+
+00001a9e <_exit>:
+    1a9e:	f8 94       	cli
+
+00001aa0 <__stop_program>:
+    1aa0:	ff cf       	rjmp	.-2      	; 0x1aa0 <__stop_program>
